@@ -21,6 +21,7 @@ const initialRoute = routes['initial'];
 
 
 const router = (route, navigator) => {
+  console.log('ROUTING: ',route);
   const r = routes[route.name];
   if(r && r.comp){
     return <r.comp route={route} navigator={navigator} />;

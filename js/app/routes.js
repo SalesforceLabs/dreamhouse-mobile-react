@@ -10,7 +10,7 @@ module.exports = {
     name:'propertyList',
     comp: PropertyList
   },
-  propertyView:{
+  propertyDetail:{
     name:'propertyDetail',
     comp: PropertyDetail
   },

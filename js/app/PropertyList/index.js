@@ -1,71 +1,70 @@
 'use strict';
 
-var React = require('react-native');
-var {
+import React from 'react-native';
+
+const {
     AppRegistry,
     StyleSheet,
     Text,
     View,
     ListView,
     PixelRatio,
-    NavigatorIOS
+    TouchableOpacity
 } = React;
 
 import forceClient from '../../common/react.force/react.force.net.js';
 
 import SLDS from 'design-system-react-native';
 
+import PropertyListItem from './PropertyListItem';
+
 import styles from './styles';
 
+const soql = 'SELECT Id, Name FROM Property__c LIMIT 100';
+
 module.exports = React.createClass({
-    getInitialState: function() {
+    getInitialState() {
       var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
       return {
           dataSource: ds.cloneWithRows([]),
       };
     },
     
-    componentDidMount: function() {
-        var that = this;
-        var soql = 'SELECT Id, Name FROM Property__c LIMIT 100';
-        forceClient.query(soql,
-                          function(response) {
-                              var users = response.records;
-                              var data = [];
-                              for (var i in users) {
-                                  data.push(users[i]["Name"]);
-                              }
-                              console.log('data: ',data);
-                              that.setState({
-                                  dataSource: that.getDataSource(data),
-                              });
-
-                          });
+    componentDidMount() {
+      forceClient.query(soql,
+        (response) => {
+          const items = response.records;
+          this.setState({
+              dataSource: this.getDataSource(items),
+          });
+        });
     },
 
-    getDataSource: function(users: Array<any>): ListViewDataSource {
-        return this.state.dataSource.cloneWithRows(users);
+    handlePress() {
+      if(this.props.navigator){
+        this.props.navigator.push({
+          name:'propertyDetail',
+
+        });
+      }
     },
 
-    render: function() {
-        return (
-            <ListView
-              dataSource={this.state.dataSource}
-              renderRow={this.renderRow} />
+    getDataSource (users) {
+      return this.state.dataSource.cloneWithRows(users);
+    },
+
+    renderRow (sobj) {
+      return (
+        <PropertyListItem sobj={sobj} route={this.props.route} navigator={this.props.navigator} />
       );
     },
 
-    renderRow: function(rowData: Object) {
-        return (
-                <View>
-                    <View style={styles.row}>
-                    <SLDS.Icons.Utility name="like" />
-                      <Text numberOfLines={1}>
-                       {rowData}
-                      </Text>
-                    </View>
-                    <View style={styles.cellBorder} />
-                </View>
-        );
+    render () {
+      return (
+        <ListView
+          dataSource={this.state.dataSource}
+          renderRow={this.renderRow} />
+      );
     }
+
 });
