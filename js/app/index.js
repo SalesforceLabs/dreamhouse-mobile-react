@@ -8,12 +8,8 @@ var {
     View,
     ListView,
     PixelRatio,
-    NavigatorIOS,
     Navigator
 } = React;
-var forceClient = require('../react.force.net.js');
-
-import SLDS from 'design-system-react-native';
 
 import PropertyList from './PropertyList';
 

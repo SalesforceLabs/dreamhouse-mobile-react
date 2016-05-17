@@ -242,6 +242,18 @@ var search = function(sosl, callback, error) {
                        , callback, error, 'GET', {q: sosl});
 };
 
+var compactLayout = function(objtype, callback, error) {
+    return sendRequest('/services/data', '/' + apiVersion + '/sobjects/' + objtype + '/describe/compactLayouts/primary'
+                       , callback, error);
+};
+
+var defaultLayout = function(objtype, callback, error) {
+    return sendRequest('/services/data', '/' + apiVersion + '/sobjects/' + objtype + '/describe/layouts/012000000000000AAA'
+                       , callback, error);
+};
+
+
+
 /**
  * Part of the module that is public
  */
@@ -262,5 +274,7 @@ module.exports = {
     del: del,
     query: query,
     queryMore: queryMore,
-    search: search
+    search: search,
+    compactLayout: compactLayout,
+    defaultLayout: defaultLayout
 };

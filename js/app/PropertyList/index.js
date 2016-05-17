@@ -11,7 +11,7 @@ var {
     NavigatorIOS
 } = React;
 
-import forceClient from '../../react.force.net.js';
+import forceClient from '../../common/react.force/react.force.net.js';
 
 import SLDS from 'design-system-react-native';
 
