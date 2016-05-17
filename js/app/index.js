@@ -19,6 +19,16 @@ import styles from './styles';
 
 const initialRoute = routes['initial'];
 
+
+const router = (route, navigator) => {
+  const r = routes[route.name];
+  if(r && r.comp){
+    return <r.comp route={route} navigator={navigator} />;
+  }
+  return <initialRoute.comp route={route} navigator={navigator} />;
+};
+
+
 module.exports = React.createClass({
     render: function() {
         return (
@@ -26,12 +36,7 @@ module.exports = React.createClass({
                 style={styles.container}
                 configureScene={() => Navigator.SceneConfigs.PushFromRight}
                 initialRoute={initialRoute}
-                renderScene={(route, navigator) => {
-                  if(route && route.comp){
-                    return <route.comp route={route} navigator={navigator} />;
-                  }
-                  return <initialRoute.comp route={route} navigator={navigator} />;
-                }}
+                renderScene={router}
             />
         );
     }
