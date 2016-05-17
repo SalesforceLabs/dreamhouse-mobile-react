@@ -26,8 +26,14 @@
 
 'use strict';
 
-import React from 'react-native';
+var React = require('react-native');
+var {
+    StyleSheet,
+} = React;
 
-import App from './app';
-
-React.AppRegistry.registerComponent('dreamhouse', () => App);
+module.exports = StyleSheet.create({
+  container: {
+      flex: 1,
+      backgroundColor: 'white',
+  }
+});
