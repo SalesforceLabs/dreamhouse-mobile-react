@@ -38,6 +38,8 @@ var {
 } = React;
 var forceClient = require('./react.force.net.js');
 
+import SLDS from 'design-system-react-native';
+
 var App = React.createClass({
     render: function() {
         return (
@@ -62,7 +64,7 @@ var UserList = React.createClass({
     
     componentDidMount: function() {
         var that = this;
-        var soql = 'SELECT Id, Name FROM User LIMIT 10';
+        var soql = 'SELECT Id, Name FROM Property__c LIMIT 100';
         forceClient.query(soql,
                           function(response) {
                               var users = response.records;
@@ -94,6 +96,7 @@ var UserList = React.createClass({
         return (
                 <View>
                     <View style={styles.row}>
+                    <SLDS.Icons.Utility name="like" />
                       <Text numberOfLines={1}>
                        {rowData}
                       </Text>

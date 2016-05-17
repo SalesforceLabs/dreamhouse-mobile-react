@@ -5,25 +5,27 @@
 	};
 	objectVersion = 47;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		02E37E28E528DD90AFBC849F /* libPods-dreamhouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E606AE0C7CABF6DAF27DF3CC /* libPods-dreamhouse.a */; };
-		4406E7E1160C44379E9FD3FE /* SalesforceSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1C59909CBF04427B21148D3 /* SalesforceSans-Regular.ttf */; };
-		4A3BCEB38A8748318E120760 /* SalesforceDesignSystemIconsUtility.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7537789ABA394B85A54BBB6B /* SalesforceDesignSystemIconsUtility.ttf */; };
+		123AA910979A4FD292852A31 /* SalesforceDesignSystemIconsAction.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEA155A60BD64C7790E8C7DC /* SalesforceDesignSystemIconsAction.ttf */; };
+		21D6B0A9C14C498CBD6A0957 /* SalesforceSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF2BCE1AE5784E06B79915E8 /* SalesforceSans-Bold.ttf */; };
 		4F8D5EA31B6C0568005E64D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D5EA21B6C0568005E64D4 /* main.m */; };
 		4F8D5EA61B6C0568005E64D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D5EA51B6C0568005E64D4 /* AppDelegate.m */; };
 		4F8D5EAE1B6C0568005E64D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8D5EAD1B6C0568005E64D4 /* Images.xcassets */; };
 		4F8D5EC81B6C0F94005E64D4 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D5EC71B6C0F94005E64D4 /* InitialViewController.m */; };
-		67B439725EBD484CA462EA72 /* SalesforceDesignSystemIconsCustom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EF53D9860EC43FFA99E2159 /* SalesforceDesignSystemIconsCustom.ttf */; };
-		67ED42169C444B9EA7805B9C /* SalesforceSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E78FFBAC739740E78E834D1E /* SalesforceSans-Bold.ttf */; };
-		833593A88B6C47898C1A8F23 /* SalesforceDesignSystemIconsStandard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01F19B86C0834673B653A3DF /* SalesforceDesignSystemIconsStandard.ttf */; };
-		F2B23375324F4D4E91C7D172 /* SalesforceDesignSystemIconsAction.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAFC440470CF40E79CFB9D05 /* SalesforceDesignSystemIconsAction.ttf */; };
-		F750716430374ACDA4F95B39 /* SalesforceSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64C7F448D6AA4E8B8A006B17 /* SalesforceSans-Light.ttf */; };
+		550C2DFC22DD424098A2C1EE /* SalesforceDesignSystemIconsStandard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD816733C20B4D9CB64286A7 /* SalesforceDesignSystemIconsStandard.ttf */; };
+		57423EDBA47D4DE89EBEDE78 /* libDesignSystemReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA61F5B7283A4F07B11D5C56 /* libDesignSystemReactNative.a */; };
+		861215BF5D734ED8841A273C /* SalesforceDesignSystemIconsCustom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36B33DA8B2AF407F826F43A6 /* SalesforceDesignSystemIconsCustom.ttf */; };
+		90C7439560CC4B39AF069511 /* SalesforceSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D3BD3676DD8486F868724F2 /* SalesforceSans-Light.ttf */; };
+		ECA8DAF325D44B1998FD5739 /* SalesforceDesignSystemIconsUtility.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34A5109C257426193348B65 /* SalesforceDesignSystemIconsUtility.ttf */; };
+		F8BD51ADBD9D47A1804E3815 /* SalesforceSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 063FEB2C242F4C4AB2025E00 /* SalesforceSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		05EF402B1CEB9A8F005FAEB2 /* PBXContainerItemProxy */ = {
+		051989C21CEBAA2D00BEF0B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EF8DAE0118254621B6E88745 /* DesignSystemReactNative.xcodeproj */;
+			containerPortal = 5E8DBE6E14B845E9A2E28C77 /* DesignSystemReactNative.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 05E4E6EC1CBDF7BE00899BCA;
 			remoteInfo = DesignSystemReactNative;
@@ -31,7 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01F19B86C0834673B653A3DF /* SalesforceDesignSystemIconsStandard.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SalesforceDesignSystemIconsStandard.ttf; path = "node_modules/design-system-react-native/Fonts/SalesforceDesignSystemIconsStandard.ttf"; sourceTree = "<group>"; };
+		063FEB2C242F4C4AB2025E00 /* SalesforceSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SalesforceSans-Regular.ttf"; path = "node_modules/design-system-react-native/Fonts/SalesforceSans-Regular.ttf"; sourceTree = "<group>"; };
+		1D3BD3676DD8486F868724F2 /* SalesforceSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SalesforceSans-Light.ttf"; path = "node_modules/design-system-react-native/Fonts/SalesforceSans-Light.ttf"; sourceTree = "<group>"; };
+		36B33DA8B2AF407F826F43A6 /* SalesforceDesignSystemIconsCustom.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SalesforceDesignSystemIconsCustom.ttf; path = "node_modules/design-system-react-native/Fonts/SalesforceDesignSystemIconsCustom.ttf"; sourceTree = "<group>"; };
 		4F8D5E9D1B6C0568005E64D4 /* dreamhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dreamhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8D5EA11B6C0568005E64D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F8D5EA21B6C0568005E64D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,16 +44,15 @@
 		4F8D5EAD1B6C0568005E64D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4F8D5EC61B6C0F94005E64D4 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
 		4F8D5EC71B6C0F94005E64D4 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
+		5E8DBE6E14B845E9A2E28C77 /* DesignSystemReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = DesignSystemReactNative.xcodeproj; path = "node_modules/design-system-react-native/ios/DesignSystemReactNative/DesignSystemReactNative.xcodeproj"; sourceTree = "<group>"; };
 		641A79C6255C9F5C2DC614D8 /* Pods-dreamhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dreamhouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-dreamhouse/Pods-dreamhouse.release.xcconfig"; sourceTree = "<group>"; };
-		64C7F448D6AA4E8B8A006B17 /* SalesforceSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SalesforceSans-Light.ttf"; path = "node_modules/design-system-react-native/Fonts/SalesforceSans-Light.ttf"; sourceTree = "<group>"; };
-		6EF53D9860EC43FFA99E2159 /* SalesforceDesignSystemIconsCustom.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SalesforceDesignSystemIconsCustom.ttf; path = "node_modules/design-system-react-native/Fonts/SalesforceDesignSystemIconsCustom.ttf"; sourceTree = "<group>"; };
-		7537789ABA394B85A54BBB6B /* SalesforceDesignSystemIconsUtility.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SalesforceDesignSystemIconsUtility.ttf; path = "node_modules/design-system-react-native/Fonts/SalesforceDesignSystemIconsUtility.ttf"; sourceTree = "<group>"; };
 		90400F35EE8FD2C6D3B8B7E7 /* Pods-dreamhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dreamhouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dreamhouse/Pods-dreamhouse.debug.xcconfig"; sourceTree = "<group>"; };
-		D1C59909CBF04427B21148D3 /* SalesforceSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SalesforceSans-Regular.ttf"; path = "node_modules/design-system-react-native/Fonts/SalesforceSans-Regular.ttf"; sourceTree = "<group>"; };
+		AD816733C20B4D9CB64286A7 /* SalesforceDesignSystemIconsStandard.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SalesforceDesignSystemIconsStandard.ttf; path = "node_modules/design-system-react-native/Fonts/SalesforceDesignSystemIconsStandard.ttf"; sourceTree = "<group>"; };
+		B34A5109C257426193348B65 /* SalesforceDesignSystemIconsUtility.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SalesforceDesignSystemIconsUtility.ttf; path = "node_modules/design-system-react-native/Fonts/SalesforceDesignSystemIconsUtility.ttf"; sourceTree = "<group>"; };
+		BF2BCE1AE5784E06B79915E8 /* SalesforceSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SalesforceSans-Bold.ttf"; path = "node_modules/design-system-react-native/Fonts/SalesforceSans-Bold.ttf"; sourceTree = "<group>"; };
+		CEA155A60BD64C7790E8C7DC /* SalesforceDesignSystemIconsAction.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SalesforceDesignSystemIconsAction.ttf; path = "node_modules/design-system-react-native/Fonts/SalesforceDesignSystemIconsAction.ttf"; sourceTree = "<group>"; };
 		E606AE0C7CABF6DAF27DF3CC /* libPods-dreamhouse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dreamhouse.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E78FFBAC739740E78E834D1E /* SalesforceSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SalesforceSans-Bold.ttf"; path = "node_modules/design-system-react-native/Fonts/SalesforceSans-Bold.ttf"; sourceTree = "<group>"; };
-		EF8DAE0118254621B6E88745 /* DesignSystemReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = DesignSystemReactNative.xcodeproj; path = "node_modules/design-system-react-native/ios/DesignSystemReactNative/DesignSystemReactNative.xcodeproj"; sourceTree = "<group>"; };
-		FAFC440470CF40E79CFB9D05 /* SalesforceDesignSystemIconsAction.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SalesforceDesignSystemIconsAction.ttf; path = "node_modules/design-system-react-native/Fonts/SalesforceDesignSystemIconsAction.ttf"; sourceTree = "<group>"; };
+		EA61F5B7283A4F07B11D5C56 /* libDesignSystemReactNative.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libDesignSystemReactNative.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +61,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				02E37E28E528DD90AFBC849F /* libPods-dreamhouse.a in Frameworks */,
+				57423EDBA47D4DE89EBEDE78 /* libDesignSystemReactNative.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05EF40281CEB9A8F005FAEB2 /* Products */ = {
+		051989BF1CEBAA2D00BEF0B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05EF402C1CEB9A8F005FAEB2 /* libDesignSystemReactNative.a */,
+				051989C31CEBAA2D00BEF0B9 /* libDesignSystemReactNative.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,7 +137,7 @@
 		746047FD40DE4DEF81D36853 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				EF8DAE0118254621B6E88745 /* DesignSystemReactNative.xcodeproj */,
+				5E8DBE6E14B845E9A2E28C77 /* DesignSystemReactNative.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -141,13 +145,13 @@
 		799288BF02274A06900D14E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FAFC440470CF40E79CFB9D05 /* SalesforceDesignSystemIconsAction.ttf */,
-				6EF53D9860EC43FFA99E2159 /* SalesforceDesignSystemIconsCustom.ttf */,
-				01F19B86C0834673B653A3DF /* SalesforceDesignSystemIconsStandard.ttf */,
-				7537789ABA394B85A54BBB6B /* SalesforceDesignSystemIconsUtility.ttf */,
-				E78FFBAC739740E78E834D1E /* SalesforceSans-Bold.ttf */,
-				64C7F448D6AA4E8B8A006B17 /* SalesforceSans-Light.ttf */,
-				D1C59909CBF04427B21148D3 /* SalesforceSans-Regular.ttf */,
+				CEA155A60BD64C7790E8C7DC /* SalesforceDesignSystemIconsAction.ttf */,
+				36B33DA8B2AF407F826F43A6 /* SalesforceDesignSystemIconsCustom.ttf */,
+				AD816733C20B4D9CB64286A7 /* SalesforceDesignSystemIconsStandard.ttf */,
+				B34A5109C257426193348B65 /* SalesforceDesignSystemIconsUtility.ttf */,
+				BF2BCE1AE5784E06B79915E8 /* SalesforceSans-Bold.ttf */,
+				1D3BD3676DD8486F868724F2 /* SalesforceSans-Light.ttf */,
+				063FEB2C242F4C4AB2025E00 /* SalesforceSans-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -211,8 +215,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 05EF40281CEB9A8F005FAEB2 /* Products */;
-					ProjectRef = EF8DAE0118254621B6E88745 /* DesignSystemReactNative.xcodeproj */;
+					ProductGroup = 051989BF1CEBAA2D00BEF0B9 /* Products */;
+					ProjectRef = 5E8DBE6E14B845E9A2E28C77 /* DesignSystemReactNative.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -223,11 +227,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		05EF402C1CEB9A8F005FAEB2 /* libDesignSystemReactNative.a */ = {
+		051989C31CEBAA2D00BEF0B9 /* libDesignSystemReactNative.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libDesignSystemReactNative.a;
-			remoteRef = 05EF402B1CEB9A8F005FAEB2 /* PBXContainerItemProxy */;
+			remoteRef = 051989C21CEBAA2D00BEF0B9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -238,13 +242,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F8D5EAE1B6C0568005E64D4 /* Images.xcassets in Resources */,
-				F2B23375324F4D4E91C7D172 /* SalesforceDesignSystemIconsAction.ttf in Resources */,
-				67B439725EBD484CA462EA72 /* SalesforceDesignSystemIconsCustom.ttf in Resources */,
-				833593A88B6C47898C1A8F23 /* SalesforceDesignSystemIconsStandard.ttf in Resources */,
-				4A3BCEB38A8748318E120760 /* SalesforceDesignSystemIconsUtility.ttf in Resources */,
-				67ED42169C444B9EA7805B9C /* SalesforceSans-Bold.ttf in Resources */,
-				F750716430374ACDA4F95B39 /* SalesforceSans-Light.ttf in Resources */,
-				4406E7E1160C44379E9FD3FE /* SalesforceSans-Regular.ttf in Resources */,
+				123AA910979A4FD292852A31 /* SalesforceDesignSystemIconsAction.ttf in Resources */,
+				861215BF5D734ED8841A273C /* SalesforceDesignSystemIconsCustom.ttf in Resources */,
+				550C2DFC22DD424098A2C1EE /* SalesforceDesignSystemIconsStandard.ttf in Resources */,
+				ECA8DAF325D44B1998FD5739 /* SalesforceDesignSystemIconsUtility.ttf in Resources */,
+				21D6B0A9C14C498CBD6A0957 /* SalesforceSans-Bold.ttf in Resources */,
+				90C7439560CC4B39AF069511 /* SalesforceSans-Light.ttf in Resources */,
+				F8BD51ADBD9D47A1804E3815 /* SalesforceSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
