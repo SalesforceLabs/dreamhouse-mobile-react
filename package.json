@@ -1,0 +1,12 @@
+{
+  "name": "dreamhouse",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/react-native/packager/packager.sh --root js"
+  },
+  "dependencies": {
+    "design-system-react-native": "git+ssh://git@github.com/ForceDotComLabs/design-system-react-native.git",
+    "react-native": "^0.20.0"
+  }
+}
