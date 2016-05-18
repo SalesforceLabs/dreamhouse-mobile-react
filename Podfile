@@ -7,19 +7,11 @@ source 'https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Specs.git' # need
 source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'React', :path => './node_modules/react-native', :subspecs => [
-    'ART',
-    'RCTActionSheet',
-    'RCTAdSupport',
-    'RCTCameraRoll',
-    'RCTGeolocation',
-    'RCTImage',
-    'RCTNetwork',
-    'RCTPushNotification',
-    'RCTSettings',
-    'RCTText',
-    'RCTVibration',
-    'RCTWebSocket',
-    'RCTLinkingIOS'
+  'Core',
+  'RCTImage',
+  'RCTNetwork',
+  'RCTText',
+  'RCTWebSocket',
 ]
 
 pod 'SalesforceSDKCore'

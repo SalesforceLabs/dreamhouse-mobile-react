@@ -32,6 +32,8 @@
 #import <SalesforceSDKCore/SFLogger.h>
 #import <SmartStore/SalesforceSDKManagerWithSmartStore.h>
 
+#include "TargetConditionals.h"
+
 // Fill these in when creating a new Connected Application on Force.com
 static NSString * const RemoteAccessConsumerKey = @"3MVG9Iu66FKeHhINkB1l7xt7kR8czFcCTUhgoA8Ol2Ltf1eYHOU4SqQRSEitYFDUpqRWcoQ2.dBv_a1Dyu5xa";
 static NSString * const OAuthRedirectURI        = @"testsfdc:///mobilesdk/detect/oauth/done";
@@ -144,7 +146,16 @@ static NSString * const OAuthRedirectURI        = @"testsfdc:///mobilesdk/detect
      * `inet` value under `en0:`) and make sure your computer and iOS device are
      * on the same Wi-Fi network.
      */
-    [self setupReactRootView:[NSURL URLWithString:@"http://localhost:8081/js/index.ios.bundle?platform=ios"]];
+
+#if (TARGET_IPHONE_SIMULATOR)
+    NSURL *jsCodeLocation = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:%@/index.ios.bundle",@"8081"]];
+#else
+
+ NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+
+#endif
+ 
+    [self setupReactRootView:jsCodeLocation];
     
     /**
      * OPTION 2
