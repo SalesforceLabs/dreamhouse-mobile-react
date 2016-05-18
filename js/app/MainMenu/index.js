@@ -17,31 +17,34 @@ import SLDS from 'design-system-react-native';
 
 import styles from './styles';
 
+import routes from '../routes';
+
+import MenuItem from './MenuItem';
 
 module.exports = React.createClass({
     
-    handlePress() {
-      alert('PRESS!');
-/*
-      if(this.props.navigator){
-        this.props.navigator.push({
-          name:'propertyDetail',
-          sobj: this.props.sobj
-        });
-      }
-*/
-    },
-
-    render () {
-      return (
-        <View style={styles.container}>
-          <TouchableOpacity onPress={this.handlePress}>
-            <Text>Item 1</Text>
-            <Text>Item 2</Text>
-            <Text>Item 3</Text>
-            <Text>Item 4</Text>
-          </TouchableOpacity>
-        </View>
-      );
+  handleMenuItemPress(route) {
+    if(this.props.onMenuPress){
+      this.props.onMenuPress(route);
     }
+  },
+
+  getMenuItems () {
+    return routes.menu.map((menuItem)=>{
+      const r = routes[menuItem];
+      return <MenuItem 
+        navigator={this.props.navigator}
+        route={this.props.route}
+        onPress={this.handleMenuItemPress}
+        menuItem={r} />;
+    });
+  },
+
+  render () {
+    return (
+      <View style={styles.container}>
+        { this.getMenuItems() }
+      </View>
+    );
+  }
 });

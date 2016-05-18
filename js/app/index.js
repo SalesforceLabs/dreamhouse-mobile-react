@@ -26,14 +26,6 @@ import MainMenu from './MainMenu';
 const initialRoute = routes['initial'];
 
 
-const router = (route, navigator) => {
-  const r = routes[route.name];
-  if(r && r.comp){
-    return <r.comp route={route} navigator={navigator} />;
-  }
-  return <initialRoute.comp route={route} navigator={navigator} />;
-};
-
 
 const NavigationBarRouteMapper = {
     LeftButton (route, navigator, index, navState) {
@@ -53,26 +45,40 @@ const NavigationBarRouteMapper = {
 
 };
 
-const Menu = React.createClass({
-  render: function() {
-    return (
-      <View>
-        <Text></Text>
-      </View>
-    );
-  }
-});
-
 
 module.exports = React.createClass({
+
+  getInitialState() {
+    return {
+      isOpen:false,
+      navigator:null
+    };
+  },
+
+  handleMenuPress(route) {
+    this.setState({isOpen:false});
+    this.state.navigator.replace(route);
+  },
+
+  router(route, navigator) {
+    this.state.navigator = navigator;
+    const r = routes[route.name];
+    if(r && r.comp){
+      return <r.comp route={route} navigator={navigator} />;
+    }
+    return <initialRoute.comp route={route} navigator={navigator} />;
+  },
+
   render() {
     return (
-      <SideMenu menu={<MainMenu />}>
+      <SideMenu 
+        isOpen={this.state.isOpen}
+        menu={<MainMenu onMenuPress={this.handleMenuPress} />}>
         <Navigator
             style={styles.container}
             configureScene={() => Navigator.SceneConfigs.PushFromRight}
             initialRoute={initialRoute}
-            renderScene={router}
+            renderScene={this.router}
             navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouteMapper} />}
         />
       </SideMenu>

@@ -25,11 +25,11 @@ module.exports = React.createClass({
    const sobj = this.props.route.sobj;
     return (
       <View style={styles.container}>
-        <ScrollView>
-          <F.SobjContainer id={sobj.Id} type={sobj.attributes.type}>
-            <DetailLayout />
-          </F.SobjContainer>
-        </ScrollView>
+      <ScrollView>
+        <F.SobjContainer id={sobj.Id} type={sobj.attributes.type}>
+          <DetailLayout />
+        </F.SobjContainer>
+      </ScrollView>
       </View>
     );
   },
