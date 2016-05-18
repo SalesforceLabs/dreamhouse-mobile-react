@@ -8,6 +8,38 @@ import React, {
 import getByTypeAndId from '../getByTypeAndId';
 
 import Loader from './Loader';
+import query from '../query';
+
+const subscribers = [];
+
+const subscribe = (comp)=>{
+  subscribers.push(comp)
+};
+
+const unsubscribe = (comp) => {
+  const i = subscribers.indexOf(comp);
+  if(i != -1) {
+    subscribers.splice(i, 1);
+  }
+};
+
+const notify = (ids,sobjs) => {
+  if(subscribers && subscribers.length){
+    subscribers.forEach((subscriber)=>{
+      if(subscriber && subscriber.props && subscriber.props.id){
+        const index = ids.indexOf(subscriber.props.id);
+        if(index>-1){
+          const sobj = sobjs[index];
+          subscriber.setState({
+            sobj:sobj
+          });
+        }
+      }
+    });
+  }
+};
+
+query.addListener(notify);
 
 module.exports = React.createClass ({
   getDefaultProps(){
@@ -26,6 +58,10 @@ module.exports = React.createClass ({
   },
   componentDidMount(){
     this.getInfo();
+    subscribe(this);
+  },
+  componentWillUnmount(){
+    unsubscribe(this);
   },
   handleDataLoad(){
     if(this.props.onData){
@@ -44,8 +80,8 @@ module.exports = React.createClass ({
     getByTypeAndId(this.props.type,this.props.id,true)
     .then((opts)=>{
       that.setState({
-        sobj:opts.sobj,
-        compactTitle: opts.sobj.attributes.compactTitle,
+//        sobj:opts.sobj,
+//        compactTitle: opts.sobj.attributes.compactTitle,
         compactLayout:opts.compactLayout,
         defaultLayout:opts.defaultLayout,
         loading:false

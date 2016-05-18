@@ -28,6 +28,6 @@ module.exports = (type, id, noCache) => {
     .then(getDefaultLayoutFieldNames)
     .then(addToQueue)
     .then(query)
-    .then(getCompactLayoutTitle)
+//    .then(getCompactLayoutTitle)
     .then(doCacheSobj);
 };

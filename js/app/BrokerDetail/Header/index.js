@@ -52,7 +52,7 @@ module.exports = React.createClass({
               />
             </View>
             <Text style={styles.name}>{this.props.sobj.attributes.compactTitle}</Text>
-            <Text style={styles.name}>{title}</Text>
+            <Text style={styles.title}>{title}</Text>
         </View>
     );
   }

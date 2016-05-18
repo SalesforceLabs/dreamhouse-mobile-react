@@ -37,7 +37,7 @@ module.exports = StyleSheet.create({
     backgroundColor: 'white',
   },
   navbar: {
-    backgroundColor: 'green',
+    backgroundColor: '#81ca2b',
     height:60
   },
   page:{

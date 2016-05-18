@@ -3,6 +3,11 @@ import union from 'lodash.union';
 import remove from 'lodash.remove';
 import trim from 'lodash.trim';
 
+import utils from './utils';
+
+
+const listeners = [];
+
 const buildQuery = (type, id, fields) => {
   return 'SELECT ' +
   fields.join(',') +
@@ -10,6 +15,17 @@ const buildQuery = (type, id, fields) => {
   ' WHERE '+ 'Id = \''+id+'\'' +
   ' LIMIT '+ 200;
 };
+
+const broadcast = (records)=>{
+  const ids = records.map((record)=>{
+    return record.Id;
+  });
+  listeners.forEach((listener)=>{
+    listener(ids,records);
+  });
+};
+
+
 
 module.exports = (opts) => {
   return new Promise(
@@ -20,7 +36,7 @@ module.exports = (opts) => {
         return;
       }
 
-      const fields = remove(union(opts.compactLayoutFieldNames, opts.defaultLayoutFieldNames), (name)=>{
+      const fields = remove(union(opts.compactLayoutFieldNames, opts.defaultLayoutFieldNames, ['Id']), (name)=>{
         return trim(name,', _-\n\t').length>0;
       });
 
@@ -32,7 +48,12 @@ module.exports = (opts) => {
 //      forceClient.retrieve(opts.type, opts.id, fields.join(','),
         (response) => {
           if(response.records && response.records.length){
-            opts.sobj = response.records[0];
+            const records = response.records.map((r)=>{
+                r.attributes.compactTitle = utils.getCompactTitle(r, opts.compactTitleFieldNames);
+              return r;
+            });
+            opts.sobj = records[0];
+            broadcast(records);
           }
           resolve(opts);
         },
@@ -42,4 +63,7 @@ module.exports = (opts) => {
       );
     }
   );
+};
+module.exports.addListener = (listener) => {
+  listeners.push(listener);
 };

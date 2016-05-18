@@ -7,13 +7,21 @@ var {
 
 module.exports = StyleSheet.create({
   container: {
-    height:240
+    height:260
   },
   name: {
     textAlign:'center',
     backgroundColor: 'rgba(0,0,0,0)',
     color:'white',
-    padding:10
+    paddingBottom:5,
+    fontSize:28
+  },
+  title: {
+    textAlign:'center',
+    backgroundColor: 'rgba(0,0,0,0)',
+    color:'white',
+    paddingBottom:14,
+    fontSize:14
   },
   imageRow:{
     flex:1,
@@ -21,26 +29,13 @@ module.exports = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     height:160,
-  },
-  titleRow:{
-    flex:1,
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'center',
-    height:50
-  },
-  nameRow:{
-    flex:1,
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'center',
-    height:50
+    marginTop:10
   },
   image:{
-    width:140,
-    height:140,
+    width:160,
+    height:160,
     backgroundColor:'white',
-    borderRadius:70,
+    borderRadius:80,
     borderWidth: 4, 
     borderColor: 'white',
   },
@@ -49,7 +44,7 @@ module.exports = StyleSheet.create({
     bottom:0,
     left:10,
     right:10,
-    height:150,
-    backgroundColor:'green'
+    height:120,
+    backgroundColor:'#81ca2b'
   }
 });
