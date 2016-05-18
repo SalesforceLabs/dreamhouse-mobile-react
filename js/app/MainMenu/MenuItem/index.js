@@ -28,7 +28,7 @@ module.exports = React.createClass({
 
     render() {
       return (
-        <View>
+        <View style={styles.container}>
           <TouchableOpacity onPress={this.handlePress}>
             <Text>{this.props.menuItem.label}</Text>
           </TouchableOpacity>

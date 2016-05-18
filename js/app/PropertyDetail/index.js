@@ -27,7 +27,7 @@ module.exports = React.createClass({
       <View style={styles.container}>
         <ScrollView>
           <F.SobjContainer id={sobj.Id} type={sobj.attributes.type}>
-            <DetailLayout />
+            <CompactLayout />
           </F.SobjContainer>
         </ScrollView>
       </View>
