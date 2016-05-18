@@ -23,7 +23,7 @@ module.exports = React.createClass({
     handlePress() {
       if(this.props.navigator){
         this.props.navigator.push({
-          name:'propertyDetail',
+          name:'brokerDetail',
           sobj: this.props.sobj
         });
       }

@@ -7,7 +7,9 @@ var {
 
 import MenuButton from './MenuButton';
 import BackButton from './BackButton';
+import Title from './Title';
 
+import routes from '../routes';
 
 module.exports = (config) => ({
   LeftButton: (route, navigator, index, navState) => {
@@ -20,6 +22,7 @@ module.exports = (config) => ({
     return null;
   },
   Title (route, navigator, index, navState) {
-    return (<View ><Text > {route.name} </Text></View>);
+    const r = routes[route.name];
+    return <Title label={r.label} />;
   }
 });

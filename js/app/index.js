@@ -9,7 +9,8 @@ var {
     ListView,
     PixelRatio,
     Navigator,
-    TouchableOpacity
+    TouchableOpacity,
+    StatusBar
 } = React;
 
 import SideMenu from 'react-native-side-menu';
@@ -39,6 +40,10 @@ module.exports = React.createClass({
   handleMenuPress(route) {
     this.setState({isOpen:false});
     this.state.navigator.replace(route);
+  },
+
+  componentDidMount(){
+    StatusBar.setBarStyle('light-content', true);
   },
 
   router(route, navigator) {
