@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02E37E28E528DD90AFBC849F /* libPods-dreamhouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E606AE0C7CABF6DAF27DF3CC /* libPods-dreamhouse.a */; };
+		05A4E0881CECF0D600199B05 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 05DF20AE1CECDC5C00D48CFC /* main.jsbundle */; };
 		05DF20921CECD85D00D48CFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D5EA51B6C0568005E64D4 /* AppDelegate.m */; };
 		05DF20931CECD85D00D48CFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D5EA21B6C0568005E64D4 /* main.m */; };
 		05DF20941CECD85D00D48CFC /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D5EC71B6C0F94005E64D4 /* InitialViewController.m */; };
@@ -295,6 +296,7 @@
 				05DF20991CECD85D00D48CFC /* Images.xcassets in Resources */,
 				05DF209A1CECD85D00D48CFC /* SalesforceDesignSystemIconsAction.ttf in Resources */,
 				05DF209B1CECD85D00D48CFC /* SalesforceDesignSystemIconsCustom.ttf in Resources */,
+				05A4E0881CECF0D600199B05 /* main.jsbundle in Resources */,
 				05DF209C1CECD85D00D48CFC /* SalesforceDesignSystemIconsStandard.ttf in Resources */,
 				05DF209D1CECD85D00D48CFC /* SalesforceDesignSystemIconsUtility.ttf in Resources */,
 				05DF209E1CECD85D00D48CFC /* SalesforceSans-Bold.ttf in Resources */,

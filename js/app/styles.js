@@ -33,7 +33,15 @@ var {
 
 module.exports = StyleSheet.create({
   container: {
-      flex: 1,
-      backgroundColor: 'white',
+    flex: 1,
+    backgroundColor: 'white',
+  },
+  navbar: {
+    backgroundColor: 'green',
+    height:60
+  },
+  page:{
+    flex:1,
+    marginTop:60
   }
 });

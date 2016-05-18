@@ -25,26 +25,7 @@ import MainMenu from './MainMenu';
 
 const initialRoute = routes['initial'];
 
-
-
-const NavigationBarRouteMapper = {
-    LeftButton (route, navigator, index, navState) {
-      if(index<1){
-        return null;
-      }
-      return <View ><TouchableOpacity onPress={() => navigator.pop()}><Text style={{padding:10}}>Back</Text></TouchableOpacity></View>;
-    },
-    
-    RightButton (route, navigator, index, navState) {
-        return null;
-    },
-
-    Title (route, navigator, index, navState) {
-        return (<View ><Text > {route.name} </Text></View>);
-  },
-
-};
-
+import NavigationBarRouteMapper from './NavBar/mapper';
 
 module.exports = React.createClass({
 
@@ -64,9 +45,13 @@ module.exports = React.createClass({
     this.state.navigator = navigator;
     const r = routes[route.name];
     if(r && r.comp){
-      return <r.comp route={route} navigator={navigator} />;
+      return <View style={styles.page}><r.comp route={route} navigator={navigator} /></View>;
     }
-    return <initialRoute.comp route={route} navigator={navigator} />;
+    return <View style={styles.page}><initialRoute.comp route={route} navigator={navigator} /></View>;
+  },
+
+  handleMenuOpen(){
+    this.setState({isOpen:true});
   },
 
   render() {
@@ -79,7 +64,7 @@ module.exports = React.createClass({
             configureScene={() => Navigator.SceneConfigs.PushFromRight}
             initialRoute={initialRoute}
             renderScene={this.router}
-            navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouteMapper} />}
+            navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouteMapper({onMenuOpen:this.handleMenuOpen})} style={styles.navbar}/>}
         />
       </SideMenu>
     );
