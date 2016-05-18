@@ -11,6 +11,10 @@ import getCachedCompactLayout from './getCachedCompactLayout';
 import doCacheDefaultLayout from './doCacheDefaultLayout';
 import doCacheCompactLayout from './doCacheCompactLayout';
 
+import addToQueue from './addToQueue';
+
+import queue from './queue';
+
 module.exports = (type, id, noCache) => {
   return getCachedSobj({type:type,id:id, noCache:!!noCache})
     .then(getCachedCompactLayout)
@@ -22,7 +26,7 @@ module.exports = (type, id, noCache) => {
     .then(getDefaultLayout)
     .then(doCacheDefaultLayout)
     .then(getDefaultLayoutFieldNames)
-
+    .then(addToQueue)
     .then(query)
     .then(getCompactLayoutTitle)
     .then(doCacheSobj);

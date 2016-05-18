@@ -41,7 +41,7 @@ module.exports = React.createClass ({
       return;
     }
     const that = this;
-    getByTypeAndId(this.props.type,this.props.id,false)
+    getByTypeAndId(this.props.type,this.props.id,true)
     .then((opts)=>{
       that.setState({
         sobj:opts.sobj,
