@@ -1,5 +1,6 @@
 let Queue = {};
 import TimerMixin from 'react-timer-mixin';
+import keys from 'lodash.keys';
 
 module.exports = {
   add(type, id){
@@ -10,6 +11,9 @@ module.exports = {
     Queue[type].push(id);
     setTimeout(()=>{
       console.log('TRIGGER QUERY !!!');
+      keys(Queue).foreach(key => {
+
+      });
     },300);
   },
   get(type){
