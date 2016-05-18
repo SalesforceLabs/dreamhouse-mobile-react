@@ -20,6 +20,8 @@ import SLDS from 'design-system-react-native';
 
 import styles from './styles';
 
+import Header from './Header';
+
 module.exports = React.createClass({    
   render() {
    const sobj = this.props.route.sobj;
@@ -27,6 +29,7 @@ module.exports = React.createClass({
       <View style={styles.container}>
       <ScrollView>
         <F.SobjContainer id={sobj.Id} type={sobj.attributes.type}>
+          <Header />
           <CompactLayout />
         </F.SobjContainer>
       </ScrollView>
