@@ -11,15 +11,17 @@ import getCachedCompactLayout from './getCachedCompactLayout';
 import doCacheDefaultLayout from './doCacheDefaultLayout';
 import doCacheCompactLayout from './doCacheCompactLayout';
 
-import getMetaByType from './getMetaByType';
-
 import addToQueue from './addToQueue';
 
 import queue from './queue';
 
-module.exports = (type, id, noCache) => {
-  return getCachedSobj({type:type,id:id, noCache:!!noCache})
-    .then(getMetaByType)
-    .then(addToQueue)
-    .then(query);
+module.exports = (opts) => {
+  return getCachedCompactLayout(opts)
+    .then(getCompactLayout)
+    .then(doCacheCompactLayout)
+    .then(getCompactLayoutFieldNames)
+    .then(getCachedDefaultLayout)
+    .then(getDefaultLayout)
+    .then(doCacheDefaultLayout)
+    .then(getDefaultLayoutFieldNames);
 };

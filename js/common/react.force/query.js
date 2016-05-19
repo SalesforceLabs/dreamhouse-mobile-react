@@ -5,6 +5,7 @@ import trim from 'lodash.trim';
 
 import utils from './utils';
 
+let queryCount = 0;
 
 const listeners = [];
 
@@ -20,6 +21,7 @@ const broadcast = (records)=>{
   const ids = records.map((record)=>{
     return record.Id;
   });
+  console.log('BROADCASt: ',listeners);
   listeners.forEach((listener)=>{
     listener(ids,records);
   });
@@ -43,7 +45,7 @@ module.exports = (opts) => {
       const query = buildQuery(opts.type,opts.id,fields);
       console.log('>>> query: '+query);
       console.log('::: ALREADY CACHED!!!');
-
+      queryCount++;
       forceClient.query(query,
 //      forceClient.retrieve(opts.type, opts.id, fields.join(','),
         (response) => {
@@ -52,7 +54,7 @@ module.exports = (opts) => {
                 r.attributes.compactTitle = utils.getCompactTitle(r, opts.compactTitleFieldNames);
               return r;
             });
-            opts.sobj = records[0];
+//            opts.sobj = records[0];
             broadcast(records);
           }
           resolve(opts);
@@ -66,4 +68,7 @@ module.exports = (opts) => {
 };
 module.exports.addListener = (listener) => {
   listeners.push(listener);
+};
+module.exports.getQueryCount = () => {
+  return queryCount;
 };

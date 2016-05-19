@@ -28,6 +28,8 @@ const initialRoute = routes['initial'];
 
 import NavigationBarRouteMapper from './NavBar/mapper';
 
+import F from '../common/react.force';
+
 module.exports = React.createClass({
 
   getInitialState() {
@@ -71,6 +73,7 @@ module.exports = React.createClass({
             renderScene={this.router}
             navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouteMapper({onMenuOpen:this.handleMenuOpen})} style={styles.navbar}/>}
         />
+        <F.QueryCounter />
       </SideMenu>
     );
   }

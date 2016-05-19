@@ -6,6 +6,8 @@ import query from './query';
 import getByTypeAndId from './getByTypeAndId';
 
 import SobjContainer from './SobjContainer';
+import QueryCounter from './QueryCounter';
+import cache from './cache';
 
 module.exports = {
   getByTypeAndId:getByTypeAndId,
@@ -14,5 +16,6 @@ module.exports = {
   getCompactLayout:getCompactLayout,
   getCompactLayoutFieldNames:getCompactLayoutFieldNames,
   query:query,
-  SobjContainer:SobjContainer
+  SobjContainer:SobjContainer,
+  QueryCounter:QueryCounter
 };
