@@ -23,7 +23,7 @@ const unsubscribe = (comp) => {
   }
 };
 
-const notify = (ids,sobjs) => {
+const notify = (ids,sobjs,compactLayout,defaultLayout) => {
   if(subscribers && subscribers.length){
     subscribers.forEach((subscriber)=>{
       if(subscriber && subscriber.props && subscriber.props.id){
@@ -31,7 +31,10 @@ const notify = (ids,sobjs) => {
         if(index>-1){
           const sobj = sobjs[index];
           subscriber.setState({
-            sobj:sobj
+            sobj:sobj,
+            loading:false,
+            compactLayout:compactLayout,
+            defaultLayout:defaultLayout
           });
         }
       }
@@ -57,6 +60,7 @@ module.exports = React.createClass ({
     };
   },
   componentDidMount(){
+    console.log('SOBJ PROPS: ',this.props);
     this.getInfo();
     subscribe(this);
   },
@@ -76,20 +80,21 @@ module.exports = React.createClass ({
     if(!this.props.type || !this.props.id){
       return;
     }
-    const that = this;
-    getByTypeAndId(this.props.type,this.props.id,true)
-    .then((opts)=>{
-      that.setState({
+    getByTypeAndId(this.props.type,this.props.id,true);
+//    .then((opts)=>{
+//      that.setState({
 //        sobj:opts.sobj,
 //        compactTitle: opts.sobj.attributes.compactTitle,
-        compactLayout:opts.compactLayout,
-        defaultLayout:opts.defaultLayout,
-        loading:false
-      });
-      this.handleDataLoad();
-    });
+//        compactLayout:opts.compactLayout,
+//        defaultLayout:opts.defaultLayout,
+        
+//      });
+//      this.handleDataLoad();
+//    });
   },
   render() {
+    console.log('SOBJ: ',this.state.sobj);
+    console.log('compactLayout: ',this.state.compactLayout);
     if(!this.state.sobj || !this.state.sobj.attributes){
       return <Loader />;
     }

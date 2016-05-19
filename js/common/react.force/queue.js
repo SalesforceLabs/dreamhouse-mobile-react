@@ -3,6 +3,8 @@ import TimerMixin from 'react-timer-mixin';
 import keys from 'lodash.keys';
 import query from './query';
 
+import batchRunByType from './batchRunByType';
+
 const get = (type) => {
   const result = Queue[type];
   Queue[type] = [];
@@ -21,6 +23,7 @@ const add = (type, id) => {
     console.log('TRIGGER QUERY !!!');
     if(Queue[type] && Queue[type].length){
       const ids = get(type);
+      batchRunByType(type,ids);
     }
   },300);
 };

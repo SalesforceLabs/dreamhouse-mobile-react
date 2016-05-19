@@ -11,15 +11,13 @@ import getCachedCompactLayout from './getCachedCompactLayout';
 import doCacheDefaultLayout from './doCacheDefaultLayout';
 import doCacheCompactLayout from './doCacheCompactLayout';
 
+import getMetaByType from './getMetaByType';
 
+import addToQueue from './addToQueue';
 
-module.exports = (opts) => {
-  return getCachedCompactLayout(opts)
-    .then(getCompactLayout)
-    .then(doCacheCompactLayout)
-    .then(getCompactLayoutFieldNames)
-    .then(getCachedDefaultLayout)
-    .then(getDefaultLayout)
-    .then(doCacheDefaultLayout)
-    .then(getDefaultLayoutFieldNames);
+import queue from './queue';
+
+module.exports = (type,ids) => {
+  return getMetaByType({type:type, ids:ids})
+    .then(query);
 };

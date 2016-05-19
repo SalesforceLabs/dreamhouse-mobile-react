@@ -23,5 +23,10 @@ module.exports = React.StyleSheet.create({
         // Trick to get the thinest line the device can display
         height: 1 / React.PixelRatio.get(),
         marginLeft: 4,
+    },
+    image: {
+        width:40,
+        height:40,
+        borderRadius:20
     }
 });

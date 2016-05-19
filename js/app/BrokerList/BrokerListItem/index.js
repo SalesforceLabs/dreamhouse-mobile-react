@@ -7,7 +7,7 @@ const {
     StyleSheet,
     Text,
     View,
-    ListView,
+    Image,
     PixelRatio,
     TouchableOpacity
 } = React;
@@ -16,6 +16,8 @@ const {
 import SLDS from 'design-system-react-native';
 
 import styles from './styles';
+
+import F from '../../../common/react.force';
 
 
 module.exports = React.createClass({
@@ -30,17 +32,27 @@ module.exports = React.createClass({
     },
 
     render () {
+      const imgConfig = F.utils.parseImageHTML(this.props.sobj['Picture_IMG__c']);
+      const title = this.props.sobj['Title__c'];
       return (
         <View>
           <TouchableOpacity onPress={this.handlePress}>
-            <View style={styles.row}>
-            <SLDS.Icons.Utility name="like" />
-              <Text numberOfLines={1}>
-               {this.props.sobj.Name}
-              </Text>
-            </View>
-            <View style={styles.cellBorder} />
-          </TouchableOpacity>
+                <View style={styles.row}>
+                <Image 
+                  style={styles.image}
+                  source={{uri: imgConfig.url }}
+                />
+                <View>
+                  <Text numberOfLines={1}>
+                   {this.props.sobj.Name}
+                  </Text>
+                </View>
+                  <Text numberOfLines={1}>
+                   {title}
+                  </Text>
+                </View>
+                <View style={styles.cellBorder} />
+        </TouchableOpacity>
         </View>
       );
     }

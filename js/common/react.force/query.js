@@ -9,21 +9,24 @@ let queryCount = 0;
 
 const listeners = [];
 
-const buildQuery = (type, id, fields) => {
+const buildQuery = (type, ids, fields) => {
+  const where = ids.map((id)=>{
+    return 'Id = \''+id+'\'';
+  }).join(' OR ');
   return 'SELECT ' +
   fields.join(',') +
   ' FROM '+type +
-  ' WHERE '+ 'Id = \''+id+'\'' +
+  ' WHERE '+ where +
   ' LIMIT '+ 200;
 };
 
-const broadcast = (records)=>{
+const broadcast = (records,compactLayout,defaultLayout)=>{
   const ids = records.map((record)=>{
     return record.Id;
   });
   console.log('BROADCASt: ',listeners);
   listeners.forEach((listener)=>{
-    listener(ids,records);
+    listener(ids,records,compactLayout,defaultLayout);
   });
 };
 
@@ -42,20 +45,19 @@ module.exports = (opts) => {
         return trim(name,', _-\n\t').length>0;
       });
 
-      const query = buildQuery(opts.type,opts.id,fields);
+      const query = buildQuery(opts.type,opts.ids,fields);
       console.log('>>> query: '+query);
       console.log('::: ALREADY CACHED!!!');
       queryCount++;
       forceClient.query(query,
-//      forceClient.retrieve(opts.type, opts.id, fields.join(','),
         (response) => {
+          console.log('RESPONSE: ',response);
           if(response.records && response.records.length){
             const records = response.records.map((r)=>{
                 r.attributes.compactTitle = utils.getCompactTitle(r, opts.compactTitleFieldNames);
               return r;
             });
-//            opts.sobj = records[0];
-            broadcast(records);
+            broadcast(records, opts.compactLayout, opts.defaultLayout);
           }
           resolve(opts);
         },

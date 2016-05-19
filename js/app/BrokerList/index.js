@@ -14,6 +14,9 @@ const {
 
 import forceClient from '../../common/react.force/react.force.net.js';
 
+import F from '../../common/react.force';
+
+
 import SLDS from 'design-system-react-native';
 
 import BrokerListItem from './BrokerListItem';
@@ -55,7 +58,9 @@ module.exports = React.createClass({
 
     renderRow (sobj) {
       return (
-        <BrokerListItem sobj={sobj} route={this.props.route} navigator={this.props.navigator} />
+        <F.SobjContainer type={sobj.attributes.type} id={sobj.Id} >
+          <BrokerListItem route={this.props.route} navigator={this.props.navigator} />
+        </F.SobjContainer>
       );
     },
 
