@@ -25,8 +25,8 @@ module.exports = React.StyleSheet.create({
         marginLeft: 4,
     },
     image: {
-        width:40,
-        height:40,
-        borderRadius:20
+        width:30,
+        height:30,
+        borderRadius:15
     }
 });

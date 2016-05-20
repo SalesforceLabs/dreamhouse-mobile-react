@@ -12,6 +12,8 @@ const {
     TouchableOpacity
 } = React;
 
+import F from '../../common/react.force';
+
 import forceClient from '../../common/react.force/react.force.net.js';
 
 import SLDS from 'design-system-react-native';
@@ -20,7 +22,8 @@ import PropertyListItem from './PropertyListItem';
 
 import styles from './styles';
 
-const soql = 'SELECT Id, Name FROM Property__c LIMIT 100';
+
+const soql = 'SELECT Id, Name, Title__c, Thumbnail_IMG__c, City__c, State__c, Price__c FROM Property__c LIMIT 100';
 
 module.exports = React.createClass({
     getInitialState() {
@@ -55,7 +58,9 @@ module.exports = React.createClass({
 
     renderRow (sobj) {
       return (
-        <PropertyListItem sobj={sobj} route={this.props.route} navigator={this.props.navigator} />
+        <F.SobjContainer type={sobj.attributes.type} id={sobj.Id} >
+          <PropertyListItem sobj={sobj} route={this.props.route} navigator={this.props.navigator} />
+        </F.SobjContainer>
       );
     },
 

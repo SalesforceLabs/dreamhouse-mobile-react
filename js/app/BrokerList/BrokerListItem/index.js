@@ -31,29 +31,28 @@ module.exports = React.createClass({
       }
     },
 
+    shouldComponentUpdate (newProps,newStats) {
+      if( newProps.sobj['Title__c'] !== this.props.sobj['Title__c'] ||
+          newProps.sobj['Picture_IMG__c'] !== this.props.sobj['Picture_IMG__c'] ||
+          newProps.sobj['Name'] !== this.props.sobj['Name']){
+        return true;
+      }
+      return false;
+    },
+
     render () {
       const imgConfig = F.utils.parseImageHTML(this.props.sobj['Picture_IMG__c']);
       const title = this.props.sobj['Title__c'];
       return (
-        <View>
-          <TouchableOpacity onPress={this.handlePress}>
-                <View style={styles.row}>
-                <Image 
+        <TouchableOpacity onPress={this.handlePress}>
+          <SLDS.Tiles.List 
+            title={this.props.sobj.Name} 
+            detail={title}
+            image={<Image 
                   style={styles.image}
                   source={{uri: imgConfig.url }}
-                />
-                <View>
-                  <Text numberOfLines={1}>
-                   {this.props.sobj.Name}
-                  </Text>
-                </View>
-                  <Text numberOfLines={1}>
-                   {title}
-                  </Text>
-                </View>
-                <View style={styles.cellBorder} />
+                />} />
         </TouchableOpacity>
-        </View>
       );
     }
 });

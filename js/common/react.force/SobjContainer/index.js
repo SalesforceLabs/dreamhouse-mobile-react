@@ -60,7 +60,6 @@ module.exports = React.createClass ({
     };
   },
   componentDidMount(){
-    console.log('SOBJ PROPS: ',this.props);
     this.getInfo();
     subscribe(this);
   },
@@ -80,8 +79,17 @@ module.exports = React.createClass ({
     if(!this.props.type || !this.props.id){
       return;
     }
-    getByTypeAndId(this.props.type,this.props.id,true);
-//    .then((opts)=>{
+    getByTypeAndId(this.props.type,this.props.id,false)
+    .then((opts)=>{
+        if(opts.cachedSobj){
+          this.setState({
+            sobj:opts.cachedSobj,
+            compactTitle: opts.cachedSobj.attributes.compactTitle,
+            compactLayout:opts.compactLayout,
+            defaultLayout:opts.defaultLayout,
+          });
+        }
+      });
 //      that.setState({
 //        sobj:opts.sobj,
 //        compactTitle: opts.sobj.attributes.compactTitle,
@@ -92,22 +100,26 @@ module.exports = React.createClass ({
 //      this.handleDataLoad();
 //    });
   },
-  render() {
-    console.log('SOBJ: ',this.state.sobj);
-    console.log('compactLayout: ',this.state.compactLayout);
-    if(!this.state.sobj || !this.state.sobj.attributes){
-      return <Loader />;
+
+  getBody() {
+    if(this.state.sobj && this.state.sobj.attributes){
+
+      return React.Children.map(this.props.children,
+      (child) => React.cloneElement(child, {
+          sobj:this.state.sobj,
+          compactLayout:this.state.compactLayout,
+          defaultLayout:this.state.defaultLayout
+        })
+      )
+
     }
-    const childrenWithProps = React.Children.map(this.props.children,
-     (child) => React.cloneElement(child, {
-        sobj:this.state.sobj,
-        compactLayout:this.state.compactLayout,
-        defaultLayout:this.state.defaultLayout
-     })
-    );
+    return this.props.children;
+  },
+
+  render() {
     return (
       <View>
-        {childrenWithProps}
+        {this.getBody()}
       </View>
     )
   },

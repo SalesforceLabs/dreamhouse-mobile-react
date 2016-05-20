@@ -1,5 +1,5 @@
 module.exports = (image_html)=>{
-  if(!image_html) return;
+  if(!image_html) return {};
   const splits = image_html.split(' ');
   let url = null;
   let width = 50;

@@ -23,7 +23,7 @@ import BrokerListItem from './BrokerListItem';
 
 import styles from './styles';
 
-const soql = 'SELECT Id, Name FROM Broker__c LIMIT 100';
+const soql = 'SELECT Id, Name, Title__c FROM Broker__c LIMIT 100';
 
 module.exports = React.createClass({
     getInitialState() {
@@ -59,7 +59,7 @@ module.exports = React.createClass({
     renderRow (sobj) {
       return (
         <F.SobjContainer type={sobj.attributes.type} id={sobj.Id} >
-          <BrokerListItem route={this.props.route} navigator={this.props.navigator} />
+          <BrokerListItem sobj={sobj} route={this.props.route} navigator={this.props.navigator} />
         </F.SobjContainer>
       );
     },
