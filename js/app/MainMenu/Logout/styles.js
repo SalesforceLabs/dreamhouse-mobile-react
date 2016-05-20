@@ -7,12 +7,10 @@ var {
 
 module.exports = StyleSheet.create({
   container: {
-      flex: 1,
-      backgroundColor: 'white',
-      paddingTop:10
+    marginTop:20
   },
-  title: {
-    fontSize:20,
-    padding:20
+  image: {
+    width:20,
+    height:20
   }
 });

@@ -48,8 +48,6 @@ module.exports = React.createClass({
     },
 
     shouldComponentUpdate(nextProps, nextState){
-      console.log('!!! shouldComponentUpdate');
-      return false;
       if( nextProps.sobj['Thumbnail_IMG__c'] !== this.props.sobj['Thumbnail_IMG__c'] ||
           nextProps.sobj['Picture_IMG__c'] !== this.props.sobj['Picture_IMG__c'] ||
           nextProps.sobj['Name'] !== this.props.sobj['Name'] ||

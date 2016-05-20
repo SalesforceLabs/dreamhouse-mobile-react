@@ -46,11 +46,10 @@ module.exports = (opts) => {
       });
 
       const query = buildQuery(opts.type,opts.ids,fields);
-      console.log('>>> query: '+query);
-      console.log('::: ALREADY CACHED!!!');
       queryCount++;
       forceClient.query(query,
         (response) => {
+          console.log('#### RESPONSE: ');
           console.log('RESPONSE: ',response);
           if(response.records && response.records.length){
             const records = response.records.map((r)=>{

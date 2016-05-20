@@ -21,12 +21,20 @@ import routes from '../routes';
 
 import MenuItem from './MenuItem';
 
+import Logout from './Logout';
+
+import oauth from '../../common/react.force/react.force.oauth';
+
 module.exports = React.createClass({
     
   handleMenuItemPress(route) {
     if(this.props.onMenuPress){
       this.props.onMenuPress(route);
     }
+  },
+
+  handleLogout(){
+    oauth.logout();
   },
 
   getMenuItems () {
@@ -43,7 +51,9 @@ module.exports = React.createClass({
   render () {
     return (
       <View style={styles.container}>
+        <SLDS.Text style={styles.title}>DreamHouse</SLDS.Text>
         { this.getMenuItems() }
+        <Logout label='Logout' onPress={this.handleLogout} />
       </View>
     );
   }
