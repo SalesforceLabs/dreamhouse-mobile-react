@@ -18,7 +18,7 @@ import forceClient from '../../common/react.force/react.force.net.js';
 
 import SLDS from 'design-system-react-native';
 
-import PropertyListItem from './PropertyListItem';
+import PropertyListItem from '../PropertyList/PropertyListItem';
 
 import styles from './styles';
 
@@ -36,7 +36,6 @@ module.exports = React.createClass({
     componentDidMount() {
       forceClient.query(soql,
         (response) => {
-          console.log('>>> response.records: ',response.records);
           const items = response.records;
           this.setState({
               dataSource: this.getDataSource(items),

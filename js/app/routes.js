@@ -8,18 +8,19 @@ module.exports = {
   initial:{
     name:'propertyList',
     comp: PropertyList,
-    label: 'Properties'
+    label: 'Properties',
+    icon:'home'
   },
   propertyList:{
     name:'propertyList',
     comp: PropertyList,
-    label: 'Properties'
+    label: 'Properties',
+    icon:'home'
   },
   propertyDetail:{
     name:'propertyDetail',
     comp: PropertyDetail,
     label: 'Property',
-    icon:'home'
   },
   favoriteList:{
     name:'favoriteList',

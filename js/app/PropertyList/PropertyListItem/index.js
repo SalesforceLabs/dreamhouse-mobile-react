@@ -22,6 +22,12 @@ import styles from './styles';
 
 module.exports = React.createClass({
     
+    getDefaultProps(){
+      return {
+        sobj:{attributes:{}}
+      }
+    },
+
     handlePress() {
       if(this.props.navigator){
         this.props.navigator.push({
@@ -32,13 +38,18 @@ module.exports = React.createClass({
     },
 
     getDetail () {
-      const city = this.props.sobj['City__c'];
-      const state = this.props.sobj['State__c'];
-      const price = this.props.sobj['Price__c'];
-      return city+', '+state+' ● '+'$'+price;
+      if(this.props.sobj['City__c'] && this.props.sobj['State__c'] && this.props.sobj['Price__c']){
+        const city = this.props.sobj['City__c'];
+        const state = this.props.sobj['State__c'];
+        const price = this.props.sobj['Price__c'];
+        return city+', '+state+' ● '+'$'+price;
+      }
+      return ' ';
     },
 
     shouldComponentUpdate(nextProps, nextState){
+      console.log('!!! shouldComponentUpdate');
+      return false;
       if( nextProps.sobj['Thumbnail_IMG__c'] !== this.props.sobj['Thumbnail_IMG__c'] ||
           nextProps.sobj['Picture_IMG__c'] !== this.props.sobj['Picture_IMG__c'] ||
           nextProps.sobj['Name'] !== this.props.sobj['Name'] ||
@@ -52,8 +63,8 @@ module.exports = React.createClass({
     },
 
     render () {
-      const imgConfig = F.utils.parseImageHTML(this.props.sobj['Thumbnail_IMG__c']);
-      const title = this.props.sobj['Title__c'];
+      const imgConfig = this.props.sobj['Thumbnail_IMG__c']?F.utils.parseImageHTML(this.props.sobj['Thumbnail_IMG__c']):'';
+      const title = this.props.sobj['Title__c']?this.props.sobj['Title__c']:'';
       const detail = this.getDetail();
       return (
           <TouchableOpacity onPress={this.handlePress}>

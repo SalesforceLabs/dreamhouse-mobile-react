@@ -49,7 +49,8 @@ module.exports = React.createClass ({
     return {
       type:null,
       id:null,
-      refreshDate:new Date()
+      refreshDate:new Date(),
+      update:true
     };
   },
   getInitialState(){
@@ -120,6 +121,9 @@ module.exports = React.createClass ({
     }
   },
   shouldComponentUpdate(nextProps, nextState){
+    if(!this.props.update){
+      return false;
+    }
     if(this.props.type !== nextProps.type){
       return true;
     }

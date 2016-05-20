@@ -35,6 +35,13 @@ module.exports = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
+    shadowColor:'#000000',
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    shadowOffset: {
+      height:1,
+      width:0
+    }
   },
   navbar: {
     backgroundColor: '#81ca2b',
@@ -42,6 +49,8 @@ module.exports = StyleSheet.create({
   },
   page:{
     flex:1,
-    marginTop:60
+    marginTop:60,
+    borderLeftWidth: 1,
+    borderLeftColor: '#d8dde6' 
   }
 });

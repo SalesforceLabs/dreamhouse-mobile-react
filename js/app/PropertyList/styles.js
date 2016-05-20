@@ -5,7 +5,8 @@ import React from 'react-native';
 module.exports = React.StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'white',
+        margin:1,
+        backgroundColor: 'white'
     },
     header: {
         height: 50,
