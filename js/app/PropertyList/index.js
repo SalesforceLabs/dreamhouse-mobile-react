@@ -43,15 +43,6 @@ module.exports = React.createClass({
         });
     },
 
-    handlePress() {
-      if(this.props.navigator){
-        this.props.navigator.push({
-          name:'propertyDetail',
-
-        });
-      }
-    },
-
     getDataSource (users) {
       return this.state.dataSource.cloneWithRows(users);
     },

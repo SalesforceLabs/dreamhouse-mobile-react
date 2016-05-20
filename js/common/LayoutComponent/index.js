@@ -49,6 +49,7 @@ module.exports = React.createClass ({
           onSobjRequest={this.props.onSobjRequest}/>;
     }
     if(this.props.layoutItem && this.props.layoutItem.details && this.props.layoutItem.details.type === 'reference'){
+      console.log('REFERENCE!!!');
       return (
         <Reference 
           sobj={this.props.sobj} 

@@ -12,7 +12,7 @@ import FieldItem from './FieldItem';
 module.exports = React.createClass ({
   getDefaultProps(){
     return {
-      sobj:{},
+      sobj:{attributes:{}},
       compactLayout:{},
       onSobjRequest:null
     };
@@ -33,7 +33,6 @@ module.exports = React.createClass ({
     }
   },
   render() {
-    console.log(' !!! COMPACT LAYOUT !!!');
     return (
       <View>
         {this.getFieldItems()}

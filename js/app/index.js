@@ -4,6 +4,7 @@ var React = require('react-native');
 var {
     AppRegistry,
     StyleSheet,
+    AsyncStorage,
     Text,
     View,
     ListView,
@@ -30,6 +31,7 @@ import NavigationBarRouteMapper from './NavBar/mapper';
 
 import F from '../common/react.force';
 
+
 module.exports = React.createClass({
 
   getInitialState() {
@@ -45,6 +47,7 @@ module.exports = React.createClass({
   },
 
   componentDidMount(){
+    AsyncStorage.clear();
     StatusBar.setBarStyle('light-content', true);
   },
 

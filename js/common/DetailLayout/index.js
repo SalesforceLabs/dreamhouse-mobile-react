@@ -12,7 +12,7 @@ import LayoutSection from './LayoutSection';
 module.exports = React.createClass ({
   getDefaultProps(){
     return {
-      sobj:{},
+      sobj:{attributes:{}},
       defaultLayout:{}
     };
   },

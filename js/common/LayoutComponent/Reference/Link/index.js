@@ -10,9 +10,21 @@ import SLDS from 'design-system-react-native';
 
 
 module.exports = React.createClass ({
+  getDefaultProps(){
+    return {
+      sobj:{attributes:{compactTitle:' '}}
+    };
+  },
   handlePress(){
-    if(this.props.onPress){
-      this.props.onPress();
+    if(this.props.onLayoutTap){
+      this.props.onLayoutTap(
+        {
+          refSobj:this.props.sobj,
+          layoutItem:this.props.layoutItem,
+          sobj:this.props.parentSobj,
+          eventType:this.props.layoutItem.details.type
+        }
+      );
     }
   },
   render() {

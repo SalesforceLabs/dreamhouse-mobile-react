@@ -20,7 +20,7 @@ import SobjContainer from '../../react.force/SobjContainer';
 module.exports = React.createClass ({
   getDefaultProps(){
     return {
-      sobj:{},
+      sobj:{attributes:{}},
       layoutItem:{}
     };
   },
@@ -38,16 +38,9 @@ module.exports = React.createClass ({
     const referenceId = this.props.sobj[this.props.layoutItem.details.name];
     const referenceType = this.props.layoutItem.details.referenceTo[this.props.layoutItem.details.referenceTo.length-1];
 
-    if(referenceType === 'Group'){
-      console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@@@: ');
-      console.log('this.props.layoutItem.details: ');
-      console.log(this.props.layoutItem.details);
-    }
-
     if(!referenceType || !referenceType){
       return <Empty />
     }
-
     return (
       <SobjContainer
         type={referenceType}
@@ -55,6 +48,9 @@ module.exports = React.createClass ({
       >
         <Link 
           onPress={this.handlePress}
+          onLayoutTap={this.props.onLayoutTap}
+          layoutItem={this.props.layoutItem}
+          parentSobj={this.props.sobj}
         />
       </SobjContainer>
     );
