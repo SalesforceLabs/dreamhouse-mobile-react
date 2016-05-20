@@ -38,9 +38,10 @@ module.exports = React.createClass({
   },
 
   getMenuItems () {
-    return routes.menu.map((menuItem)=>{
+    return routes.menu.map((menuItem,index)=>{
       const r = routes[menuItem];
       return <MenuItem 
+        key={'menu_'+index}
         navigator={this.props.navigator}
         route={this.props.route}
         onPress={this.handleMenuItemPress}

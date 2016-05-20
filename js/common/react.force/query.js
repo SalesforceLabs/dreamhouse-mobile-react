@@ -5,6 +5,7 @@ import trim from 'lodash.trim';
 
 import utils from './utils';
 
+
 let queryCount = 0;
 
 const listeners = [];
@@ -51,6 +52,7 @@ module.exports = (opts) => {
         (response) => {
           console.log('#### RESPONSE: ');
           console.log('RESPONSE: ',response);
+          console.log('opts.compactLayout: ',opts.compactLayout);
           if(response.records && response.records.length){
             const records = response.records.map((r)=>{
                 r.attributes.compactTitle = utils.getCompactTitle(r, opts.compactTitleFieldNames);
@@ -58,6 +60,7 @@ module.exports = (opts) => {
             });
             broadcast(records, opts.compactLayout, opts.defaultLayout);
           }
+
           resolve(opts);
         },
         (error)=>{

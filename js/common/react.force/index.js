@@ -9,6 +9,7 @@ import SobjContainer from './SobjContainer';
 import QueryCounter from './QueryCounter';
 import cache from './cache';
 import utils from './utils';
+import refs from './refs';
 
 module.exports = {
   getByTypeAndId:getByTypeAndId,

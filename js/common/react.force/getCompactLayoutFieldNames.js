@@ -6,6 +6,7 @@ module.exports = (opts) => {
     (resolve, reject) => {
       const fields = [];
       const compactTitleFieldNames = [];
+      const refs = {};
       if(opts.compactLayout.fieldItems){
         opts.compactLayout.fieldItems.forEach((fieldItem, fieldItemIndex)=>{
           if(fieldItem.layoutComponents && fieldItem.layoutComponents.length){
@@ -23,6 +24,15 @@ module.exports = (opts) => {
               else{
                 if(layoutComponent.value && trim(layoutComponent.value,'_-\n\t').length){
                   fields.push(layoutComponent.value);
+                  if(layoutComponent.details && 
+                      layoutComponent.details.type && 
+                      layoutComponent.details.type === 'reference' && 
+                      layoutComponent.details.referenceTo && 
+                      layoutComponent.details.referenceTo.length){
+                        const ref = layoutComponent.details.referenceTo[layoutComponent.details.referenceTo.length-1];
+                        refs[layoutComponent.details.name] = ref;
+                  }
+
                   if(fieldItemIndex < 1){
                     compactTitleFieldNames.push(layoutComponent.value);
                   }
@@ -33,6 +43,7 @@ module.exports = (opts) => {
         });
         opts.compactLayoutFieldNames = fields;
         opts.compactTitleFieldNames = compactTitleFieldNames;
+        opts.compactLayout.refs = refs;
         resolve(opts);
       }
       else{
