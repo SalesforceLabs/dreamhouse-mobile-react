@@ -9,5 +9,9 @@ module.exports = StyleSheet.create({
   container: {
       backgroundColor: 'white',
       padding:10
+  },
+  image: {
+    width:20,
+    height:20
   }
 });

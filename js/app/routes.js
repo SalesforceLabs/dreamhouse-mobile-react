@@ -1,5 +1,6 @@
 import PropertyList from './PropertyList';
 import PropertyDetail from './PropertyDetail';
+import FavoriteList from './FavoriteList';
 import BrokerList from './BrokerList';
 import BrokerDetail from './BrokerDetail';
 
@@ -17,12 +18,20 @@ module.exports = {
   propertyDetail:{
     name:'propertyDetail',
     comp: PropertyDetail,
-    label: 'Property'
+    label: 'Property',
+    icon:'home'
+  },
+  favoriteList:{
+    name:'favoriteList',
+    comp: FavoriteList,
+    label: 'Favorites',
+    icon:'favorite'
   },
   brokerList:{
     name:'brokerList',
     comp: BrokerList,
-    label: 'Brokers'
+    label: 'Brokers',
+    icon: 'groups'
   },
   brokerDetail:{
     name:'brokerDetail',
@@ -31,4 +40,4 @@ module.exports = {
   }
 };
 
-module.exports.menu = ['propertyList','brokerList'];
+module.exports.menu = ['propertyList','brokerList','favoriteList'];

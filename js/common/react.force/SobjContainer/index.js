@@ -90,15 +90,6 @@ module.exports = React.createClass ({
           });
         }
       });
-//      that.setState({
-//        sobj:opts.sobj,
-//        compactTitle: opts.sobj.attributes.compactTitle,
-//        compactLayout:opts.compactLayout,
-//        defaultLayout:opts.defaultLayout,
-        
-//      });
-//      this.handleDataLoad();
-//    });
   },
 
   getBody() {

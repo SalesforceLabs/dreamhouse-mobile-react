@@ -28,11 +28,12 @@ module.exports = React.createClass({
 
     render() {
       return (
-        <View style={styles.container}>
           <TouchableOpacity onPress={this.handlePress}>
-            <Text>{this.props.menuItem.label}</Text>
+          <SLDS.Tiles.List 
+            title={this.props.menuItem.label} 
+            image={<SLDS.Icons.Utility name={this.props.menuItem.icon} style={styles.image} />}
+            />
           </TouchableOpacity>
-        </View>
       );
     }
 });
