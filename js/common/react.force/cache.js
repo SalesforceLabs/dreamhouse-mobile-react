@@ -2,6 +2,8 @@ import { AsyncStorage } from 'react-native';
 
 import query from './query';
 
+//let CACHE = {};
+
 const notify = (ids,sobjs) => {
   console.log('===========================');
   console.log('CACHE NOTIFIED: ',ids, sobjs);
@@ -16,11 +18,12 @@ query.addListener(notify);
 let cache = {};
 
 const get = (id)=>{
-  return cache(id);
+  return cache[id];
 };
 
 const set = (sobj)=>{
   cache[sobj.Id] = sobj;
+/*
   if(sobj && sobj.attributes && sobj.attributes.type && sobj.attributes.url){
     const type = sobj.attributes.type;
     const id = sobj.attributes.url.substring(sobj.attributes.url.lastIndexOf('/')+1);
@@ -29,6 +32,7 @@ const set = (sobj)=>{
 
     });
   }
+*/
 };
 
 module.exports = {
