@@ -17,7 +17,7 @@ module.exports = StyleSheet.create({
     paddingLeft:10,
     fontSize:18
   },
-  title: {
+  desc: {
     textAlign:'left',
     backgroundColor: 'rgba(0,0,0,0)',
     paddingBottom:14,

@@ -23,7 +23,7 @@ import BrokerListItem from './BrokerListItem';
 
 import styles from './styles';
 
-const soql = 'SELECT Id, Name, Title__c, Picture_IMG__c FROM Broker__c LIMIT 100';
+const soql = 'SELECT Id, Name FROM Broker__c LIMIT 100';
 
 module.exports = React.createClass({
     getInitialState() {

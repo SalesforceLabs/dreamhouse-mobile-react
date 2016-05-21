@@ -23,7 +23,7 @@ import PropertyListItem from './PropertyListItem';
 import styles from './styles';
 
 
-const soql = 'SELECT Id, Name, Title__c, Thumbnail_IMG__c, City__c, State__c, Price__c FROM Property__c LIMIT 100';
+const soql = 'SELECT Id, Name FROM Property__c LIMIT 100';
 
 module.exports = React.createClass({
     getInitialState() {

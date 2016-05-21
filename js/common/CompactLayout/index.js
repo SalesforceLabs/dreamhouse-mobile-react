@@ -10,20 +10,23 @@ import SLDS from 'design-system-react-native';
 import FieldItem from './FieldItem';
 
 module.exports = React.createClass ({
+  contextTypes: {
+    sobj: React.PropTypes.object,
+    compactLayout: React.PropTypes.object,
+    defaultLayout: React.PropTypes.object
+  },
   getDefaultProps(){
     return {
-      sobj:{attributes:{}},
-      compactLayout:{},
       onSobjRequest:null
     };
   },
   getFieldItems(){
-    if(this.props.compactLayout && this.props.compactLayout.fieldItems && this.props.compactLayout.fieldItems.length){
-      return this.props.compactLayout.fieldItems.map((layoutItem,index)=>{
+    if(this.context.compactLayout && this.context.compactLayout.fieldItems && this.context.compactLayout.fieldItems.length){
+      return this.context.compactLayout.fieldItems.map((layoutItem,index)=>{
         if(index){
           return (
             <FieldItem 
-            sobj={this.props.sobj} 
+            sobj={this.context.sobj} 
             layoutItem={layoutItem} 
             onLayoutTap={this.props.onLayoutTap}
             onSobjRequest={this.props.onSobjRequest} />

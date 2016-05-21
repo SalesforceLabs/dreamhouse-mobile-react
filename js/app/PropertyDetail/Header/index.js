@@ -14,15 +14,20 @@ import F from '../../../common/react.force';
 
 module.exports = React.createClass({
 
+  contextTypes: {
+    sobj: React.PropTypes.object
+  },
+
   getDefaultProps(){
     return {
-      sobj:{attributes:{}}
     };
   },
 
   render(){
-    const imgConfig = F.utils.parseImageHTML(this.props.sobj['Picture_IMG__c']);
-    const title = this.props.sobj['Title__c'];
+    const imgConfig = F.utils.parseImageHTML(this.context.sobj['Picture_IMG__c']);
+    const name = this.context.sobj['Title__c'];
+    const desc = this.context.sobj['Description__c'];
+
     return (
         <View style={styles.container}>
           <View style={styles.imageContainer}>
@@ -31,8 +36,8 @@ module.exports = React.createClass({
               source={{uri: imgConfig.url }}
             />
           </View>
-          <SLDS.Text style={styles.name}>{title}</SLDS.Text>
-          <SLDS.Text style={styles.title}>{this.props.sobj.attributes.compactTitle}</SLDS.Text>
+          <SLDS.Text style={styles.name}>{name}</SLDS.Text>
+          <SLDS.Text style={styles.desc}>{desc}</SLDS.Text>
         </View>
     );
   }

@@ -24,45 +24,39 @@ module.exports = React.createClass({
     
     getDefaultProps(){
       return {
-        sobj:{attributes:{}}
       }
+    },
+
+    contextTypes: {
+      sobj: React.PropTypes.object
     },
 
     handlePress() {
       if(this.props.navigator){
         this.props.navigator.push({
           name:'propertyDetail',
-          sobj: this.props.sobj
+          sobj: this.context.sobj
         });
       }
     },
 
     getDetail () {
-      if(this.props.sobj['City__c'] && this.props.sobj['State__c'] && this.props.sobj['Price__c']){
-        const city = this.props.sobj['City__c'];
-        const state = this.props.sobj['State__c'];
-        const price = this.props.sobj['Price__c'];
+      if(this.context.sobj['City__c'] && this.context.sobj['State__c'] && this.context.sobj['Price__c']){
+        const city = this.context.sobj['City__c'];
+        const state = this.context.sobj['State__c'];
+        const price = this.context.sobj['Price__c'];
         return city+', '+state+' ● '+'$'+price;
       }
       return ' ';
     },
 
-    shouldComponentUpdate(nextProps, nextState){
-      if( nextProps.sobj['Thumbnail_IMG__c'] !== this.props.sobj['Thumbnail_IMG__c'] ||
-          nextProps.sobj['Picture_IMG__c'] !== this.props.sobj['Picture_IMG__c'] ||
-          nextProps.sobj['Name'] !== this.props.sobj['Name'] ||
-          nextProps.sobj['City__c'] !== this.props.sobj['City__c'] ||
-          nextProps.sobj['State__c'] !== this.props.sobj['State__c'] ||
-          nextProps.sobj['Price__c'] !== this.props.sobj['Price__c']
-        ){
-        return true;
-      }
-      return false;
+    shouldComponentUpdate(nextProps, nextState, nextContext){
+      return nextContext.sobj !== this.context.sobj;
     },
 
     render () {
-      const imgConfig = this.props.sobj['Thumbnail_IMG__c']?F.utils.parseImageHTML(this.props.sobj['Thumbnail_IMG__c']):'';
-      const title = this.props.sobj['Title__c']?this.props.sobj['Title__c']:'';
+      const imgConfig = this.context.sobj['Thumbnail_IMG__c']?F.utils.parseImageHTML(this.context.sobj['Thumbnail_IMG__c']):'';
+      const title = this.context.sobj['Title__c']?this.context.sobj['Title__c']:'';
       const detail = this.getDetail();
       return (
           <TouchableOpacity onPress={this.handlePress}>

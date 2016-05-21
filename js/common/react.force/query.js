@@ -25,7 +25,6 @@ const broadcast = (records,compactLayout,defaultLayout)=>{
   const ids = records.map((record)=>{
     return record.Id;
   });
-  console.log('BROADCASt: ',listeners);
   listeners.forEach((listener)=>{
     listener(ids,records,compactLayout,defaultLayout);
   });
@@ -50,9 +49,6 @@ module.exports = (opts) => {
       queryCount++;
       forceClient.query(query,
         (response) => {
-          console.log('#### RESPONSE: ');
-          console.log('RESPONSE: ',response);
-          console.log('opts.compactLayout: ',opts.compactLayout);
           if(response.records && response.records.length){
             const records = response.records.map((r)=>{
                 r.attributes.compactTitle = utils.getCompactTitle(r, opts.compactTitleFieldNames);

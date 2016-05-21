@@ -53,11 +53,24 @@ module.exports = React.createClass ({
       update:true
     };
   },
+  childContextTypes: {
+    sobj: React.PropTypes.object,
+    compactLayout: React.PropTypes.object,
+    defaultLayout: React.PropTypes.object
+  },
   getInitialState(){
     return {
-      sobj:{},
+      sobj:{Name:' ',attributes:{}},
       compactLayout:{},
+      defaultLayout:{},
       loading:false
+    };
+  },
+  getChildContext() {
+    return {
+      sobj: this.state.sobj,
+      compactLayout:this.state.compactLayout,
+      defaultLayout:this.state.defaultLayout
     };
   },
   componentDidMount(){
@@ -80,7 +93,7 @@ module.exports = React.createClass ({
     if(!this.props.type || !this.props.id){
       return;
     }
-    getByTypeAndId(this.props.type,this.props.id,false)
+    getByTypeAndId(this.props.type,this.props.id)
     .then((opts)=>{
         if(opts.cachedSobj){
           this.setState({
@@ -94,6 +107,7 @@ module.exports = React.createClass ({
   },
 
   getBody() {
+{/*
     if(this.state.sobj && this.state.sobj.attributes){
 
       return React.Children.map(this.props.children,
@@ -105,6 +119,7 @@ module.exports = React.createClass ({
       )
 
     }
+*/}
     return this.props.children;
   },
 
@@ -122,7 +137,7 @@ module.exports = React.createClass ({
   },
   shouldComponentUpdate(nextProps, nextState){
     if(!this.props.update){
-      return false;
+//      return false;
     }
     if(this.props.type !== nextProps.type){
       return true;

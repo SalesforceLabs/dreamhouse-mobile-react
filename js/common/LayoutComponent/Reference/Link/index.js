@@ -10,6 +10,11 @@ import SLDS from 'design-system-react-native';
 
 
 module.exports = React.createClass ({
+  contextTypes: {
+    sobj: React.PropTypes.object,
+    compactLayout: React.PropTypes.object,
+    defaultLayout: React.PropTypes.object
+  },
   getDefaultProps(){
     return {
       sobj:{attributes:{compactTitle:' '}}
@@ -19,7 +24,7 @@ module.exports = React.createClass ({
     if(this.props.onLayoutTap){
       this.props.onLayoutTap(
         {
-          refSobj:this.props.sobj,
+          refSobj:this.context.sobj,
           layoutItem:this.props.layoutItem,
           sobj:this.props.parentSobj,
           eventType:this.props.layoutItem.details.type
@@ -35,7 +40,7 @@ module.exports = React.createClass ({
         onPress={this.handlePress}>
         <View>
           <SLDS.InputReadonly.ValueText>
-            {this.props.sobj.attributes.compactTitle}
+            {this.context.sobj.attributes.compactTitle?this.context.sobj.attributes.compactTitle:' '}
           </SLDS.InputReadonly.ValueText>
         </View>
       </TouchableHighlight>
