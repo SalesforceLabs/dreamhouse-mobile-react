@@ -7,7 +7,8 @@ var {
 
 module.exports = StyleSheet.create({
   container: {
-    marginTop:20
+    flex:0,
+    marginTop:100
   },
   image: {
     width:20,

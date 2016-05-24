@@ -17,7 +17,7 @@ module.exports = React.createClass ({
   },
   getDefaultProps(){
     return {
-      onSobjRequest:null
+      onSobjRequest:null,
     };
   },
   getFieldItems(){

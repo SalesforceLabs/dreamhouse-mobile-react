@@ -5,8 +5,10 @@ import React from 'react-native';
 const {
     AppRegistry,
     StyleSheet,
+    ScrollView,
     Text,
     View,
+    Image,
     ListView,
     PixelRatio,
     TouchableOpacity
@@ -52,9 +54,21 @@ module.exports = React.createClass({
   render () {
     return (
       <View style={styles.container}>
-        <SLDS.Text style={styles.title}>DreamHouse</SLDS.Text>
-        { this.getMenuItems() }
-        <Logout label='Logout' onPress={this.handleLogout} />
+        <View style={styles.header}>
+          <View style={styles.headerRow}>
+            <Image style={{width:60,heght:60}}
+              source={require('image!logo')}
+              resizeMode='contain' />
+
+          </View>
+            <SLDS.Text style={styles.title}>D R E A M H O U Z Z</SLDS.Text>
+
+        </View>
+        <ScrollView>
+          { this.getMenuItems() }
+        </ScrollView>
+          <Logout label='Logout' onPress={this.handleLogout} />
+
       </View>
     );
   }

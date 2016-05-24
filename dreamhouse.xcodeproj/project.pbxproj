@@ -23,6 +23,7 @@
 		05DF209F1CECD85D00D48CFC /* SalesforceSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D3BD3676DD8486F868724F2 /* SalesforceSans-Light.ttf */; };
 		05DF20A01CECD85D00D48CFC /* SalesforceSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 063FEB2C242F4C4AB2025E00 /* SalesforceSans-Regular.ttf */; };
 		05DF20AF1CECDC5C00D48CFC /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 05DF20AE1CECDC5C00D48CFC /* main.jsbundle */; };
+		05F7BE311CF4014A00057E91 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F7BE301CF4014A00057E91 /* logo.png */; };
 		123AA910979A4FD292852A31 /* SalesforceDesignSystemIconsAction.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEA155A60BD64C7790E8C7DC /* SalesforceDesignSystemIconsAction.ttf */; };
 		21D6B0A9C14C498CBD6A0957 /* SalesforceSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF2BCE1AE5784E06B79915E8 /* SalesforceSans-Bold.ttf */; };
 		4F8D5EA31B6C0568005E64D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D5EA21B6C0568005E64D4 /* main.m */; };
@@ -51,6 +52,7 @@
 		05DF20A61CECD85D00D48CFC /* dreamhouse copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dreamhouse copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05DF20A71CECD85D00D48CFC /* dreamhouse copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "dreamhouse copy-Info.plist"; path = "/Users/ibogdanov/msdkdev/dreamhouse/dreamhouse copy-Info.plist"; sourceTree = "<absolute>"; };
 		05DF20AE1CECDC5C00D48CFC /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		05F7BE301CF4014A00057E91 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		063FEB2C242F4C4AB2025E00 /* SalesforceSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SalesforceSans-Regular.ttf"; path = "node_modules/design-system-react-native/Fonts/SalesforceSans-Regular.ttf"; sourceTree = "<group>"; };
 		1D3BD3676DD8486F868724F2 /* SalesforceSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SalesforceSans-Light.ttf"; path = "node_modules/design-system-react-native/Fonts/SalesforceSans-Light.ttf"; sourceTree = "<group>"; };
 		36B33DA8B2AF407F826F43A6 /* SalesforceDesignSystemIconsCustom.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SalesforceDesignSystemIconsCustom.ttf; path = "node_modules/design-system-react-native/Fonts/SalesforceDesignSystemIconsCustom.ttf"; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 				051989C31CEBAA2D00BEF0B9 /* libDesignSystemReactNative.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		05F7BE2F1CF4014A00057E91 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				05F7BE301CF4014A00057E91 /* logo.png */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 		37B95F29A292887A2CC072C3 /* Frameworks */ = {
@@ -175,6 +185,7 @@
 		799288BF02274A06900D14E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				05F7BE2F1CF4014A00057E91 /* assets */,
 				CEA155A60BD64C7790E8C7DC /* SalesforceDesignSystemIconsAction.ttf */,
 				36B33DA8B2AF407F826F43A6 /* SalesforceDesignSystemIconsCustom.ttf */,
 				AD816733C20B4D9CB64286A7 /* SalesforceDesignSystemIconsStandard.ttf */,
@@ -315,6 +326,7 @@
 				05DF20AF1CECDC5C00D48CFC /* main.jsbundle in Resources */,
 				550C2DFC22DD424098A2C1EE /* SalesforceDesignSystemIconsStandard.ttf in Resources */,
 				ECA8DAF325D44B1998FD5739 /* SalesforceDesignSystemIconsUtility.ttf in Resources */,
+				05F7BE311CF4014A00057E91 /* logo.png in Resources */,
 				21D6B0A9C14C498CBD6A0957 /* SalesforceSans-Bold.ttf in Resources */,
 				90C7439560CC4B39AF069511 /* SalesforceSans-Light.ttf in Resources */,
 				F8BD51ADBD9D47A1804E3815 /* SalesforceSans-Regular.ttf in Resources */,

@@ -37,7 +37,7 @@ module.exports = React.createClass({
 */}
 
           <SLDS.Menus.ActionListItem 
-            image={ <SLDS.Icons.Utility style={{width:30,height:30}} name='logout' isRound={true} /> }
+            image={ <SLDS.Icons.Utility style={{width:20,height:20,margin:10,}} name='logout' isRound={true} /> }
             label={ this.props.label} />
           </TouchableOpacity>
       );
