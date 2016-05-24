@@ -3,7 +3,7 @@
 import React, {
   Text,
   View,
-  TouchableHighlight
+  TouchableOpacity
 } from 'react-native';
 
 import SLDS from 'design-system-react-native';
@@ -34,16 +34,35 @@ module.exports = React.createClass ({
   },
   render() {
     return (
-      <TouchableHighlight 
+      <TouchableOpacity 
         activeOpacity={1}
         underlayColor="rgb(210, 230, 255)"
         onPress={this.handlePress}>
         <View>
-          <SLDS.InputReadonly.ValueText>
+          <SLDS.InputReadonly.ValueText 
+            style={{
+              paddingLeft:22,
+              color:'#0070d2'
+            }}>
             {this.context.sobj.attributes.compactTitle?this.context.sobj.attributes.compactTitle:' '}
           </SLDS.InputReadonly.ValueText>
+          <View 
+            style={{
+              position:'absolute',
+              top:12,
+              left:0,
+              height:20,
+              width:20,
+            }}>
+            <SLDS.Icons.Utility 
+              name='link' 
+              style={{
+                width:16,
+                height:16
+              }} />
+          </View>
         </View>
-      </TouchableHighlight>
+      </TouchableOpacity>
     );
   }
 });

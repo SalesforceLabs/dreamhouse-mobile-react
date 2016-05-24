@@ -56,7 +56,7 @@ module.exports = React.createClass({
       <View style={styles.container}>
         <View style={styles.header}>
           <View style={styles.headerRow}>
-            <Image style={{width:60,heght:60}}
+            <Image style={{width:60,height:60}}
               source={require('image!logo')}
               resizeMode='contain' />
 

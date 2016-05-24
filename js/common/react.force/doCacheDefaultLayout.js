@@ -9,7 +9,6 @@ module.exports = (opts) => {
       const defaultLayout = opts.defaultLayout;
       if(defaultLayout && opts.type){
         const type = defaultLayout.objectType;
-
         cacheDefault.set(type,defaultLayout);
         resolve(opts);
 /*

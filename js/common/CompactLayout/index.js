@@ -17,6 +17,7 @@ module.exports = React.createClass ({
   },
   getDefaultProps(){
     return {
+      hideFields:[],
       onSobjRequest:null,
     };
   },
@@ -29,7 +30,8 @@ module.exports = React.createClass ({
             sobj={this.context.sobj} 
             layoutItem={layoutItem} 
             onLayoutTap={this.props.onLayoutTap}
-            onSobjRequest={this.props.onSobjRequest} />
+            onSobjRequest={this.props.onSobjRequest} 
+            hideFields={this.props.hideFields} />
           );
         }
       });
