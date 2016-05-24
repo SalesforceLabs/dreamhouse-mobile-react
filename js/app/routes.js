@@ -9,13 +9,15 @@ module.exports = {
     name:'propertyList',
     comp: PropertyList,
     label: 'Properties',
-    icon:'home'
+    icon:'home',
+    iconCategory:'standard'
   },
   propertyList:{
     name:'propertyList',
     comp: PropertyList,
     label: 'Properties',
-    icon:'home'
+    icon:'custom85',
+    iconCategory:'custom'
   },
   propertyDetail:{
     name:'propertyDetail',
@@ -26,13 +28,15 @@ module.exports = {
     name:'favoriteList',
     comp: FavoriteList,
     label: 'Favorites',
-    icon:'favorite'
+    icon:'check',
+    iconCategory:'action'
   },
   brokerList:{
     name:'brokerList',
     comp: BrokerList,
     label: 'Brokers',
-    icon: 'groups'
+    icon: 'groups',
+    iconCategory:'standard'
   },
   brokerDetail:{
     name:'brokerDetail',

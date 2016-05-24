@@ -29,10 +29,16 @@ module.exports = React.createClass({
     render() {
       return (
           <TouchableOpacity style={styles.container} onPress={this.handlePress}>
+{/*
           <SLDS.Tiles.List 
             title={this.props.label} 
             image={<SLDS.Icons.Utility name='logout' style={styles.image} />}
             />
+*/}
+
+          <SLDS.Menus.ActionListItem 
+            image={ <SLDS.Icons.Utility style={{width:30,height:30}} name='logout' isRound={true} /> }
+            label={ this.props.label} />
           </TouchableOpacity>
       );
     }

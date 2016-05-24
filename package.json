@@ -6,7 +6,7 @@
     "start": "node_modules/react-native/packager/packager.sh --root js"
   },
   "dependencies": {
-    "design-system-react-native": "git+ssh://git@github.com/ForceDotComLabs/design-system-react-native.git",
+    "design-system-react-native": "git+ssh://git@github.com/ForceDotComLabs/design-system-react-native.git#master",
     "lodash.keys": "^4.0.7",
     "lodash.merge": "^4.4.0",
     "lodash.remove": "^4.5.0",
