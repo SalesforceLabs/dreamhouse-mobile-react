@@ -6,7 +6,7 @@ const {
     ListView
 } = React;
 
-import {ListContainer} from '../../common/DataContainer';
+import {ListContainer,RelevantItems} from '../../common/DataContainer';
 
 import List from './List';
 
@@ -15,6 +15,7 @@ import styles from './styles';
 module.exports = React.createClass({
 
   render () {
+/*
     return (
       <ListContainer 
         type='Property__c' 
@@ -23,6 +24,12 @@ module.exports = React.createClass({
         style={styles.container}>
         <List navigator={this.props.navigator} route={this.props.route} />
       </ListContainer>
+    );
+*/
+    return (
+      <RelevantItems type='Property__c' style={styles.container}>
+        <List navigator={this.props.navigator} route={this.props.route} />
+      </RelevantItems>
     );
   }
 

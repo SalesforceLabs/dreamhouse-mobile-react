@@ -14,7 +14,7 @@ const {
 
 import {forceClient} from '../../common/react.force';
 
-import {SobjContainer,ListContainer} from '../../common/DataContainer';
+import {SobjContainer,ListContainer,RelevantItems} from '../../common/DataContainer';
 
 
 import SLDS from 'design-system-react-native';
@@ -27,10 +27,17 @@ import List from './List';
 
 module.exports = React.createClass({    
     render () {
+/*
       return (
         <ListContainer type='Broker__c' fields={['Name']} style={styles.container}>
           <List navigator={this.props.navigator} route={this.props.route} />
         </ListContainer>
+      );
+*/
+      return (
+        <RelevantItems type='Broker__c' style={styles.container}>
+          <List navigator={this.props.navigator} route={this.props.route} />
+        </RelevantItems>
       );
     }
 

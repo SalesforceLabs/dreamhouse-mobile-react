@@ -4,7 +4,6 @@ var React = require('react-native');
 var {
     AppRegistry,
     StyleSheet,
-    AsyncStorage,
     Text,
     View,
     ListView,
@@ -47,7 +46,6 @@ module.exports = React.createClass({
   },
 
   componentDidMount(){
-    AsyncStorage.clear();
     StatusBar.setBarStyle('light-content', true);
   },
 

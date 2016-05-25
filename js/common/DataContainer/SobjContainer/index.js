@@ -6,6 +6,7 @@ import React, {
 } from 'react-native';
 
 import shallowEqual from 'shallowequal';
+import findIndex from 'lodash.findindex';
 
 import {
   query,
@@ -29,15 +30,22 @@ const notify = (ids,sobjs,compactLayout,defaultLayout) => {
   if(subscribers && subscribers.length){
     subscribers.forEach((subscriber)=>{
       if(subscriber && subscriber.props && subscriber.props.id){
-        const index = ids.indexOf(subscriber.props.id);
+        const searchId = subscriber.props.id;
+        const index = findIndex(ids, (id) => { 
+          return id.indexOf(searchId)>-1;
+        });
+//        const index = ids.indexOf(subscriber.props.id);
         if(index>-1){
           const sobj = sobjs[index];
+          /*
           subscriber.setState({
             sobj:sobj,
             loading:false,
             compactLayout:compactLayout,
             defaultLayout:defaultLayout
           });
+          */
+          subscriber.updateSobj(sobj,compactLayout,defaultLayout);
         }
       }
     });
@@ -82,6 +90,14 @@ module.exports = React.createClass ({
   componentWillUnmount(){
     unsubscribe(this);
   },
+  updateSobj(sobj,compactLayout,defaultLayout){
+    this.setState({
+      sobj:sobj,
+      loading:false,
+      compactLayout:compactLayout,
+      defaultLayout:defaultLayout
+    });
+  },
   handleDataLoad(){
     if(this.props.onData){
       this.props.onData({
@@ -120,6 +136,7 @@ module.exports = React.createClass ({
       this.getInfo();
     }
   },
+/*
   shouldComponentUpdate(nextProps, nextState){
     if(!this.props.update){
 //      return false;
@@ -138,4 +155,5 @@ module.exports = React.createClass ({
     }
     return false;
   }
+*/
 });

@@ -252,7 +252,10 @@ var defaultLayout = function(objtype, callback, error) {
                        , callback, error);
 };
 
-
+var relevantItems = function(objtypes, callback, error) {
+    return sendRequest('/services/data', '/' + apiVersion + '/sobjects/relevantItems?sobjects='+objtypes.join(',')
+                       , callback, error);
+};
 
 /**
  * Part of the module that is public
@@ -276,5 +279,6 @@ module.exports = {
     queryMore: queryMore,
     search: search,
     compactLayout: compactLayout,
-    defaultLayout: defaultLayout
+    defaultLayout: defaultLayout,
+    relevantItems:relevantItems
 };

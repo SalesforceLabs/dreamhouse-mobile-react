@@ -1,5 +1,3 @@
-import { AsyncStorage } from 'react-native';
-
 import cacheCompact from './cacheCompact';
 
 let cache = {};
@@ -15,11 +13,6 @@ module.exports = (opts) => {
         cacheCompact.set(type,compactLayout);
         resolve(opts);
 
-/*
-        AsyncStorage.setItem(id, JSON.stringify(compactLayout), ()=>{
-          resolve(opts);
-        });
-*/
       }
       else{
         reject('Wrong compact layout');
