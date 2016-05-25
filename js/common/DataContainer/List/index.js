@@ -2,13 +2,16 @@
 
 import React, {
   Text,
-  View
+  View,
+  ListView
 } from 'react-native';
 
+import union from 'lodash.union';
 
 import {
   query,
-  getByTypeAndId
+  getByTypeAndId,
+  forceClient
 } from '../../react.force';
 
 module.exports = React.createClass ({
@@ -17,51 +20,54 @@ module.exports = React.createClass ({
       type:null,
       fields:[],
       where:null,
+      limit:200,
       refreshDate:new Date()
     };
   },
   childContextTypes: {
-    sobjs: React.PropTypes.array
+    dataSource: React.PropTypes.object
   },
   getInitialState(){
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     return {
-      items:this.props.items?this.props.items:[],
-      loading:false
+      loading:false,
+      dataSource: ds.cloneWithRows([])
     };
   },
   getChildContext() {
     return {
-      items: this.state.items
+      dataSource: this.state.dataSource
     };
   },
   componentDidMount(){
     this.getData();
   },
-  handleDataLoad(){
-    if(this.props.onData){
-      this.props.onData({
-        items:this.state.items,
-      });
+  getDataSource (items) {
+    return this.state.dataSource.cloneWithRows(items);
+  },
+  getQuery() {
+    if(!this.props.type) return;
+    const fields = union(['Id'],this.props.fields);
+    let soql = 'SELECT '+ fields.join(', ') + ' FROM '+this.props.type;
+    if(this.props.where){
+      soql += ' WHERE '+this.props.where;
     }
+    soql += ' LIMIT '+this.props.limit;
+    return soql;
   },
   getData() {
-    this.setState({loading:true});
-    if(!this.props.type){
+    const soql = this.getQuery();
+    if(!soql){
       return;
     }
-/*
-    getByTypeAndId(this.props.type,this.props.id)
-    .then((opts)=>{
-        if(opts.cachedSobj){
-          this.setState({
-            sobj:opts.cachedSobj,
-            compactTitle: opts.cachedSobj.attributes.compactTitle,
-            compactLayout:opts.compactLayout,
-            defaultLayout:opts.defaultLayout,
-          });
-        }
+    this.setState({loading:true});
+    forceClient.query(soql,
+      (response) => {
+        const items = response.records;
+        this.setState({
+          dataSource: this.getDataSource(items)
+        });
       });
-*/
   },
 
   render() {
@@ -76,19 +82,4 @@ module.exports = React.createClass ({
       this.getData();
     }
   },
-  shouldComponentUpdate(nextProps, nextState){
-    if(this.props.type !== nextProps.type){
-      return true;
-    }
-    if(this.props.type !== nextProps.type){
-      return true;
-    }
-    if(this.state.items !== nextProps.items){
-      return true;
-    }
-    if(this.state.loading !== nextProps.loading){
-      return true;
-    }
-    return false;
-  }
 });

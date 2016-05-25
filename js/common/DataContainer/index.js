@@ -3,5 +3,5 @@ import List from './List';
 
 module.exports = {
   SobjContainer: SobjContainer,
-  SobjList: List
+  ListContainer: List
 };

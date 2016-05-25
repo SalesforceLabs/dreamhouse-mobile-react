@@ -5,6 +5,7 @@ import React, {
   View
 } from 'react-native';
 
+import shallowEqual from 'shallowequal';
 
 import {
   query,
@@ -129,7 +130,7 @@ module.exports = React.createClass ({
     if(this.props.type !== nextProps.type){
       return true;
     }
-    if(this.state.sobj !== nextProps.sobj){
+    if(!shallowEqual(this.state.sobj, nextProps.sobj)){
       return true;
     }
     if(this.state.loading !== nextProps.loading){

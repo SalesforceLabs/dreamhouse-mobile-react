@@ -19,7 +19,7 @@ import {SobjContainer} from '../../common/DataContainer';
 
 import SLDS from 'design-system-react-native';
 
-import BrokerListItem from './BrokerListItem';
+import BrokerListItem from './ListItem';
 
 import styles from './styles';
 

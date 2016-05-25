@@ -16,7 +16,7 @@ import {forceClient} from '../../common/react.force';
 
 import SLDS from 'design-system-react-native';
 
-import PropertyListItem from './PropertyListItem';
+import PropertyListItem from './ListItem';
 
 import styles from './styles';
 

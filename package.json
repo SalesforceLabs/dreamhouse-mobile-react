@@ -15,6 +15,7 @@
     "react": "^0.14.8",
     "react-native": "^0.24.1",
     "react-native-side-menu": "^0.19.0",
-    "react-timer-mixin": "^0.13.3"
+    "react-timer-mixin": "^0.13.3",
+    "shallowequal": "^0.2.2"
   }
 }
