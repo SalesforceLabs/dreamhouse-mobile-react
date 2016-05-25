@@ -22,6 +22,7 @@ import PropertyListItem from './PropertyListItem';
 
 import styles from './styles';
 
+import {SobjContainer} from '../../common/DataContainer';
 
 const soql = 'SELECT Id, Name FROM Property__c LIMIT 100';
 
@@ -48,11 +49,10 @@ module.exports = React.createClass({
     },
 
     renderRow (sobj) {
-      console.log('sobj: ',sobj);
       return (
-        <F.SobjContainer key={sobj.Id} type={sobj.attributes.type} id={sobj.Id} sobj={sobj} update={false} >
+        <SobjContainer key={sobj.Id} type={sobj.attributes.type} id={sobj.Id} sobj={sobj} update={false} >
           <PropertyListItem key={sobj.Id} sobj={sobj} route={this.props.route} navigator={this.props.navigator} />
-        </F.SobjContainer>
+        </SobjContainer>
       );
     },
 

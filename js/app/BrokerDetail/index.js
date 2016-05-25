@@ -12,7 +12,6 @@ var {
     Linking
 } = React;
 
-import F from '../../common/react.force';
 
 import CompactLayout from '../../common/CompactLayout';
 import DetailLayout from '../../common/DetailLayout';
@@ -22,6 +21,8 @@ import SLDS from 'design-system-react-native';
 import styles from './styles';
 
 import Header from './Header';
+
+import {SobjContainer} from '../../common/DataContainer';
 
 module.exports = React.createClass({    
   handleLayoutTap(layoutTapEvent){
@@ -53,10 +54,10 @@ module.exports = React.createClass({
     return (
       <View style={styles.container}>
       <ScrollView>
-        <F.SobjContainer id={sobj.Id} type={sobj.attributes.type}>
+        <SobjContainer id={sobj.Id} type={sobj.attributes.type}>
           <Header />
           <CompactLayout onLayoutTap={this.handleLayoutTap} />
-        </F.SobjContainer>
+        </SobjContainer>
       </ScrollView>
       </View>
     );

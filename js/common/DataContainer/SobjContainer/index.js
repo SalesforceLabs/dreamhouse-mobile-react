@@ -5,10 +5,11 @@ import React, {
   View
 } from 'react-native';
 
-import getByTypeAndId from '../getByTypeAndId';
 
-import Loader from './Loader';
-import query from '../query';
+import {
+  query,
+  getByTypeAndId
+} from '../../react.force';
 
 const subscribers = [];
 

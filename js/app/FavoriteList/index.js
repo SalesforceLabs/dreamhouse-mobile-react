@@ -14,6 +14,8 @@ const {
 
 import F from '../../common/react.force';
 
+import {SobjContainer} from '../../common/DataContainer';
+
 import forceClient from '../../common/react.force/react.force.net.js';
 
 import SLDS from 'design-system-react-native';
@@ -58,9 +60,9 @@ module.exports = React.createClass({
 
     renderRow (sobj) {
       return (
-        <F.SobjContainer type='Property__c' id={sobj.Property__c} >
+        <SobjContainer type='Property__c' id={sobj.Property__c} >
           <PropertyListItem route={this.props.route} navigator={this.props.navigator} />
-        </F.SobjContainer>
+        </SobjContainer>
       );
     },
 

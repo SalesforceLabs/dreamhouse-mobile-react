@@ -15,7 +15,8 @@ import Link from './Link';
 import Empty from './Empty';
 
 
-import SobjContainer from '../../react.force/SobjContainer';
+import {SobjContainer} from '../../DataContainer';
+
 
 module.exports = React.createClass ({
   getDefaultProps(){
