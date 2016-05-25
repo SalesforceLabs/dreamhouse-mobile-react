@@ -8,7 +8,8 @@ var {
     View,
     ListView,
     PixelRatio,
-    ScrollView
+    ScrollView,
+    Linking
 } = React;
 
 import F from '../../common/react.force';
@@ -23,6 +24,30 @@ import styles from './styles';
 import Header from './Header';
 
 module.exports = React.createClass({    
+  handleLayoutTap(layoutTapEvent){
+
+    if(layoutTapEvent.eventType === 'phone'){
+      const url = 'tel:'+layoutTapEvent.value;
+      Linking.canOpenURL(url).then(supported => {
+        if (!supported) {
+          alert('Can\'t handle url: ' + url);
+        } else {
+          return Linking.openURL(url);
+        }
+      }).catch(err => console.error('An error occurred', err));
+    }
+    else if(layoutTapEvent.eventType === 'email'){
+      const url = 'mailto:'+layoutTapEvent.value;
+      Linking.canOpenURL(url).then(supported => {
+        if (!supported) {
+          alert('Can\'t handle url: ' + url);
+        } else {
+          return Linking.openURL(url);
+        }
+      }).catch(err => console.error('An error occurred', err));
+    }
+
+  },
   render() {
    const sobj = this.props.route.sobj;
     return (
@@ -30,7 +55,7 @@ module.exports = React.createClass({
       <ScrollView>
         <F.SobjContainer id={sobj.Id} type={sobj.attributes.type}>
           <Header />
-          <CompactLayout />
+          <CompactLayout onLayoutTap={this.handleLayoutTap} />
         </F.SobjContainer>
       </ScrollView>
       </View>

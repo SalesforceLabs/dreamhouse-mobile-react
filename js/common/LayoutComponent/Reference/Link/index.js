@@ -27,7 +27,8 @@ module.exports = React.createClass ({
           refSobj:this.context.sobj,
           layoutItem:this.props.layoutItem,
           sobj:this.props.parentSobj,
-          eventType:this.props.layoutItem.details.type
+          eventType:this.props.layoutItem.details.type,
+          value:this.props.sobj[this.props.layoutItem.details.name]
         }
       );
     }
@@ -35,8 +36,6 @@ module.exports = React.createClass ({
   render() {
     return (
       <TouchableOpacity 
-        activeOpacity={1}
-        underlayColor="rgb(210, 230, 255)"
         onPress={this.handlePress}>
         <View>
           <SLDS.InputReadonly.ValueText 

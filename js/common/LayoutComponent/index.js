@@ -11,10 +11,14 @@ import Component from './Component';
 
 import Reference from './Reference';
 
+import Phone from './Phone';
+
+import Email from './Email';
+
 import LayoutImage from './LayoutImage';
 
-
 import styles from './styles';
+
 
 
 module.exports = React.createClass ({
@@ -51,6 +55,24 @@ module.exports = React.createClass ({
     if(this.props.layoutItem && this.props.layoutItem.details && this.props.layoutItem.details.type === 'reference'){
       return (
         <Reference 
+          sobj={this.props.sobj} 
+          layoutItem={this.props.layoutItem} 
+          onLayoutTap={this.props.onLayoutTap}
+          onSobjRequest={this.props.onSobjRequest}/>
+      );
+    }
+    if(this.props.layoutItem && this.props.layoutItem.details && this.props.layoutItem.details.type === 'phone'){
+      return (
+        <Phone 
+          sobj={this.props.sobj} 
+          layoutItem={this.props.layoutItem} 
+          onLayoutTap={this.props.onLayoutTap}
+          onSobjRequest={this.props.onSobjRequest}/>
+      );
+    }
+    if(this.props.layoutItem && this.props.layoutItem.details && this.props.layoutItem.details.type === 'email'){
+      return (
+        <Email 
           sobj={this.props.sobj} 
           layoutItem={this.props.layoutItem} 
           onLayoutTap={this.props.onLayoutTap}

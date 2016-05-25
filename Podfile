@@ -12,6 +12,7 @@ pod 'React', :path => './node_modules/react-native', :subspecs => [
   'RCTNetwork',
   'RCTText',
   'RCTWebSocket',
+  'RCTLinkingIOS'
 ]
 
 pod 'SalesforceSDKCore'
