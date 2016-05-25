@@ -15,6 +15,9 @@ import Phone from './Phone';
 
 import Email from './Email';
 
+import Currency from './Currency';
+
+
 import LayoutImage from './LayoutImage';
 
 import styles from './styles';
@@ -58,7 +61,7 @@ module.exports = React.createClass ({
           sobj={this.props.sobj} 
           layoutItem={this.props.layoutItem} 
           onLayoutTap={this.props.onLayoutTap}
-          onSobjRequest={this.props.onSobjRequest}/>
+        />
       );
     }
     if(this.props.layoutItem && this.props.layoutItem.details && this.props.layoutItem.details.type === 'phone'){
@@ -67,7 +70,7 @@ module.exports = React.createClass ({
           sobj={this.props.sobj} 
           layoutItem={this.props.layoutItem} 
           onLayoutTap={this.props.onLayoutTap}
-          onSobjRequest={this.props.onSobjRequest}/>
+        />
       );
     }
     if(this.props.layoutItem && this.props.layoutItem.details && this.props.layoutItem.details.type === 'email'){
@@ -76,7 +79,15 @@ module.exports = React.createClass ({
           sobj={this.props.sobj} 
           layoutItem={this.props.layoutItem} 
           onLayoutTap={this.props.onLayoutTap}
-          onSobjRequest={this.props.onSobjRequest}/>
+        />
+      );
+    }
+    if(this.props.layoutItem && this.props.layoutItem.details && this.props.layoutItem.details.type === 'currency'){
+      return (
+        <Currency
+          sobj={this.props.sobj} 
+          layoutItem={this.props.layoutItem} 
+        />
       );
     }
     return <SLDS.InputReadonly.ValueText>{this.getValue()}</SLDS.InputReadonly.ValueText>;

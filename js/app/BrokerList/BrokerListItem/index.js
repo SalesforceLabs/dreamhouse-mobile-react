@@ -41,7 +41,7 @@ module.exports = React.createClass({
 
     render () {
       const imgConfig = F.utils.parseImageHTML(this.context.sobj['Picture_IMG__c']);
-      const title = this.context.sobj.Name
+      const title = this.context.sobj.Name;
       const detail = this.context.sobj['Title__c']?this.context.sobj['Title__c']:' ';
       return (
         <TouchableOpacity onPress={this.handlePress}>

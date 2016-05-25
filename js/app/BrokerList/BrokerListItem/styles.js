@@ -27,6 +27,7 @@ module.exports = React.StyleSheet.create({
     image: {
         width:30,
         height:30,
-        borderRadius:15
+        borderRadius:15,
+        backgroundColor: 'rgba(0, 0, 0, 0.1)'
     }
 });

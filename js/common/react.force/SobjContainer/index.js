@@ -60,7 +60,7 @@ module.exports = React.createClass ({
   },
   getInitialState(){
     return {
-      sobj:{Name:' ',attributes:{}},
+      sobj:this.props.sobj?this.props.sobj:{Name:' ',attributes:{}},
       compactLayout:{},
       defaultLayout:{},
       loading:false
@@ -106,27 +106,10 @@ module.exports = React.createClass ({
       });
   },
 
-  getBody() {
-{/*
-    if(this.state.sobj && this.state.sobj.attributes){
-
-      return React.Children.map(this.props.children,
-      (child) => React.cloneElement(child, {
-          sobj:this.state.sobj,
-          compactLayout:this.state.compactLayout,
-          defaultLayout:this.state.defaultLayout
-        })
-      )
-
-    }
-*/}
-    return this.props.children;
-  },
-
   render() {
     return (
       <View>
-        {this.getBody()}
+        {this.props.children}
       </View>
     )
   },

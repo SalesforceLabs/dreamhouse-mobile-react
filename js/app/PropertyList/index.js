@@ -48,8 +48,9 @@ module.exports = React.createClass({
     },
 
     renderRow (sobj) {
+      console.log('sobj: ',sobj);
       return (
-        <F.SobjContainer key={sobj.Id} type={sobj.attributes.type} id={sobj.Id} update={false} >
+        <F.SobjContainer key={sobj.Id} type={sobj.attributes.type} id={sobj.Id} sobj={sobj} update={false} >
           <PropertyListItem key={sobj.Id} sobj={sobj} route={this.props.route} navigator={this.props.navigator} />
         </F.SobjContainer>
       );
