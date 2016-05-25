@@ -14,7 +14,7 @@ const {
 
 import {forceClient} from '../../common/react.force';
 
-import {SobjContainer} from '../../common/DataContainer';
+import {SobjContainer,ListContainer} from '../../common/DataContainer';
 
 
 import SLDS from 'design-system-react-native';
@@ -23,52 +23,14 @@ import BrokerListItem from './ListItem';
 
 import styles from './styles';
 
-const soql = 'SELECT Id, Name FROM Broker__c LIMIT 100';
+import List from './List';
 
-module.exports = React.createClass({
-    getInitialState() {
-      var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-      return {
-          dataSource: ds.cloneWithRows([]),
-      };
-    },
-    
-    componentDidMount() {
-      forceClient.query(soql,
-        (response) => {
-          const items = response.records;
-          this.setState({
-              dataSource: this.getDataSource(items),
-          });
-        });
-    },
-
-    handlePress() {
-      if(this.props.navigator){
-        this.props.navigator.push({
-          name:'propertyDetail',
-
-        });
-      }
-    },
-
-    getDataSource (users) {
-      return this.state.dataSource.cloneWithRows(users);
-    },
-
-    renderRow (sobj) {
-      return (
-        <SobjContainer type={sobj.attributes.type} id={sobj.Id} sobj={sobj} update={false}>
-          <BrokerListItem sobj={sobj} route={this.props.route} navigator={this.props.navigator} />
-        </SobjContainer>
-      );
-    },
-
+module.exports = React.createClass({    
     render () {
       return (
-        <ListView
-          dataSource={this.state.dataSource}
-          renderRow={this.renderRow} />
+        <ListContainer type='Broker__c' fields={['Name']}>
+          <List navigator={this.props.navigator} route={this.props.route} />
+        </ListContainer>
       );
     }
 

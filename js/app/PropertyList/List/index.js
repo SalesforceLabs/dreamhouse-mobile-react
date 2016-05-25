@@ -10,30 +10,21 @@ const {
     TouchableOpacity
 } = React;
 
-import {SobjContainer} from '../../../common/DataContainer';
-
 import SLDS from 'design-system-react-native';
 
-import PropertyListItem from '../../PropertyList/ListItem';
+import PropertyListItem from '../ListItem';
 
+import {SobjContainer} from '../../../common/DataContainer';
 
 module.exports = React.createClass({
 
     contextTypes: {
       dataSource: React.PropTypes.object,
     },
-
-    handlePress() {
-      if(this.props.navigator){
-        this.props.navigator.push({
-          name:'propertyDetail',
-        });
-      }
-    },
-
+    
     renderRow (sobj) {
       return (
-        <SobjContainer type='Property__c' id={sobj.Property__c} >
+        <SobjContainer key={sobj.Id} type={sobj.attributes.type} id={sobj.Id} sobj={sobj} >
           <PropertyListItem route={this.props.route} navigator={this.props.navigator} />
         </SobjContainer>
       );
@@ -41,9 +32,9 @@ module.exports = React.createClass({
 
     render () {
       return (
-          <ListView
-            dataSource={this.context.dataSource}
-            renderRow={this.renderRow} />
+        <ListView
+          dataSource={this.context.dataSource}
+          renderRow={this.renderRow} />
       );
     }
 
