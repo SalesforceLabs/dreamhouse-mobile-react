@@ -1,1 +1,46 @@
-## Dreamhouse (React Native + Salesforce MobileSDK Sample App)
+## DreamHouzz App (ReactNative + Salesforce MobileSDK). 
+
+### Setup
+
+1. npm dependencies:
+
+  ```
+
+  npm install
+
+  ```
+
+2. cocoapods dependencies:
+
+  ```
+
+  npm install
+
+  ```
+
+3. if [RNPM](http://facebook.github.io/react-native/releases/0.24/docs/linking-libraries-ios.html#automatic-linking) is not yet installed:
+
+  ```
+
+  npm install rnpm -g
+
+  ```
+4. link dependencies: 
+
+  ```
+
+  rnpm link
+
+  ```
+  
+### Run
+
+1. Start:
+
+  ```
+
+  npm start
+
+  ```
+
+2. Open the project in Xcode or Android Studio and click `Run`
