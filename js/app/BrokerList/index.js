@@ -28,7 +28,7 @@ import List from './List';
 module.exports = React.createClass({    
     render () {
       return (
-        <ListContainer type='Broker__c' fields={['Name']}>
+        <ListContainer type='Broker__c' fields={['Name']} style={styles.container}>
           <List navigator={this.props.navigator} route={this.props.route} />
         </ListContainer>
       );
