@@ -12,9 +12,7 @@ const {
     TouchableOpacity
 } = React;
 
-import forceClient from '../../common/react.force/react.force.net.js';
-
-import F from '../../common/react.force';
+import {forceClient} from '../../common/react.force';
 
 import {SobjContainer} from '../../common/DataContainer';
 

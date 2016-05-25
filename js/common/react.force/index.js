@@ -10,6 +10,7 @@ import QueryCounter from './QueryCounter';
 import cache from './cache';
 import utils from './utils';
 import refs from './refs';
+import forceClient from './react.force.net';
 
 module.exports = {
   getByTypeAndId:getByTypeAndId,
@@ -20,5 +21,6 @@ module.exports = {
   query:query,
 //  SobjContainer:SobjContainer,
   QueryCounter:QueryCounter,
-  utils:utils
+  utils:utils,
+  forceClient:forceClient
 };
