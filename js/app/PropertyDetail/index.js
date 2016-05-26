@@ -1,25 +1,16 @@
 'use strict';
 
-var React = require('react-native');
-var {
-    AppRegistry,
-    StyleSheet,
-    Text,
+import React from 'react-native';
+const {
     View,
-    ListView,
-    PixelRatio,
     ScrollView
 } = React;
 
 import CompactLayout from '../../common/CompactLayout';
 import DetailLayout from '../../common/DetailLayout';
-
 import {SobjContainer} from '../../common/DataContainer';
-
 import SLDS from 'design-system-react-native';
-
 import styles from './styles';
-
 import Header from './Header';
 
 module.exports = React.createClass({    

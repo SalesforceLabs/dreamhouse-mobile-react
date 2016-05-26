@@ -3,17 +3,11 @@
 import React from 'react-native';
 
 const {
-    AppRegistry,
-    StyleSheet,
-    Text,
-    View,
     Image,
-    PixelRatio,
     TouchableOpacity
 } = React;
 
 import F from '../../../common/react.force';
-
 
 import SLDS from 'design-system-react-native';
 
@@ -50,13 +44,28 @@ module.exports = React.createClass({
       return ' ';
     },
 
+    getTitle () {
+      if(this.context.sobj['Title__c']){
+        return this.context.sobj['Title__c'];
+      }
+      return this.context.sobj.Name;
+    },
+
+    getImgConfig () {
+      if(this.context.sobj['Thumbnail_IMG__c']){
+        return F.utils.parseImageHTML(this.context.sobj['Thumbnail_IMG__c']);
+      }
+      return {};
+    },
+
     shouldComponentUpdate(nextProps, nextState, nextContext){
       return nextContext.sobj !== this.context.sobj;
     },
 
+
     render () {
-      const imgConfig = this.context.sobj['Thumbnail_IMG__c']?F.utils.parseImageHTML(this.context.sobj['Thumbnail_IMG__c']):'';
-      const title = this.context.sobj['Title__c']?this.context.sobj['Title__c']:this.context.sobj.Name;
+      const imgConfig = this.getImgConfig();
+      const title = this.getTitle();
       const detail = this.getDetail();
       return (
           <TouchableOpacity onPress={this.handlePress}>

@@ -1,19 +1,11 @@
 'use strict';
 
 import React from 'react-native';
-
 const {
-    Text,
-    View,
     ListView,
-    PixelRatio,
-    TouchableOpacity
 } = React;
-
 import SLDS from 'design-system-react-native';
-
 import PropertyListItem from '../ListItem';
-
 import {SobjContainer} from '../../../common/DataContainer';
 
 module.exports = React.createClass({
@@ -37,5 +29,4 @@ module.exports = React.createClass({
           renderRow={this.renderRow} />
       );
     }
-
 });

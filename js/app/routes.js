@@ -5,13 +5,6 @@ import BrokerList from './BrokerList';
 import BrokerDetail from './BrokerDetail';
 
 module.exports = {
-  initial:{
-    name:'propertyList',
-    comp: PropertyList,
-    label: 'Properties',
-    icon:'home',
-    iconCategory:'standard'
-  },
   propertyList:{
     name:'propertyList',
     comp: PropertyList,

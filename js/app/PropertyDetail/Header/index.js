@@ -23,10 +23,22 @@ module.exports = React.createClass({
     };
   },
 
+  getImgConfig(){
+    return F.utils.parseImageHTML(this.context.sobj['Picture_IMG__c']);
+  },
+
+  getName(){
+    return this.context.sobj['Title__c'];
+  },
+
+  getDesc(){
+    return this.context.sobj['Description__c'];
+  },
+
   render(){
-    const imgConfig = F.utils.parseImageHTML(this.context.sobj['Picture_IMG__c']);
-    const name = this.context.sobj['Title__c'];
-    const desc = this.context.sobj['Description__c'];
+    const imgConfig = this.getImgConfig();
+    const name = this.getName();
+    const desc = this.getDesc();
 
     return (
         <View style={styles.container}>
