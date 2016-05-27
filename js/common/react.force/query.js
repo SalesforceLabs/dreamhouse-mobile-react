@@ -1,4 +1,4 @@
-import forceClient from './react.force.net.js';
+import {forceClient} from 'react.force';
 import union from 'lodash.union';
 import remove from 'lodash.remove';
 import trim from 'lodash.trim';

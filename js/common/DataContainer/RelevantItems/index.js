@@ -5,9 +5,7 @@ import React, {
   ListView
 } from 'react-native';
 
-import {
-  forceClient
-} from '../../react.force';
+import {forceClient} from 'react.force';
 
 module.exports = React.createClass ({
   getDefaultProps(){

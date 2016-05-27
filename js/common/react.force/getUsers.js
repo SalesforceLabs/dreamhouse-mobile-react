@@ -1,4 +1,4 @@
-import forceClient from './react.force.net.js';
+import {forceClient} from 'react.force';
 
 const query = 'SELECT Id, Name FROM Account LIMIT 10';
 

@@ -1,4 +1,4 @@
-import forceClient from './react.force.net.js';
+import {forceClient} from 'react.force';
 
 module.exports = (opts) => {
   return new Promise(

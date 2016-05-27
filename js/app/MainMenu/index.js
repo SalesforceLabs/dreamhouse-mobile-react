@@ -22,7 +22,7 @@ import Header from './Header';
 
 import Logout from './Logout';
 
-import oauth from '../../common/react.force/react.force.oauth';
+import {oauth} from 'react.force';
 
 module.exports = React.createClass({
     
