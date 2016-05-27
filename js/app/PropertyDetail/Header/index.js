@@ -10,7 +10,7 @@ import SLDS from 'design-system-react-native';
 
 import styles from './styles';
 
-import F from '../../../common/react.force';
+import F from 'react.force.data';
 
 module.exports = React.createClass({
 

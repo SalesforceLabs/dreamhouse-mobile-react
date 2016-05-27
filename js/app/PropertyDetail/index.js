@@ -5,10 +5,10 @@ const {
     View,
     ScrollView
 } = React;
-
 import CompactLayout from '../../common/CompactLayout';
 import {SobjContainer} from 'react.force.datacontainer';
 import SLDS from 'design-system-react-native';
+
 import styles from './styles';
 import Header from './Header';
 

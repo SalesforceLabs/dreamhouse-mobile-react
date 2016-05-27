@@ -7,7 +7,7 @@ const {
     TouchableOpacity
 } = React;
 
-import F from '../../../common/react.force';
+import F from 'react.force.data';
 
 import SLDS from 'design-system-react-native';
 
