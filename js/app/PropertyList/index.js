@@ -6,7 +6,7 @@ const {
     ListView
 } = React;
 
-import {ListContainer,RelevantItems} from '../../common/DataContainer';
+import {ListContainer,RelevantItems} from 'react.force.datacontainer';
 
 import List from './List';
 

@@ -7,7 +7,7 @@ const {
 } = React;
 
 
-import {SobjContainer} from '../../../common/DataContainer';
+import {SobjContainer} from 'react.force.datacontainer';
 
 import BrokerListItem from '../ListItem';
 

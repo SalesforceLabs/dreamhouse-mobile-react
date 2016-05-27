@@ -2,7 +2,7 @@
 
 import React from 'react-native';
 
-import {ListContainer} from '../../common/DataContainer';
+import {ListContainer} from 'react.force.datacontainer';
 
 import List from './List';
 

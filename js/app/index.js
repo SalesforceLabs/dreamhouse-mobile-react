@@ -13,7 +13,7 @@ import PropertyList from './PropertyList';
 import styles from './styles';
 import MainMenu from './MainMenu';
 import NavigationBarRouteMapper from './NavBar/mapper';
-import F from '../common/react.force';
+import {QueryCounter} from 'react.force.data';
 
 
 module.exports = React.createClass({
@@ -68,7 +68,7 @@ module.exports = React.createClass({
             navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouteMapper({onMenuOpen:this.handleMenuOpen})} style={styles.navbar}/>}
         />
 
-        <F.QueryCounter />
+        <QueryCounter />
 
       </SideMenu>
     );

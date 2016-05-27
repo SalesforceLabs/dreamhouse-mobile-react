@@ -5,8 +5,9 @@ const {
     ListView,
 } = React;
 import SLDS from 'design-system-react-native';
+import {SobjContainer} from 'react.force.datacontainer';
+
 import PropertyListItem from '../ListItem';
-import {SobjContainer} from '../../../common/DataContainer';
 
 module.exports = React.createClass({
 

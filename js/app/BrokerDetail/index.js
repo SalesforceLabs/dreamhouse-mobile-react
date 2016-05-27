@@ -2,7 +2,6 @@
 
 var React = require('react-native');
 var {
-    AppRegistry,
     StyleSheet,
     Text,
     View,
@@ -14,7 +13,6 @@ var {
 
 
 import CompactLayout from '../../common/CompactLayout';
-import DetailLayout from '../../common/DetailLayout';
 
 import SLDS from 'design-system-react-native';
 
@@ -22,7 +20,7 @@ import styles from './styles';
 
 import Header from './Header';
 
-import {SobjContainer} from '../../common/DataContainer';
+import {SobjContainer} from 'react.force.datacontainer';
 
 module.exports = React.createClass({    
   handleLayoutTap(layoutTapEvent){

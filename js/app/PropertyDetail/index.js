@@ -7,18 +7,14 @@ const {
 } = React;
 
 import CompactLayout from '../../common/CompactLayout';
-import DetailLayout from '../../common/DetailLayout';
-import {SobjContainer} from '../../common/DataContainer';
+import {SobjContainer} from 'react.force.datacontainer';
 import SLDS from 'design-system-react-native';
 import styles from './styles';
 import Header from './Header';
 
 module.exports = React.createClass({    
 
-  getDefaultProps(){
-    return {
-    };
-  },
+
   handleLayoutTap(layoutTapEvent){
     if(layoutTapEvent && layoutTapEvent.refSobj && layoutTapEvent.refSobj.attributes){
       if(layoutTapEvent.eventType === 'reference'){

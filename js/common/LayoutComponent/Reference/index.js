@@ -7,6 +7,8 @@ import React, {
 } from 'react-native';
 
 import SLDS from 'design-system-react-native';
+import {SobjContainer} from 'react.force.datacontainer';
+
 
 import styles from './styles';
 
@@ -15,7 +17,6 @@ import Link from './Link';
 import Empty from './Empty';
 
 
-import {SobjContainer} from '../../DataContainer';
 
 
 module.exports = React.createClass ({
