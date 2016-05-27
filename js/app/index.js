@@ -67,8 +67,9 @@ module.exports = React.createClass({
             renderScene={this.router}
             navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouteMapper({onMenuOpen:this.handleMenuOpen})} style={styles.navbar}/>}
         />
-
+{/*
         <QueryCounter />
+*/}
 
       </SideMenu>
     );
