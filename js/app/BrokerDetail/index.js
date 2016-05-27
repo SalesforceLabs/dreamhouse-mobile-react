@@ -12,7 +12,7 @@ var {
 } = React;
 
 
-import CompactLayout from '../../common/CompactLayout';
+import {CompactLayout} from 'react.force.layout';
 
 import SLDS from 'design-system-react-native';
 

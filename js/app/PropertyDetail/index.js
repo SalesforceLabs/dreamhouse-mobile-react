@@ -5,7 +5,7 @@ const {
     View,
     ScrollView
 } = React;
-import CompactLayout from '../../common/CompactLayout';
+import {CompactLayout} from 'react.force.layout';
 import {SobjContainer} from 'react.force.datacontainer';
 import SLDS from 'design-system-react-native';
 
