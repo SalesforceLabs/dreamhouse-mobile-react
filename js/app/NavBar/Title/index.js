@@ -1,9 +1,4 @@
-var React = require('react-native');
-var {
-    Text,
-    View,
-    TouchableOpacity
-} = React;
+import React from 'react-native';
 
 import SLDS from 'design-system-react-native';
 

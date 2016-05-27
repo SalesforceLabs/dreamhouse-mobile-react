@@ -7,7 +7,7 @@ const {
     TouchableOpacity
 } = React;
 
-import F from 'react.force.data';
+import {utils} from 'react.force.data';
 
 import SLDS from 'design-system-react-native';
 
@@ -53,7 +53,7 @@ module.exports = React.createClass({
 
     getImgConfig () {
       if(this.context.sobj['Thumbnail_IMG__c']){
-        return F.utils.parseImageHTML(this.context.sobj['Thumbnail_IMG__c']);
+        return utils.parseImageHTML(this.context.sobj['Thumbnail_IMG__c']);
       }
       return {};
     },

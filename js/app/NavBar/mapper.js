@@ -1,5 +1,5 @@
-var React = require('react-native');
-var {
+import React from 'react-native';
+const {
     Text,
     View,
     TouchableOpacity

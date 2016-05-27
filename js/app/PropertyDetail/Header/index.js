@@ -1,16 +1,14 @@
-var React = require('react-native');
-var {
-    Text,
+import React from 'react-native';
+const {
     View,
-    Image,
-    TouchableOpacity
+    Image
 } = React;
 
 import SLDS from 'design-system-react-native';
 
 import styles from './styles';
 
-import F from 'react.force.data';
+import {utils} from 'react.force.data';
 
 module.exports = React.createClass({
 
@@ -24,7 +22,7 @@ module.exports = React.createClass({
   },
 
   getImgConfig(){
-    return F.utils.parseImageHTML(this.context.sobj['Picture_IMG__c']);
+    return utils.parseImageHTML(this.context.sobj['Picture_IMG__c']);
   },
 
   getName(){
