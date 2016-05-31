@@ -7,20 +7,12 @@
   },
   "dependencies": {
     "design-system-react-native": "git+ssh://git@github.com/ForceDotComLabs/design-system-react-native.git#master",
-    "lodash.findindex": "^4.4.0",
-    "lodash.keys": "^4.0.7",
-    "lodash.merge": "^4.4.0",
-    "lodash.remove": "^4.5.0",
-    "lodash.trim": "^4.4.0",
-    "lodash.union": "^4.4.0",
     "react": "^0.14.8",
     "react-native": "^0.24.1",
     "react-native-side-menu": "^0.19.0",
-    "react-timer-mixin": "^0.13.3",
-    "react.force": "git+ssh://git@github.com/ivanbogdanov/react.force.git",
-    "react.force.data": "git+ssh://git@github.com/ivanbogdanov/react.force.data.git",
-    "react.force.datacontainer": "git+ssh://git@github.com/ivanbogdanov/react.force.datacontainer.git",
-    "react.force.layout": "git+ssh://git@github.com/ivanbogdanov/react.force.layout.git",
-    "shallowequal": "^0.2.2"
+    "react.force": "git+ssh://git@github.com/ForceDotComLabs/react.force.git",
+    "react.force.data": "git+ssh://git@github.com/ForceDotComLabs/react.force.data.git",
+    "react.force.datacontainer": "git+ssh://git@github.com/ForceDotComLabs/react.force.datacontainer.git",
+    "react.force.layout": "git+ssh://git@github.com/ForceDotComLabs/react.force.layout.git"
   }
 }
