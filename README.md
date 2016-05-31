@@ -43,4 +43,17 @@
 
   ```
 
-2. Open the project in Xcode or Android Studio and click `Run`
+2. Open the project in Xcode and click `Run`
+
+
+### Running on device:
+
+1. Start:
+
+  ```
+
+  npm start
+
+  ```
+
+2. Choose `dreamhouse copy` target and click `Run`
