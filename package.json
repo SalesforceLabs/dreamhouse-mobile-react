@@ -6,13 +6,13 @@
     "start": "node_modules/react-native/packager/packager.sh --root js"
   },
   "dependencies": {
-    "design-system-react-native": "git+ssh://git@github.com/ForceDotComLabs/design-system-react-native.git#master",
     "react": "^0.14.8",
     "react-native": "^0.24.1",
     "react-native-side-menu": "^0.19.0",
     "react.force": "git+ssh://git@github.com/ForceDotComLabs/react.force.git",
+    "react.force.base.theme": "git+ssh://git@github.com/ForceDotComLabs/react.force.base.theme.git#master",
     "react.force.data": "git+ssh://git@github.com/ForceDotComLabs/react.force.data.git",
     "react.force.datacontainer": "git+ssh://git@github.com/ForceDotComLabs/react.force.datacontainer.git",
-    "react.force.layout": "git+ssh://git@github.com/ForceDotComLabs/react.force.layout.git"
+    "react.force.layout": "git+ssh://git@github.com/forceDotComLabs/react.force.layout.git"
   }
 }

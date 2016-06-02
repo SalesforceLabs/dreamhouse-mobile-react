@@ -1,6 +1,6 @@
 import React from 'react-native';
 
-import SLDS from 'design-system-react-native';
+import SLDS from 'react.force.base.theme';
 
 import styles from './styles';
 

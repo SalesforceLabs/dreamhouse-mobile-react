@@ -9,7 +9,7 @@ const {
 } = React;
 
 
-import SLDS from 'design-system-react-native';
+import SLDS from 'react.force.base.theme';
 
 import styles from './styles';
 

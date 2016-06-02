@@ -1,7 +1,7 @@
 import React from 'react-native';
 const { TouchableOpacity } = React;
 
-import SLDS from 'design-system-react-native';
+import SLDS from 'react.force.base.theme';
 
 import styles from './styles';
 

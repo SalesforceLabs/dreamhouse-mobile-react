@@ -12,7 +12,7 @@ const {
 
 import {SobjContainer} from 'react.force.datacontainer';
 
-import SLDS from 'design-system-react-native';
+import SLDS from 'react.force.base.theme';
 
 import PropertyListItem from '../../PropertyList/ListItem';
 
