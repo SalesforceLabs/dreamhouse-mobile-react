@@ -12,8 +12,6 @@ const {
 
 import {SobjContainer} from 'react.force.datacontainer';
 
-import SLDS from 'react.force.base.theme';
-
 import PropertyListItem from '../../PropertyList/ListItem';
 
 

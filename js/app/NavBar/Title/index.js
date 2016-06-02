@@ -1,6 +1,6 @@
 import React from 'react-native';
 
-import SLDS from 'react.force.base.theme';
+import Theme from 'react.force.base.theme';
 
 import styles from './styles';
 
@@ -15,9 +15,9 @@ module.exports = React.createClass({
 
   render(){
     return (
-        <SLDS.Text style={styles.text}>
+        <Theme.Text style={styles.text}>
           {this.props.label}
-        </SLDS.Text>
+        </Theme.Text>
     );
   }
 });

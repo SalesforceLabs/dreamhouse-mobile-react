@@ -14,8 +14,6 @@ const {
 
 import {CompactLayout} from 'react.force.layout';
 
-import SLDS from 'react.force.base.theme';
-
 import styles from './styles';
 
 import Header from './Header';

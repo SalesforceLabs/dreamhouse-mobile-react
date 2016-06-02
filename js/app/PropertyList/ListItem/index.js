@@ -9,7 +9,7 @@ const {
 
 import {utils} from 'react.force.data';
 
-import SLDS from 'react.force.base.theme';
+import Theme from 'react.force.base.theme';
 
 import styles from './styles';
 
@@ -69,7 +69,7 @@ module.exports = React.createClass({
       const detail = this.getDetail();
       return (
           <TouchableOpacity onPress={this.handlePress}>
-          <SLDS.Tiles.List 
+          <Theme.Tiles.List 
             title={title} 
             detail={detail}
             image={

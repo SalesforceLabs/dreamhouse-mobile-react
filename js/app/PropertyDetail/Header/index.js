@@ -4,7 +4,7 @@ const {
     Image
 } = React;
 
-import SLDS from 'react.force.base.theme';
+import Theme from 'react.force.base.theme';
 
 import styles from './styles';
 
@@ -46,8 +46,8 @@ module.exports = React.createClass({
               source={{uri: imgConfig.url }}
             />
           </View>
-          <SLDS.Text style={styles.name}>{name}</SLDS.Text>
-          <SLDS.Text style={styles.desc}>{desc}</SLDS.Text>
+          <Theme.Text style={styles.name}>{name}</Theme.Text>
+          <Theme.Text style={styles.desc}>{desc}</Theme.Text>
         </View>
     );
   }

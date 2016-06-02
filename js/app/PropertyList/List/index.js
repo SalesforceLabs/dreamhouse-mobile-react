@@ -4,7 +4,6 @@ import React from 'react-native';
 const {
     ListView,
 } = React;
-import SLDS from 'react.force.base.theme';
 import {SobjContainer} from 'react.force.datacontainer';
 
 import PropertyListItem from '../ListItem';

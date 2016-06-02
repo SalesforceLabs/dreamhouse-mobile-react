@@ -9,9 +9,6 @@ const {
     Image,
 } = React;
 
-
-import SLDS from 'react.force.base.theme';
-
 import styles from './styles';
 
 import routes from '../routes';

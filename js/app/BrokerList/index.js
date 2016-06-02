@@ -14,9 +14,6 @@ const {
 
 import {RelevantItems} from 'react.force.datacontainer';
 
-
-import SLDS from 'react.force.base.theme';
-
 import BrokerListItem from './ListItem';
 
 import styles from './styles';

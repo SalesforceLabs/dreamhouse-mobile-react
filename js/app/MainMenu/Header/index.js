@@ -7,7 +7,7 @@ const {
     Image,
 } = React;
 
-import SLDS from 'react.force.base.theme';
+import Theme from 'react.force.base.theme';
 
 import styles from './styles';
 
@@ -21,7 +21,7 @@ module.exports = React.createClass({
             source={require('image!logo')}
             resizeMode='contain' />
         </View>
-        <SLDS.Text style={styles.title}>D R E A M H O U Z Z</SLDS.Text>
+        <Theme.Text style={styles.title}>D R E A M H O U Z Z</Theme.Text>
       </View>
     );
   }

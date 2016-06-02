@@ -7,7 +7,6 @@ const {
 } = React;
 import {CompactLayout} from 'react.force.layout';
 import {SobjContainer} from 'react.force.datacontainer';
-import SLDS from 'react.force.base.theme';
 
 import styles from './styles';
 import Header from './Header';

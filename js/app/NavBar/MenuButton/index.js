@@ -1,7 +1,7 @@
 import React from 'react-native';
 const { TouchableOpacity } = React;
 
-import SLDS from 'react.force.base.theme';
+import Theme from 'react.force.base.theme';
 
 import styles from './styles';
 
@@ -14,7 +14,7 @@ module.exports = React.createClass({
   render(){
     return (
         <TouchableOpacity onPress={this.handlePress}>
-          <SLDS.Icons.Utility 
+          <Theme.Icons.Utility 
             name="rows" 
             style={styles.icon} 
             iconColor='#ffffff' />

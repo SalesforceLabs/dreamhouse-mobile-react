@@ -13,7 +13,7 @@ const {
 } = React;
 
 
-import SLDS from 'react.force.base.theme';
+import Theme from 'react.force.base.theme';
 
 import styles from './styles';
 
@@ -28,15 +28,15 @@ module.exports = React.createClass({
 
     getIconCompClass(iconCategory){
       if(iconCategory.toLowerCase() === 'standard'){
-        return SLDS.Icons.Standard;
+        return Theme.Icons.Standard;
       }
       if(iconCategory.toLowerCase() === 'custom'){
-        return SLDS.Icons.Custom;
+        return Theme.Icons.Custom;
       }
       if(iconCategory.toLowerCase() === 'utility'){
-        return SLDS.Icons.Utility;
+        return Theme.Icons.Utility;
       }
-      return SLDS.Icons.Action;
+      return Theme.Icons.Action;
     },
 
     getImage(){
@@ -50,7 +50,7 @@ module.exports = React.createClass({
       return (
           <TouchableOpacity onPress={this.handlePress}>
 
-          <SLDS.Menus.ActionListItem 
+          <Theme.Menus.ActionListItem 
             image={ this.getImage() }
             label={ this.props.menuItem.label} />
           </TouchableOpacity>

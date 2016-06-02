@@ -6,8 +6,6 @@ const {
     TouchableOpacity
 } = React;
 
-import SLDS from 'react.force.base.theme';
-
 import styles from './styles';
 
 import F from 'react.force.data';
