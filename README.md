@@ -14,7 +14,7 @@
 
   ```
 
-  npm install
+  pod install
 
   ```
 
