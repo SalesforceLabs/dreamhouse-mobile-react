@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		02E37E28E528DD90AFBC849F /* libPods-dreamhouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E606AE0C7CABF6DAF27DF3CC /* libPods-dreamhouse.a */; };
+		0566338B1D03DE160041B3B4 /* SalesforceDesignSystemIconsAction.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0224C7218E64D878376CA25 /* SalesforceDesignSystemIconsAction.ttf */; };
+		0566338C1D03DE160041B3B4 /* SalesforceDesignSystemIconsCustom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D9FA5C6EB9D4B9185D99A94 /* SalesforceDesignSystemIconsCustom.ttf */; };
+		0566338D1D03DE160041B3B4 /* SalesforceDesignSystemIconsStandard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28EBFEB5239446C596705EEF /* SalesforceDesignSystemIconsStandard.ttf */; };
+		0566338E1D03DE160041B3B4 /* SalesforceDesignSystemIconsUtility.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAEB746FDDEF49409A049542 /* SalesforceDesignSystemIconsUtility.ttf */; };
+		0566338F1D03DE160041B3B4 /* SalesforceSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAB7429758EC40B2A9370F52 /* SalesforceSans-Bold.ttf */; };
+		056633901D03DE160041B3B4 /* SalesforceSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05CED4EADC74493F93525DFF /* SalesforceSans-Light.ttf */; };
+		056633911D03DE160041B3B4 /* SalesforceSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D695F6FCD7649FF83058D42 /* SalesforceSans-Regular.ttf */; };
+		056633931D03DE950041B3B4 /* libSalesforceBaseTheme.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 055113D51D000DD8000142B5 /* libSalesforceBaseTheme.a */; };
 		05A4E0881CECF0D600199B05 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 05DF20AE1CECDC5C00D48CFC /* main.jsbundle */; };
 		05DF20921CECD85D00D48CFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D5EA51B6C0568005E64D4 /* AppDelegate.m */; };
 		05DF20931CECD85D00D48CFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D5EA21B6C0568005E64D4 /* main.m */; };
@@ -72,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056633931D03DE950041B3B4 /* libSalesforceBaseTheme.a in Frameworks */,
 				05DF20961CECD85D00D48CFC /* libPods-dreamhouse.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +307,13 @@
 			files = (
 				05DF20991CECD85D00D48CFC /* Images.xcassets in Resources */,
 				05A4E0881CECF0D600199B05 /* main.jsbundle in Resources */,
+				0566338E1D03DE160041B3B4 /* SalesforceDesignSystemIconsUtility.ttf in Resources */,
+				0566338D1D03DE160041B3B4 /* SalesforceDesignSystemIconsStandard.ttf in Resources */,
+				0566338F1D03DE160041B3B4 /* SalesforceSans-Bold.ttf in Resources */,
+				056633911D03DE160041B3B4 /* SalesforceSans-Regular.ttf in Resources */,
+				056633901D03DE160041B3B4 /* SalesforceSans-Light.ttf in Resources */,
+				0566338C1D03DE160041B3B4 /* SalesforceDesignSystemIconsCustom.ttf in Resources */,
+				0566338B1D03DE160041B3B4 /* SalesforceDesignSystemIconsAction.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

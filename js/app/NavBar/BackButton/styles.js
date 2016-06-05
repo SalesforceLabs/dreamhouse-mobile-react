@@ -9,7 +9,9 @@ module.exports = StyleSheet.create({
   icon: {
     width:20,
     height:20,
-    margin:5,
-    marginLeft:15
+    marginBottom:15,
+    marginRight:35,
+    marginTop:7,
+    marginLeft:20
   }
 });
