@@ -13,7 +13,7 @@ import Theme from 'react.force.base.theme';
 
 import styles from './styles';
 
-import F from 'react.force.data';
+import {utils} from 'react.force.data';
 
 
 module.exports = React.createClass({
@@ -31,12 +31,8 @@ module.exports = React.createClass({
       }
     },
 
-    shouldComponentUpdate (nextProps,nextState,nextContext) {
-      return nextContext.sobj != this.context.sobj;
-    },
-
     render () {
-      const imgConfig = F.utils.parseImageHTML(this.context.sobj['Picture_IMG__c']);
+      const imgConfig = utils.parseImageHTML(this.context.sobj['Picture_IMG__c']);
       const title = this.context.sobj.Name;
       const detail = this.context.sobj['Title__c']?this.context.sobj['Title__c']:' ';
       return (

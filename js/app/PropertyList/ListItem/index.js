@@ -58,11 +58,6 @@ module.exports = React.createClass({
       return {};
     },
 
-    shouldComponentUpdate(nextProps, nextState, nextContext){
-      return nextContext.sobj !== this.context.sobj;
-    },
-
-
     render () {
       const imgConfig = this.getImgConfig();
       const title = this.getTitle();
