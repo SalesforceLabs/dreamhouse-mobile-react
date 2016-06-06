@@ -21,7 +21,7 @@
  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
+
 'use strict';
 
 import React from 'react-native';
@@ -50,6 +50,7 @@ module.exports = React.createClass({
       return (
         <ListView
           dataSource={this.context.dataSource}
+          enableEmptySections={true}
           renderRow={this.renderRow} />
       );
     }
