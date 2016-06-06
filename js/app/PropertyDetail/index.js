@@ -21,7 +21,7 @@
  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
+
 'use strict';
 
 import React from 'react-native';
@@ -30,7 +30,7 @@ const {
     ScrollView
 } = React;
 import {CompactLayout} from 'react.force.layout';
-import {SobjContainer} from 'react.force.datacontainer';
+import {SobjContainer,ScrollRefresh} from 'react.force.datacontainer';
 
 import styles from './styles';
 import Header from './Header';
@@ -55,12 +55,12 @@ module.exports = React.createClass({
     const sobj = this.props.route.sobj;
     return (
       <View style={styles.container}>
-        <ScrollView>
-          <SobjContainer id={sobj.Id} type={sobj.attributes.type}>
+        <SobjContainer id={sobj.Id} type={sobj.attributes.type}>
+          <ScrollRefresh>
             <Header />
             <CompactLayout onLayoutTap={this.handleLayoutTap}/>
-          </SobjContainer>
-        </ScrollView>
+          </ScrollRefresh>
+        </SobjContainer>
       </View>
     );
   },
