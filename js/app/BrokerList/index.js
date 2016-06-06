@@ -21,20 +21,10 @@
  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
+
 'use strict';
 
 import React from 'react-native';
-
-const {
-    AppRegistry,
-    StyleSheet,
-    Text,
-    View,
-    ListView,
-    PixelRatio,
-    TouchableOpacity
-} = React;
 
 import {RelevantItems} from 'react.force.datacontainer';
 
@@ -46,13 +36,6 @@ import List from './List';
 
 module.exports = React.createClass({    
     render () {
-/*
-      return (
-        <ListContainer type='Broker__c' fields={['Name']} style={styles.container}>
-          <List navigator={this.props.navigator} route={this.props.route} />
-        </ListContainer>
-      );
-*/
       return (
         <RelevantItems type='Broker__c' style={styles.container}>
           <List navigator={this.props.navigator} route={this.props.route} />
