@@ -54,14 +54,12 @@ module.exports = React.createClass({
   render() {
     const sobj = this.props.route.sobj;
     return (
-      <View style={styles.container}>
-        <SobjContainer id={sobj.Id} type={sobj.attributes.type}>
-          <ScrollRefresh>
-            <Header />
-            <CompactLayout onLayoutTap={this.handleLayoutTap}/>
-          </ScrollRefresh>
-        </SobjContainer>
-      </View>
+      <SobjContainer id={sobj.Id} type={sobj.attributes.type} style={styles.container}>
+        <ScrollRefresh>
+          <Header />
+          <CompactLayout onLayoutTap={this.handleLayoutTap}/>
+        </ScrollRefresh>
+      </SobjContainer>
     );
   },
 });
