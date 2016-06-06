@@ -12,7 +12,7 @@ module.exports = React.createClass({
     
     render () {
       return (
-        <ListContainer type='Favorite__c' fields={['Property__c']} style={styles.container}>
+        <ListContainer type='Favorite__c' fields={['Property__c']} style={styles.container} fullFetch={false}>
           <List navigator={this.props.navigator} route={this.props.route} />
         </ListContainer>
       );
