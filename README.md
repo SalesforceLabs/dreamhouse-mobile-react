@@ -1,6 +1,10 @@
-## DreamHouzz App (ReactNative + Salesforce MobileSDK). 
+## DreamHouse App (ReactNative + Salesforce MobileSDK). 
 
-### Setup
+### Org and Data setup:
+
+Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-site.herokuapp.com/installation/)
+
+### Project Setup
 
 1. npm dependencies:
 
