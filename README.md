@@ -47,7 +47,7 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
   
 ### Run
 
-1. Open the project in Xcode and click `Run`
+1. Open the project in Xcode:
 
   ```
 
@@ -63,6 +63,8 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
 
   ```
 
+3. Click `Run` in XCode
+
 
 
 ### Running on device:
@@ -75,4 +77,4 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
 
   ```
 
-2. Choose `dreamhouse copy` target and click `Run`
+2. Choose `dreamhouse copy` target in XCode and click `Run`
