@@ -1,6 +1,6 @@
 ## DreamHouse App (ReactNative + Salesforce MobileSDK). 
 
-![iOS Screenshot](/README_files/screen1.png?raw=true)
+![iOS Screenshot](/README_files/screen1.png?raw=true)![iOS Screenshot](/README_files/screen2.png?raw=true)
 
 ### Org and Data setup:
 
