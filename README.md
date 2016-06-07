@@ -1,5 +1,7 @@
 ## DreamHouse App (ReactNative + Salesforce MobileSDK). 
 
+![iOS Screenshot](/README_files/screen1.png?raw=true)
+
 ### Org and Data setup:
 
 Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-site.herokuapp.com/installation/)
