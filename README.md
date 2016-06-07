@@ -41,7 +41,15 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
   
 ### Run
 
-1. Start:
+1. Open the project in Xcode and click `Run`
+
+  ```
+
+  open ./dreamhouse.xcworkspace
+
+  ```
+
+2. Start development server:
 
   ```
 
@@ -49,7 +57,6 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
 
   ```
 
-2. Open the project in Xcode and click `Run`
 
 
 ### Running on device:
