@@ -47,7 +47,7 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
   
 ### Run
 
-1. Open the project in Xcode:
+1. Open the project workspace in Xcode:
 
   ```
 
