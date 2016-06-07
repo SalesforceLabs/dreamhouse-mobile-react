@@ -37,7 +37,6 @@ import PropertyList from './PropertyList';
 import styles from './styles';
 import MainMenu from './MainMenu';
 import NavigationBarRouteMapper from './NavBar/mapper';
-import {QueryCounter} from 'react.force.data';
 
 
 module.exports = React.createClass({
@@ -91,10 +90,6 @@ module.exports = React.createClass({
             renderScene={this.router}
             navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouteMapper({onMenuOpen:this.handleMenuOpen})} style={styles.navbar}/>}
         />
-{/*
-        <QueryCounter />
-*/}
-
       </SideMenu>
     );
   }

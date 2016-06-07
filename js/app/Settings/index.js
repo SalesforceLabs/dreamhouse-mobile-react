@@ -21,21 +21,30 @@
  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
+
 'use strict';
 
-var React = require('react-native');
-var {
-    StyleSheet,
+import React from 'react-native';
+const {
+    View,
+    Text,
+    ScrollView
 } = React;
 
-module.exports = StyleSheet.create({
-  container: {
-    flex:0,
-    marginTop:100
+import styles from './styles';
+
+import ClearCache from './ClearCache';
+
+import Logout from './Logout';
+
+module.exports = React.createClass({    
+  render() {
+    const sobj = this.props.route.sobj;
+    return (
+      <View style={styles.container}>
+        <ClearCache />
+        <Logout />
+      </View>
+    );
   },
-  image: {
-    width:20,
-    height:20
-  }
 });

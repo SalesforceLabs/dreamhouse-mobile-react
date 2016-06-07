@@ -27,6 +27,7 @@ import PropertyDetail from './PropertyDetail';
 import FavoriteList from './FavoriteList';
 import BrokerList from './BrokerList';
 import BrokerDetail from './BrokerDetail';
+import Settings from './Settings';
 
 module.exports = {
   propertyList:{
@@ -45,8 +46,8 @@ module.exports = {
     name:'favoriteList',
     comp: FavoriteList,
     label: 'Favorites',
-    icon:'check',
-    iconCategory:'action'
+    icon:'custom11',
+    iconCategory:'custom'
   },
   brokerList:{
     name:'brokerList',
@@ -59,7 +60,15 @@ module.exports = {
     name:'brokerDetail',
     comp: BrokerDetail,
     label: 'Broker'
+  },
+  settings:{
+    name:'settings',
+    comp: Settings,
+    label: 'Settings',
+    icon: 'custom',
+    iconCategory:'standard',
+    menuItemStyle:{marginTop:30}
   }
 };
 
-module.exports.menu = ['propertyList','brokerList','favoriteList'];
+module.exports.menu = ['propertyList','brokerList','favoriteList','settings'];
