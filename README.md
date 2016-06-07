@@ -2,6 +2,11 @@
 
 ![iOS Screenshot](/README_files/screen2.png?raw=true)  ![iOS Screenshot](/README_files/screen1.png?raw=true)
 
+### Attention: This is an experimental project published under ForceDotComLabs: 
+
+1. work in progress
+2. we need you feedback
+
 ### Org and Data setup:
 
 Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-site.herokuapp.com/installation/)
