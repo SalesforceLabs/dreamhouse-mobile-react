@@ -1,18 +1,22 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5991135B82C8515505DA5B3F9735D55C7D261D9F+++C688025",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5991135B82C8515505DA5B3F9735D55C7D261D9F+++71CB9FC",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "5991135B82C8515505DA5B3F9735D55C7D261D9F+++0BA8853" : 0,
+    "5991135B82C8515505DA5B3F9735D55C7D261D9F+++DF3A9D1" : 0,
+    "5991135B82C8515505DA5B3F9735D55C7D261D9F+++71CB9FC" : 0,
+    "5991135B82C8515505DA5B3F9735D55C7D261D9F+++8604BED" : 0,
     "5991135B82C8515505DA5B3F9735D55C7D261D9F+++C688025" : 0,
-    "5991135B82C8515505DA5B3F9735D55C7D261D9F+++DF3A9D1" : 0
+    "5991135B82C8515505DA5B3F9735D55C7D261D9F+++0BA8853" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2C75941B-9BA0-439D-A274-49826F164E21",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "5991135B82C8515505DA5B3F9735D55C7D261D9F+++0BA8853" : "..\/dreamhouse",
+    "5991135B82C8515505DA5B3F9735D55C7D261D9F+++DF3A9D1" : "..\/dreamhouse",
+    "5991135B82C8515505DA5B3F9735D55C7D261D9F+++71CB9FC" : "dreamhouse-mobile-react\/",
+    "5991135B82C8515505DA5B3F9735D55C7D261D9F+++8604BED" : "..\/msdkdev\/dreamhouse",
     "5991135B82C8515505DA5B3F9735D55C7D261D9F+++C688025" : "dreamhouse\/",
-    "5991135B82C8515505DA5B3F9735D55C7D261D9F+++DF3A9D1" : "..\/dreamhouse"
+    "5991135B82C8515505DA5B3F9735D55C7D261D9F+++0BA8853" : "..\/dreamhouse"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "dreamhouse",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -22,6 +26,16 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ivanbogdanov\/dreamhouse.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5991135B82C8515505DA5B3F9735D55C7D261D9F+++0BA8853"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ForceDotComLabs\/dreamhouse-mobile-react.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5991135B82C8515505DA5B3F9735D55C7D261D9F+++71CB9FC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ivanbogdanov\/dreamhouse.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5991135B82C8515505DA5B3F9735D55C7D261D9F+++8604BED"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ForceDotComLabs\/dreamhouse.git",
