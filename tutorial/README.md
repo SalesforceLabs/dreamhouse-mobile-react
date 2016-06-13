@@ -9,7 +9,8 @@ Before getting started with this tutorial you need to have Broker and Property c
 Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-site.herokuapp.com/installation/)
 
 ## Steps:
-1.[Initial Setup and dependencies](/tutorial/step01_cleanup_and_dependencies/)
 
-2.[Initial Setup and dependencies](/tutorial/step01_cleanup_and_dependencies/)
+* Step 1: [Initial Setup and dependencies](/tutorial/step01_cleanup_and_dependencies/)
+
+* Step 2: [Touch Handler](/tutorial/step02_touch_handler/)
 
