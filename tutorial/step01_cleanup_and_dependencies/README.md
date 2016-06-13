@@ -89,6 +89,6 @@ See this [package.json](/package.json) `dependencies` section for inspiration.
 
 ### Next:
 
-Let's add some interactivity
+Let's add some interactivity!
 
 Step2: [Touch handler](/tutorial/step02_touch_handler/)
