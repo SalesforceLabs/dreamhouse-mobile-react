@@ -82,7 +82,7 @@ See this [package.json](/package.json) `dependencies` section for inspiration.
 
   ```
   
-### Expected result
+### Expected result:
 
 ![iOS Screenshot](/tutorial/README_FILES/step1.png?raw=true)
 
