@@ -19,4 +19,19 @@ If you are new to `forceios` CLI: you can use [this great tutorial](http://rajar
 
   ```
 
+##### 2. Simplify the project:
+
+copy/replace files: 
+* `app` folder
+* `package.json`
+* `index.os.js` 
+
+##### 3. Add new dependencies to your package.json:
+* `react.force`
+* `react.force.data`
+* `react.force.datacontainer`
+* `react.force.layout`
+* `react.force.base.theme`
+
+
 
