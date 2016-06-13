@@ -4,7 +4,7 @@
 
 Setup project, install dependencies and build first simple view:
 
-![iOS Screenshot](/tutorial/README_files/step1.png?raw=true)
+![iOS Screenshot](/tutorial/README_FILES/step1.png?raw=true)
 
 ### Prerequisite
 
