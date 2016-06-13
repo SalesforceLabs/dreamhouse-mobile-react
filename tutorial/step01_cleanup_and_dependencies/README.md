@@ -61,3 +61,18 @@ See this [package.json](/package.json) `dependencies` section for inspiration.
   npm install
 
   ```
+
+##### 6. if [RNPM](http://facebook.github.io/react-native/releases/0.24/docs/linking-libraries-ios.html#automatic-linking) is not yet installed:
+
+  ```
+
+  npm install rnpm -g
+
+  ```
+##### 7. link dependencies: 
+
+  ```
+
+  rnpm link
+
+  ```
