@@ -1,6 +1,6 @@
 ## Step-by-step video tutorial
 
-[Tutorial source code](/tutorial/)
+Tutorial source code can be found [here](/tutorial/)
 
 See TralheaDX 16 video session for this tutorial: [Being Productive with React Native and Salesforce MobileSDK](https://www.salesforce.com/video/249287/)
 
