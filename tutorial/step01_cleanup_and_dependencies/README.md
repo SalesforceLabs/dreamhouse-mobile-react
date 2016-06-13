@@ -11,7 +11,7 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
 
 ##### 1. Create a new React Native Project with forceios CLI:
 
-If you are new to `forceios` CLI: you can use [this great tutorial](http://rajaraodv.github.io/salesforce-react-native-tutorial/) to get started 
+If you are new to `forceios` CLI: you can use [this great tutorial](http://rajaraodv.github.io/salesforce-react-native-tutorial/) to get started.
 
   ```
 
