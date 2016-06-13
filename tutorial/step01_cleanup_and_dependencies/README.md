@@ -19,14 +19,27 @@ If you are new to `forceios` CLI: you can use [this great tutorial](http://rajar
 
   ```
 
-##### 2. Simplify the project:
+##### 3. Run your project and make sure it works in simulator:
+
+If you don't know how to do it you can use [this great tutorial](http://rajaraodv.github.io/salesforce-react-native-tutorial/) to get started.
+
+  ```
+
+  npm start
+
+  ```
+
+##### 3. Simplify the project:
 
 copy/replace files: 
 * `app` folder
 * `package.json`
 * `index.os.js` 
 
-##### 3. Add new dependencies to your package.json:
+##### 4. Add new dependencies to your package.json:
+
+See this [package.json](/package.json) for inspiration:
+
 * `react.force`
 * `react.force.data`
 * `react.force.datacontainer`
