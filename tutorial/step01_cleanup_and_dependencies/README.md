@@ -2,7 +2,9 @@
 
 ### Objective
 
-Setup project, install dependencies and build first simple view
+Setup project, install dependencies and build first simple view:
+
+![iOS Screenshot](/tutorial/README_files/step1.png?raw=true)
 
 ### Prerequisite
 
