@@ -46,5 +46,12 @@ See this [package.json](/package.json) `dependencies` section for inspiration.
 * `react.force.layout`
 * `react.force.base.theme`
 
+##### 5. Re-install dependencies
 
+  ```
 
+  rm -rf node_modules
+
+  npm install
+
+  ```
