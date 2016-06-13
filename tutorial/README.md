@@ -10,4 +10,6 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
 
 ## Steps:
 1.[Initial Setup and dependencies](/tutorial/step01_cleanup_and_dependencies/)
+
 2.[Initial Setup and dependencies](/tutorial/step01_cleanup_and_dependencies/)
+
