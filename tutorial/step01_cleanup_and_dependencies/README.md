@@ -1,5 +1,9 @@
 ## Step 1: create forceios template app and add dependencies
 
+### Objective
+
+Setup project, install dependencies and build first simple view
+
 ### Prerequisite
 
 * Dreamhouse org and Data setup:
