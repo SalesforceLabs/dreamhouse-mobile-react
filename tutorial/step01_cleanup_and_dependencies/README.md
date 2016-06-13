@@ -2,9 +2,7 @@
 
 ### Objective
 
-Setup project, install dependencies and build first simple view:
-
-![iOS Screenshot](/tutorial/README_FILES/step1.png?raw=true)
+Setup project, install dependencies and build first simple view.
 
 ### Prerequisite
 
@@ -76,3 +74,14 @@ See this [package.json](/package.json) `dependencies` section for inspiration.
   rnpm link
 
   ```
+##### 8. run the project and make sure everyting works: 
+
+  ```
+
+  npm start
+
+  ```
+  
+### Expected result
+
+![iOS Screenshot](/tutorial/README_FILES/step1.png?raw=true)
