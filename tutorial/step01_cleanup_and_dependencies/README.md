@@ -38,7 +38,7 @@ copy/replace files:
 
 ##### 4. Add new dependencies to your package.json:
 
-See this [package.json](/package.json) for inspiration:
+See this [package.json](/package.json) `dependencies` section for inspiration:
 
 * `react.force`
 * `react.force.data`
