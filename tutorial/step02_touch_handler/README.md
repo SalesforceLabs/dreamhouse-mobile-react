@@ -20,9 +20,9 @@ npm run step1
 
 ***
 
-##### 1. in your favorite IDE open
+##### 1. In your favorite IDE
 
-[app/index.js](/tutorial/step01_cleanup_and_dependencies/app/index.js) file in your favorite IDE
+Open [app/index.js](/tutorial/step01_cleanup_and_dependencies/app/index.js) file in your favorite IDE
 
 ##### 2. Import `TouchableOpacity` component
 
