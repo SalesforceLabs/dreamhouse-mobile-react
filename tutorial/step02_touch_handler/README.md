@@ -1,8 +1,8 @@
-## Step 2: Adding Touch handler
+## Step 2: Adding Touch Handler
 
 ##### Goal
 
-Learn how to handle tap event.
+Learn how to handle tap events.
 
 ##### Before getting started
 
@@ -46,8 +46,24 @@ import React, {
 ##### 3. Wrap Text component with `TouchableOpacity` in your component render function
 
 ```html
-  <TouchableOpacity onPress={this.handlePress}> 
+  <TouchableOpacity onPress={this.handlePress}>
     <Text style={styles.text}>Let's start coding!!</Text>
   </TouchableOpacity>
 ```
+
+****
+
+##### Expected Result:
+
+Tap on 'Let's start coding!!' text:
+
+![iOS Screenshot](/tutorial/README_FILES/step2.png?raw=true)
+
+***
+
+##### Next Step:
+
+Let's add Navigator component
+
+[Step3: Adding Navigator](/tutorial/step03_navigator/)
 
