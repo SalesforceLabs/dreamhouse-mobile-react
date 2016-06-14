@@ -10,6 +10,8 @@
 
 ### Tutorial
 
+![iOS Screenshot](/tutorial_video/README_files/video2.png?raw=true)
+
 Step-by-step tutorial for this project can be found [HERE](/tutorial/)
 
 ### Org and Data setup:
