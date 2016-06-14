@@ -2,11 +2,9 @@
 
 ##### Goal
 
-Setup project, install dependencies and build first simple view.
+Learn how to setup project, install dependencies and build first simple view.
 
 ##### Before getting started
-
-* Dreamhouse org and Data setup:
 
 Before getting started with this tutorial you need to have Broker and Property custom objects set and populated with data
 
