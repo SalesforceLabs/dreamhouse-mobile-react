@@ -35,3 +35,19 @@ import React, {
 
 ```
 
+##### 3. Add `handlePress` method before `render` method in your component
+
+```
+  handlePress(){
+    alert('Pressed!');
+  },
+```
+
+##### 3. Wrap Text component with `TouchableOpacity` in your component render function
+
+```
+  <TouchableOpacity onPress={this.handlePress}> 
+    <Text style={styles.text}>Let's start coding!!</Text>
+  </TouchableOpacity>
+```
+
