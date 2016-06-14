@@ -1,10 +1,10 @@
 ## Step 1: create forceios template app and add dependencies
 
-### Objective
+##### Goal
 
 Setup project, install dependencies and build first simple view.
 
-### Prerequisite
+##### Before getting started
 
 * Dreamhouse org and Data setup:
 
@@ -82,12 +82,12 @@ See this [package.json](/package.json) `dependencies` section for inspiration.
 
   ```
   
-### Expected result:
+##### Expected result:
 
 ![iOS Screenshot](/tutorial/README_FILES/step1.png?raw=true)
 
 
-### Next:
+##### Next Step:
 
 Let's add some interactivity!
 
