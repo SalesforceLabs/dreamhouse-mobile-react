@@ -2,9 +2,11 @@
 
 Video version of this tutorial can be found [HERE](/tutorial_video/README.md)
 
+![iOS Screenshot](/tutorial_video/README_files/video2.png?raw=true)
+
 ### Goal
 
-Learn how to build Sobject List and Sobject Detail view
+Learn how to build Sobject List and Sobject Detail views and navigate between them.
 
 ### Before getting started:
 
