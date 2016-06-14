@@ -26,7 +26,7 @@ Open [app/index.js](/tutorial/step01_cleanup_and_dependencies/app/index.js) file
 
 ##### 2. Import `TouchableOpacity` component
 
-```
+```js
 import React, {
   Text,
   View,
@@ -37,7 +37,7 @@ import React, {
 
 ##### 3. Add `handlePress` method before `render` method in your component
 
-```
+```js
   handlePress(){
     alert('Pressed!');
   },
@@ -45,7 +45,7 @@ import React, {
 
 ##### 3. Wrap Text component with `TouchableOpacity` in your component render function
 
-```
+```html
   <TouchableOpacity onPress={this.handlePress}> 
     <Text style={styles.text}>Let's start coding!!</Text>
   </TouchableOpacity>
