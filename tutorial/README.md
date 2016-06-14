@@ -12,5 +12,5 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
 
 * Step 1: [Initial Setup and dependencies](/tutorial/step01_cleanup_and_dependencies/)
 
-* Step 2: [Touch handler](/tutorial/step02_touch_handler/)
+* Step 2: [Adding Touch handler](/tutorial/step02_touch_handler/)
 
