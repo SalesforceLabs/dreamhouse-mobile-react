@@ -14,7 +14,7 @@ If you just want to practice this step: you can start editing [Step1 components]
 
 ```
 
-npm run step2
+npm run step1
 
 ```
 
