@@ -11,9 +11,7 @@ Before getting started with this tutorial you need to have Broker and Property c
 Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-site.herokuapp.com/installation/)
 
 
-
-
-
+***
 
 ##### 1. Create a new React Native Project with forceios CLI:
 
@@ -62,27 +60,29 @@ See this [package.json](/package.json) `dependencies` section for inspiration.
 
   ```
 
-##### 6. if [RNPM](http://facebook.github.io/react-native/releases/0.24/docs/linking-libraries-ios.html#automatic-linking) is not yet installed:
+##### 6. If [RNPM](http://facebook.github.io/react-native/releases/0.24/docs/linking-libraries-ios.html#automatic-linking) is not yet installed:
 
   ```
 
   npm install rnpm -g
 
   ```
-##### 7. link dependencies: 
+##### 7. Link dependencies: 
 
   ```
 
   rnpm link
 
   ```
-##### 8. run the project and make sure everyting works: 
+##### 8. Run the project and make sure everyting works: 
 
   ```
 
   npm start
 
   ```
+  
+***  
   
 ##### Expected result:
 
