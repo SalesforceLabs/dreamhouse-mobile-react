@@ -1,4 +1,4 @@
-## Step 1: create forceios template app and add dependencies
+## Step 1: Create forceios template app and add dependencies
 
 ##### Goal
 
