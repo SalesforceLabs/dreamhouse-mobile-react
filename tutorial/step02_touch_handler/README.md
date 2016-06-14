@@ -18,3 +18,20 @@ npm run step1
 
 ```
 
+***
+
+##### 1. in your favorite IDE open
+
+[app/index.js](/tutorial/step01_cleanup_and_dependencies/app/index.js) file in your favorite IDE
+
+##### 2. Import `TouchableOpacity` component
+
+```
+import React, {
+  Text,
+  View,
+  TouchableOpacity // <- This line is added
+} from 'react-native';
+
+```
+
