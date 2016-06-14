@@ -2,7 +2,11 @@
 
 Video version of this tutorial can be found [HERE](/tutorial_video/README.md)
 
-### Dreamhouse org and Data setup:
+### Goal
+
+Learn how to build Sobject List and Sobject Detail view
+
+### Before getting started:
 
 Before getting started with this tutorial you need to have Broker and Property custom objects set and populated with data
 
