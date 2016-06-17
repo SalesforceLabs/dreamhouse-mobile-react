@@ -20,3 +20,5 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
 
 * Step 2: [Adding Touch handler](/tutorial/step02_touch_handler/)
 
+* Step 3: [Adding Navigator](/tutorial/step03_navigator/)
+
