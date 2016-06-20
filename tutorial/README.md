@@ -23,3 +23,5 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
 
 * Step 3: [Adding Navigator](/tutorial/step03_navigator/)
 
+* Step 4: [Working with Navigator Router](/tutorial/step04_navigator_routing/)
+
