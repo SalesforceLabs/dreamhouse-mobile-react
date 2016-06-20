@@ -1,6 +1,6 @@
 ## React Native and MobileSDK: step-by-step tutorial
 
-Video version of this tutorial 
+[Video version of this tutorial: ](https://www.youtube.com/watch?v=RY2vn2bT6XU)
 
 [![iOS Screenshot](/tutorial_video/README_files/video2.png?raw=true)](https://www.youtube.com/watch?v=RY2vn2bT6XU)
 
