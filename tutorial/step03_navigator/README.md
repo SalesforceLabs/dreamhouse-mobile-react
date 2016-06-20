@@ -6,11 +6,11 @@ Learn how to use Navigator component.
 
 ##### Before getting started
 
-If you are building your app from scratch: [Step1](/tutorial/step02_touch_handler/) needs to be completed.
+If you are building your app from scratch: [Step2](/tutorial/step02_touch_handler/) needs to be completed.
 
 OR
 
-If you just want to practice this step: you can start editing [Step1 components](/tutorial/step02_touch_handler/) in this repo and run
+If you just want to practice this step: you can start editing [Step2 components](/tutorial/step02_touch_handler/) in this repo and run
 
 ```
 
