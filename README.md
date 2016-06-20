@@ -6,13 +6,11 @@
 
 1. work in progress
 2. we need your feedback
-3. not production-ready 
+3. code contributions are welcome
 
-### Tutorial
+### Step-by-step Tutorial
 
-![iOS Screenshot](/tutorial_video/README_files/video2.png?raw=true)
-
-Step-by-step tutorial for this project can be found [HERE](/tutorial/)
+[ ![iOS Screenshot](/tutorial_video/README_files/video2.png?raw=true) ](/tutorial/)
 
 ### Org and Data setup:
 
