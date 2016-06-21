@@ -21,7 +21,7 @@ npm run step9
 
 ***
 
-##### 1. Modify [app/BrokerDetail/index.js](/tutorial/step09_sobject_detail_page/app/BrokerDetail/index.js):
+##### 1. Modify [app/BrokerDetail/index.js](/tutorial/step10_compact_layout/app/BrokerDetail/index.js):
 
 1. import `CompactLayout` from `react.force.layout` module
 2. add `<CompactLayout />` after `<Header />` component
