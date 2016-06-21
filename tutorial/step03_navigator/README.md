@@ -4,6 +4,12 @@
 
 Learn how to use Navigator component.
 
+***
+
+##### Video: [Step3](https://youtu.be/RY2vn2bT6XU?t=635)
+
+***
+
 ##### Before getting started
 
 If you are building your app from scratch: [Step 2](/tutorial/step02_touch_handler/) needs to be completed.

@@ -4,6 +4,12 @@
 
 Learn how to use Sobject Data Container
 
+***
+
+##### Video: [Step6](https://youtu.be/RY2vn2bT6XU?t=1009)
+
+***
+
 ##### Before getting started
 
 If you are building your app from scratch: [Step 5](/tutorial/step05_relevant_items/) needs to be completed.

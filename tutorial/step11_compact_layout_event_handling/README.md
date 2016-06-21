@@ -5,6 +5,12 @@
 
 Learn how to handle Compact Layout Touch Events
 
+***
+
+##### Video: [Step11](https://youtu.be/RY2vn2bT6XU?t=1547)
+
+***
+
 ##### Before getting started
 
 If you are building your app from scratch: [Step 10](/tutorial/step10_compact_layout/) needs to be completed.

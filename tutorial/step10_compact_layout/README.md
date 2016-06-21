@@ -5,6 +5,12 @@
 
 Learn how to render Sobject Compact Layout
 
+***
+
+##### Video: [Step10](https://youtu.be/RY2vn2bT6XU?t=1448)
+
+***
+
 ##### Before getting started
 
 If you are building your app from scratch: [Step 9](/tutorial/step09_sobject_detail_page/) needs to be completed.

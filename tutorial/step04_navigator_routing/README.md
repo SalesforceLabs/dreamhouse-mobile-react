@@ -4,6 +4,13 @@
 
 Learn how to use Navigator Router.
 
+***
+
+##### Video: [Step4](https://youtu.be/RY2vn2bT6XU?t=791)
+
+***
+
+
 ##### Before getting started
 
 If you are building your app from scratch: [Step 3](/tutorial/step03_navigator/) needs to be completed.

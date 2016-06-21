@@ -5,6 +5,12 @@
 
 Learn how to trigger navigation on List Item tap
 
+***
+
+##### Video: [Step8](https://youtu.be/RY2vn2bT6XU?t=1244)
+
+***
+
 ##### Before getting started
 
 If you are building your app from scratch: [Step 7](/tutorial/step07_list_item_with_base.theme/) needs to be completed.

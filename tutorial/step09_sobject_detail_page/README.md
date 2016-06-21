@@ -5,6 +5,12 @@
 
 Learn how to render Sobject information
 
+***
+
+##### Video: [Step9](https://youtu.be/RY2vn2bT6XU?t=1348)
+
+***
+
 ##### Before getting started
 
 If you are building your app from scratch: [Step 8](/tutorial/step08_list_item_touch_handler/) needs to be completed.

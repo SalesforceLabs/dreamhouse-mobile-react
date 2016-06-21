@@ -4,6 +4,12 @@
 
 Learn how to use Salesforce Base Theme
 
+***
+
+##### Video: [Step7](https://youtu.be/RY2vn2bT6XU?t=1086)
+
+***
+
 ##### Before getting started
 
 If you are building your app from scratch: [Step 6](/tutorial/step06_sobject_list/) needs to be completed.

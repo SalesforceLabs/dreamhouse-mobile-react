@@ -5,6 +5,12 @@
 
 Learn how to use `Linking` library and `ScrollRefresh` component
 
+***
+
+##### Video: [Step12](https://youtu.be/RY2vn2bT6XU?t=1639)
+
+***
+
 ##### Before getting started
 
 If you are building your app from scratch: [Step 11](/tutorial/step11_compact_layout_event_handling/) needs to be completed.

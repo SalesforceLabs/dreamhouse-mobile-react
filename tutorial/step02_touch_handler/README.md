@@ -4,6 +4,12 @@
 
 Learn how to handle tap events.
 
+***
+
+##### Video: [Step2](https://youtu.be/RY2vn2bT6XU?t=569)
+
+***
+
 ##### Before getting started
 
 If you are building your app from scratch: [Step 1](/tutorial/step01_cleanup_and_dependencies/) needs to be completed.
