@@ -33,5 +33,8 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
  
 * Step 8: [Navigating to Detail View on tap](/tutorial/step08_list_item_touch_handler/)
 
+* Step 9: [Working on SObject Detail Page](tutorial/step09_sobject_detail_page/) 
+
+
 
 
