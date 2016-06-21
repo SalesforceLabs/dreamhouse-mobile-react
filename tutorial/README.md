@@ -29,4 +29,9 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
 
 * Step 6: [Using Salesforce Base Theme](/tutorial/step06_sobject_list/)
 
+* Step 7: [Styling List Item with Salesforce Base Theme](/tutorial/step07_list_item_with_base.theme/)
+ 
+* Step 8: [Navigating to Detail View on tap](/tutorial/step08_list_item_touch_handler/)
+
+
 
