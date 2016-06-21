@@ -27,3 +27,6 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
  
 * Step 5: [Rendering Relevant Items list](/tutorial/step05_relevant_items/)
 
+* Step 6: [Using Salesforce Base Theme](/tutorial/step06_sobject_list/)
+
+
