@@ -6,11 +6,11 @@ Learn how to use Sobject Data Container
 
 ##### Before getting started
 
-If you are building your app from scratch: [Step5](/tutorial/step05_relevant_items/) needs to be completed.
+If you are building your app from scratch: [Step 5](/tutorial/step05_relevant_items/) needs to be completed.
 
 OR
 
-If you just want to practice this step: you can start editing [Step5 components](/tutorial/step05_relevant_items/) in this repo and run
+If you just want to practice this step: you can start editing [Step 5 components](/tutorial/step05_relevant_items/) in this repo and run
 
 ```
 
@@ -22,7 +22,7 @@ npm run step5
 
 ##### 1. Create file [app/BrokerList/ListItem/index.js](/tutorial/step06_sobject_list/app/BrokerList/ListItem/index.js):
 
-```html
+```js
 
 import React, {
   ListView,
@@ -70,6 +70,10 @@ module.exports = {
 
 ##### 3. Modify [app/BrokerList/List/index.js](/tutorial/step06_sobject_list/app/BrokerList/List/index.js):
 
+1. import `Sobj` from `react.force.datacontainer`
+2. import `ListItem`
+2. in `renderRow` method wrap `<ListItem />` with `<Sobj />`
+
 ```js
 
 import React, {
@@ -78,7 +82,7 @@ import React, {
   Text,
 } from 'react-native';
 
-import {Sobj} from 'react.force.datacontainer'; /* <-- Add this line */
+import {Sobj} from 'react.force.datacontainer';
 
 import ListItem from '../ListItem';
 
@@ -91,8 +95,8 @@ module.exports = React.createClass({
   },
   renderRow(sobj){
     return (
-      <Sobj id={sobj.Id} type={sobj.attributes.type}>{/* <-- Add this line */}
-        <ListItem />{/* <-- Add this line */}
+      <Sobj id={sobj.Id} type={sobj.attributes.type}>
+        <ListItem />
       </Sobj>
     );
   },

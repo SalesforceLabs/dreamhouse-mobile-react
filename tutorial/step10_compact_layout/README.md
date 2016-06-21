@@ -7,11 +7,11 @@ Learn how to render Sobject Compact Layout
 
 ##### Before getting started
 
-If you are building your app from scratch: [Step9](/tutorial/step09_sobject_detail_page/) needs to be completed.
+If you are building your app from scratch: [Step 9](/tutorial/step09_sobject_detail_page/) needs to be completed.
 
 OR
 
-If you just want to practice this step: you can start editing [Step8 components](/tutorial/step09_sobject_detail_page/) in this repo and run
+If you just want to practice this step: you can start editing [Step 9 components](/tutorial/step09_sobject_detail_page/) in this repo and run
 
 ```
 

@@ -94,4 +94,4 @@ See this [package.json](/package.json) `dependencies` section for inspiration.
 
 Let's add some interactivity!
 
-[Step2: Adding Touch handler](/tutorial/step02_touch_handler/)
+[Step 2: Adding Touch handler](/tutorial/step02_touch_handler/)

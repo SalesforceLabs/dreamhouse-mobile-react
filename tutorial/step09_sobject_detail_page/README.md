@@ -7,11 +7,11 @@ Learn how to render Sobject information
 
 ##### Before getting started
 
-If you are building your app from scratch: [Step8](/tutorial/step08_list_item_touch_handler/) needs to be completed.
+If you are building your app from scratch: [Step 8](/tutorial/step08_list_item_touch_handler/) needs to be completed.
 
 OR
 
-If you just want to practice this step: you can start editing [Step8 components](/tutorial/step08_list_item_touch_handler/) in this repo and run
+If you just want to practice this step: you can start editing [Step 8 components](/tutorial/step08_list_item_touch_handler/) in this repo and run
 
 ```
 

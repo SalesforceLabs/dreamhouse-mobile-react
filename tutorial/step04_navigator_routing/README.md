@@ -6,11 +6,11 @@ Learn how to use Navigator Router.
 
 ##### Before getting started
 
-If you are building your app from scratch: [Step3](/tutorial/step03_navigator/) needs to be completed.
+If you are building your app from scratch: [Step 3](/tutorial/step03_navigator/) needs to be completed.
 
 OR
 
-If you just want to practice this step: you can start editing [Step3 components](/tutorial/step03_navigator/) in this repo and run
+If you just want to practice this step: you can start editing [Step 3 components](/tutorial/step03_navigator/) in this repo and run
 
 ```
 
@@ -26,7 +26,7 @@ npm run step3
 
 In the cloned component replace `Page A` text with `Page B`
 
-```html
+```js
 
 import React, {
   Text,
@@ -46,7 +46,7 @@ module.exports = React.createClass({
     return (
       <View style={styles.container}>
         <TouchableOpacity onPress={this.handlePress}>
-          <Text style={styles.text}>Page B</Text> {/* <-- This line is changed */}
+          <Text style={styles.text}>Page B</Text>
         </TouchableOpacity>
       </View>
     );
@@ -59,7 +59,7 @@ module.exports = React.createClass({
 
 Replace `PageA` with `PageB` in `navigator.push` call:
 
-```html
+```js
 
 import React, {
   Text,
@@ -72,7 +72,7 @@ import styles from './styles';
 module.exports = React.createClass({
   handlePress(){
     if(this.props.navigator){
-      this.props.navigator.push({name:'PageB'}); /* <-- This line is changed */
+      this.props.navigator.push({name:'PageB'});
     }
   },
   render() {
@@ -93,7 +93,7 @@ module.exports = React.createClass({
 
 Add more logic to `renderScene` method to handle `PageB` request:
 
-```html
+```js
 
 import React, {
   Text,
@@ -109,9 +109,9 @@ import PageB from './PageB';
 
 module.exports = React.createClass({
   renderScene(route,navigator){
-    if(route.name === 'PageB'){ /* <-- This line is added */
-      return <PageB navigator={navigator} route={route} />; /* <-- This line is added */
-    } /* <-- This line is added */
+    if(route.name === 'PageB'){
+      return <PageB navigator={navigator} route={route} />;
+    }
     return <PageA navigator={navigator} route={route} />;
   },
   render() {

@@ -7,11 +7,11 @@ Learn how to handle Compact Layout Touch Events
 
 ##### Before getting started
 
-If you are building your app from scratch: [Step9](/tutorial/step10_compact_layout/) needs to be completed.
+If you are building your app from scratch: [Step 10](/tutorial/step10_compact_layout/) needs to be completed.
 
 OR
 
-If you just want to practice this step: you can start editing [Step8 components](/tutorial/step10_compact_layout/) in this repo and run
+If you just want to practice this step: you can start editing [Step 10 components](/tutorial/step10_compact_layout/) in this repo and run
 
 ```
 

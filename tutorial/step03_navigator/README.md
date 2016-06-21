@@ -6,11 +6,11 @@ Learn how to use Navigator component.
 
 ##### Before getting started
 
-If you are building your app from scratch: [Step2](/tutorial/step02_touch_handler/) needs to be completed.
+If you are building your app from scratch: [Step 2](/tutorial/step02_touch_handler/) needs to be completed.
 
 OR
 
-If you just want to practice this step: you can start editing [Step2 components](/tutorial/step02_touch_handler/) in this repo and run
+If you just want to practice this step: you can start editing [Step 2 components](/tutorial/step02_touch_handler/) in this repo and run
 
 ```
 
@@ -105,7 +105,8 @@ module.exports = React.createClass({
 
 ##### 5. Trigger navigation 
 
-Modify `handlePress` method in [app/PageA/index.js](/tutorial/step03_navigator/app/PageA/index.js) component
+Modify `handlePress` method in [app/PageA/index.js](/tutorial/step03_navigator/app/PageA/index.js) component:
+add `navigator.push` call
 
 ```js
 
@@ -119,9 +120,9 @@ import styles from './styles';
 
 module.exports = React.createClass({
   handlePress(){
-    if(this.props.navigator){ /* <-- Add this line */
-      this.props.navigator.push({name:'PageA'}); /* <-- Add this line */
-    } /* <-- Add this line */
+    if(this.props.navigator){
+      this.props.navigator.push({name:'PageA'});
+    }
   },
   render() {
     return (
@@ -149,4 +150,4 @@ Tap on 'Page A' text and observe Navigator transition animation:
 
 Let's add Router logic
 
-[Step4: Working with Navigator Routing](/tutorial/step04_navigator_routing/)
+[Step 4: Working with Navigator Routing](/tutorial/step04_navigator_routing/)

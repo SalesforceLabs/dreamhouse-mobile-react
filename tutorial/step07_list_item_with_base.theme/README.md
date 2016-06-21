@@ -6,11 +6,11 @@ Learn how to use Salesforce Base Theme
 
 ##### Before getting started
 
-If you are building your app from scratch: [Step6](/tutorial/step06_sobject_list/) needs to be completed.
+If you are building your app from scratch: [Step 6](/tutorial/step06_sobject_list/) needs to be completed.
 
 OR
 
-If you just want to practice this step: you can start editing [Step6 components](/tutorial/step06_sobject_list/) in this repo and run
+If you just want to practice this step: you can start editing [Step 6 components](/tutorial/step06_sobject_list/) in this repo and run
 
 ```
 
