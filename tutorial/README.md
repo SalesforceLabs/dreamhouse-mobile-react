@@ -37,6 +37,8 @@ Follow installation instructions at [dreamhouse micro-site](http://dreamhouse-si
  
 * Step 10: [Adding Compact Layout to SObject Detail Page](/tutorial/step10_compact_layout/)
 
+* Step 11: [Handling Compact Layout Touch Events](/tutorial/step11_compact_layout_event_handling/)
 
+* Step 12: [Using Linking library to call and adding pull-to-refresh functionality](/tutorial/step12_sobject_detail_pull_to_refresh/)
 
 
