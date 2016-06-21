@@ -1,4 +1,4 @@
-## Step 8: Working on SObject Detail Page
+## Step 9: Working on SObject Detail Page
 
 
 ##### Goal
