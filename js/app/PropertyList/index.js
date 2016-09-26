@@ -51,9 +51,11 @@ module.exports = React.createClass({
     );
 */
     return (
-      <RelevantItems type='Property__c' style={styles.container}>
+      <ListContainer 
+        type='Property__c'
+        style={styles.container}>
         <List navigator={this.props.navigator} route={this.props.route} />
-      </RelevantItems>
+      </ListContainer>
     );
   }
 

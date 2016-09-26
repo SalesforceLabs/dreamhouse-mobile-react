@@ -1,7 +1,7 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '8.0'
 
-target 'dreamhouse' do
+def shared_pods
 
 source 'https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Specs.git' # need to be first
 source 'https://github.com/CocoaPods/Specs.git'
@@ -24,3 +24,17 @@ pod 'SalesforceReact'
 
 end
 
+
+
+target 'dreamhouse' do
+
+  shared_pods
+
+end
+
+
+target 'dreamhouse copy' do
+
+  shared_pods
+
+end
