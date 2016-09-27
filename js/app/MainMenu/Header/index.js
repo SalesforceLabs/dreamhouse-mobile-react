@@ -24,12 +24,12 @@
  
 'use strict';
 
-import React from 'react-native';
+import React from 'react';
 
-const {
+import {
     View,
-    Image,
-} = React;
+    Image
+} from 'react-native';
 
 import Theme from 'react.force.base.theme';
 

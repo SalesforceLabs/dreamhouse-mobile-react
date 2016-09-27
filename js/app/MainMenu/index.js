@@ -24,14 +24,14 @@
  
 'use strict';
 
-import React from 'react-native';
+import React from 'react';
 
-const {
+import {
     ScrollView,
     Text,
     View,
-    Image,
-} = React;
+    Image
+} from 'react-native';
 
 import styles from './styles';
 

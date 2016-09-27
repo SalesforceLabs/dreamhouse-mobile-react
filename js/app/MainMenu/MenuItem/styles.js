@@ -24,15 +24,12 @@
  
 'use strict';
 
-var React = require('react-native');
-var {
-    StyleSheet,
-} = React;
+import { StyleSheet } from 'react-native';
 
 module.exports = StyleSheet.create({
   container: {
-      backgroundColor: 'white',
-      padding:10
+    backgroundColor: 'white',
+    padding:10
   },
   image: {
     width:20,

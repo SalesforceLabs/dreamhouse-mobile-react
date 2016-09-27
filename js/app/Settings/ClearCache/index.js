@@ -24,8 +24,9 @@
  
 'use strict';
 
-import React, {View} from 'react-native';
+import React from 'react';
 
+import { View } from 'react-native';
 
 import Theme from 'react.force.base.theme';
 

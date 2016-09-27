@@ -24,15 +24,15 @@
 
 'use strict';
 
-import React from 'react-native';
+import React from 'react';
 
-const {
+import {
     Text,
     View,
     ListView,
     PixelRatio,
     TouchableOpacity
-} = React;
+} from 'react-native';
 
 import {SobjContainer} from 'react.force.datacontainer';
 

@@ -24,11 +24,9 @@
 
 'use strict';
 
-import React from 'react-native';
-const {
-    ListView,
-} = React;
-import {SobjContainer} from 'react.force.datacontainer';
+import React from 'react';
+import { ListView, View, Text } from 'react-native';
+import { SobjContainer} from 'react.force.datacontainer';
 
 import PropertyListItem from '../ListItem';
 

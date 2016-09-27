@@ -24,13 +24,15 @@
  
 'use strict';
 
-import React from 'react-native';
+import React from 'react';
 
-const {
-    ListView
-} = React;
+import {
+  View,
+  Text,
+  ListView
+} from 'react-native';
 
-import {ListContainer,RelevantItems} from 'react.force.datacontainer';
+import { ListContainer } from 'react.force.datacontainer';
 
 import List from './List';
 
@@ -50,6 +52,7 @@ module.exports = React.createClass({
       </ListContainer>
     );
 */
+
     return (
       <ListContainer 
         type='Property__c'
@@ -57,6 +60,7 @@ module.exports = React.createClass({
         <List navigator={this.props.navigator} route={this.props.route} />
       </ListContainer>
     );
+
   }
 
 });

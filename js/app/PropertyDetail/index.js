@@ -24,11 +24,11 @@
 
 'use strict';
 
-import React from 'react-native';
-const {
+import React from 'react';
+import {
     View,
     ScrollView
-} = React;
+} from 'react-native';
 import {CompactLayout} from 'react.force.layout';
 import {SobjContainer,ScrollRefresh} from 'react.force.datacontainer';
 
@@ -51,6 +51,7 @@ module.exports = React.createClass({
       }
     }
   },
+
   render() {
     const sobj = this.props.route.sobj;
     return (
@@ -62,4 +63,5 @@ module.exports = React.createClass({
       </SobjContainer>
     );
   },
+
 });

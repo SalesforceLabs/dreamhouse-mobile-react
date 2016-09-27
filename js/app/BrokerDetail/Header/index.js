@@ -22,13 +22,13 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
  
-import React from 'react-native';
-const {
+import React from 'react';
+import {
     Text,
     View,
     Image,
     TouchableOpacity
-} = React;
+} from 'react-native';
 
 import styles from './styles';
 

@@ -24,9 +24,9 @@
  
 'use strict';
 
-import React from 'react-native';
+import { StyleSheet, PixelRatio } from 'react-native';
 
-module.exports = React.StyleSheet.create({
+module.exports = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'white',
@@ -45,7 +45,7 @@ module.exports = React.StyleSheet.create({
     cellBorder: {
         backgroundColor: 'rgba(0, 0, 0, 0.1)',
         // Trick to get the thinest line the device can display
-        height: 1 / React.PixelRatio.get(),
+        height: 1 / PixelRatio.get(),
         marginLeft: 4,
     }
 });

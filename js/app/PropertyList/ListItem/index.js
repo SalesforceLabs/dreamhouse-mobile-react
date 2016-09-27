@@ -24,12 +24,14 @@
  
 'use strict';
 
-import React from 'react-native';
+import React from 'react';
 
-const {
+import {
     Image,
-    TouchableOpacity
-} = React;
+    TouchableOpacity,
+    View,
+    Text
+} from 'react-native';
 
 import {utils} from 'react.force.data';
 
@@ -39,7 +41,7 @@ import styles from './styles';
 
 
 module.exports = React.createClass({
-    
+
     getDefaultProps(){
       return {
       }

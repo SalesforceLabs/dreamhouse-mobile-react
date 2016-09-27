@@ -22,11 +22,11 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
  
-import React from 'react-native';
-const {
+import React from 'react';
+import {
     View,
     Image
-} = React;
+} from 'react-native';
 
 import Theme from 'react.force.base.theme';
 

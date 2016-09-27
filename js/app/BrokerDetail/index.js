@@ -24,8 +24,8 @@
 
 'use strict';
 
-import React from 'react-native';
-const {
+import React from 'react';
+import {
     StyleSheet,
     Text,
     View,
@@ -33,10 +33,10 @@ const {
     PixelRatio,
     ScrollView,
     Linking
-} = React;
+} from 'react-native';
 
 
-import {CompactLayout} from 'react.force.layout';
+import { CompactLayout } from 'react.force.layout';
 
 import styles from './styles';
 

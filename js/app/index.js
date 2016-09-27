@@ -24,12 +24,12 @@
 
 'use strict';
 
-var React = require('react-native');
-var {
+import React  from 'react';
+import {
     View,
     Navigator,
     StatusBar
-} = React;
+} from 'react-native';
 
 import SideMenu from 'react-native-side-menu';
 import routes from './routes';

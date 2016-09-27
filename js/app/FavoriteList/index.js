@@ -24,9 +24,9 @@
  
 'use strict';
 
-import React from 'react-native';
+import React from 'react';
 
-import {ListContainer} from 'react.force.datacontainer';
+import { ListContainer } from 'react.force.datacontainer';
 
 import List from './List';
 

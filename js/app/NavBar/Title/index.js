@@ -22,7 +22,7 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
  
-import React from 'react-native';
+import React from 'react';
 
 import Theme from 'react.force.base.theme';
 
