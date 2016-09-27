@@ -68,10 +68,16 @@ module.exports = React.createClass({
     });
   },
 
+  _handleLogoPress() {
+    if(this.props.onMenuPress){
+      this.props.onMenuPress({name:'welcome'});
+    }
+  },
+
   render () {
     return (
       <View style={styles.container}>
-        <Header />
+        <Header onPress={ this._handleLogoPress } />
         <ScrollView>
           { this.getMenuItems() }
         </ScrollView>

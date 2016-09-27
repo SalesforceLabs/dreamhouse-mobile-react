@@ -21,39 +21,80 @@
  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
+
 'use strict';
 
 import React from 'react';
-
 import {
     View,
+    Text,
     Image,
-    TouchableOpacity
+    Animated,
+    Dimensions
 } from 'react-native';
 
-import Theme from 'react.force.base.theme';
+import Info from './Info';
 
 import styles from './styles';
 
-module.exports = React.createClass({
 
-  _handlePress () {
-    if(this.props.onPress){
-      this.props.onPress();
+module.exports = React.createClass({    
+
+  getInitialState() {
+    return {
+      burns: new Animated.Value(1.45)
+    };
+  },
+
+  _startBurnsZoom() {
+    this.state.burns.setValue(1);     // reset to beginning
+    Animated.decay(this.state.burns, {
+      velocity: 0.5,                    // sublte zoom
+      deceleration: 0.99999,           // slow decay
+    }).start();
+  },
+
+  _resetBurnsZoom() {
+    this.state.burns.stopAnimation(()=>{
+      this.state.burns.setValue(1);
+    });
+  },
+
+  componentDidMount() {
+    if(this.props.isOpen){
+      this._startBurnsZoom();
     }
   },
 
-  render () {
+  render() {
+    const {height, width} = Dimensions.get('window');
     return (
-      <TouchableOpacity style={styles.header} onPress={this._handlePress}>
-        <View style={styles.headerRow}>
-          <Image style={styles.logo}
-            source={require('image!logo')}
-            resizeMode='contain' />
-        </View>
-        <Theme.Text style={styles.title}>D R E A M H O U Z Z</Theme.Text>
-      </TouchableOpacity>
+      <View style={styles.container}>
+        <Animated.Image 
+          style={{
+            height:height,
+            width:width,
+            overflow: 'hidden',
+            transform: [
+              {scale: this.state.burns.interpolate({
+                inputRange: [1, 3000],
+                outputRange: [1, 1.10]})
+              },
+            ]
+          }}
+          source={require('image!slide_properties')}
+          resizeMode='cover' />
+          <Info isOpen={this.props.isOpen} />
+      </View>
     );
-  }
+  },
+
+  componentDidUpdate(prevProps){
+    if(this.props.isOpen && !prevProps.isOpen){
+      this._startBurnsZoom();
+    }
+    if(!this.props.isOpen){
+      this._resetBurnsZoom();
+    }
+  },
 });

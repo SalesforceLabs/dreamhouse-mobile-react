@@ -24,36 +24,35 @@
  
 'use strict';
 
-import React from 'react';
+import { StyleSheet } from 'react-native';
 
-import {
-    View,
-    Image,
-    TouchableOpacity
-} from 'react-native';
 
-import Theme from 'react.force.base.theme';
 
-import styles from './styles';
-
-module.exports = React.createClass({
-
-  _handlePress () {
-    if(this.props.onPress){
-      this.props.onPress();
-    }
+module.exports = StyleSheet.create({
+  container: {
+    backgroundColor:'white',
   },
-
-  render () {
-    return (
-      <TouchableOpacity style={styles.header} onPress={this._handlePress}>
-        <View style={styles.headerRow}>
-          <Image style={styles.logo}
-            source={require('image!logo')}
-            resizeMode='contain' />
-        </View>
-        <Theme.Text style={styles.title}>D R E A M H O U Z Z</Theme.Text>
-      </TouchableOpacity>
-    );
+  slide1: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+  },
+  slide2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#97CAE5',
+  },
+  slide3: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#92BBD9',
+  },
+  text: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold',
   }
 });

@@ -86,7 +86,7 @@ module.exports = React.createClass({
         <Navigator
             style={styles.container}
             configureScene={() => Navigator.SceneConfigs.PushFromRight}
-            initialRoute={routes['propertyList']}
+            initialRoute={routes['welcome']}
             renderScene={this.router}
             navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouteMapper({onMenuOpen:this.handleMenuOpen})} style={styles.navbar}/>}
         />

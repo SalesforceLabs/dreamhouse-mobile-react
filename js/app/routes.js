@@ -22,6 +22,7 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+import Welcome from './Welcome';
 import PropertyList from './PropertyList';
 import PropertyDetail from './PropertyDetail';
 import FavoriteList from './FavoriteList';
@@ -30,6 +31,11 @@ import BrokerDetail from './BrokerDetail';
 import Settings from './Settings';
 
 module.exports = {
+  welcome:{
+    name:'welcome',
+    comp: Welcome,
+    label: 'Welcome',
+  },
   propertyList:{
     name:'propertyList',
     comp: PropertyList,

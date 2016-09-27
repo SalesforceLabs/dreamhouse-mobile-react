@@ -21,39 +21,59 @@
  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
+
 'use strict';
 
 import React from 'react';
-
 import {
     View,
+    Text,
     Image,
-    TouchableOpacity
+    ScrollView,
+    TouchableOpacity,
+    Animated,
+    Dimensions
 } from 'react-native';
-
-import Theme from 'react.force.base.theme';
 
 import styles from './styles';
 
-module.exports = React.createClass({
+import Swiper from 'react-native-swiper';
 
-  _handlePress () {
-    if(this.props.onPress){
-      this.props.onPress();
-    }
+import SlideProperties from './SlideProperties';
+
+import SlideBrokers from './SlideBrokers';
+
+import SlideFavorites from './SlideFavorites';
+
+module.exports = React.createClass({    
+
+  getInitialState() {
+    return {
+      openPanelIndex:0
+    };
   },
 
-  render () {
+  _onMomentumScrollEnd (e, state, context) {
+    this.setState({openPanelIndex:context.state.index});
+  },
+
+  render() {
+    const {height, width} = Dimensions.get('window');
+    const mainDelay= 0;
     return (
-      <TouchableOpacity style={styles.header} onPress={this._handlePress}>
-        <View style={styles.headerRow}>
-          <Image style={styles.logo}
-            source={require('image!logo')}
-            resizeMode='contain' />
-        </View>
-        <Theme.Text style={styles.title}>D R E A M H O U Z Z</Theme.Text>
-      </TouchableOpacity>
+      <Swiper style={styles.container} 
+        dot={<View style={{backgroundColor:'rgba(255,255,255,.3)', width: 13, height: 13,borderRadius: 7, marginLeft: 7, marginRight: 7,}} />}
+        activeDot={<View style={{backgroundColor: '#fff', width: 13, height: 13, borderRadius: 7, marginLeft: 7, marginRight: 7}} />}
+        paginationStyle={{
+          bottom: 80
+        }}
+        loop={true}
+        onMomentumScrollEnd ={this._onMomentumScrollEnd}
+        >
+        <SlideProperties isOpen={this.state.openPanelIndex === 0} />
+        <SlideBrokers isOpen={this.state.openPanelIndex === 1}/>
+        <SlideFavorites isOpen={this.state.openPanelIndex === 2}/>
+      </Swiper>
     );
-  }
+  },
 });
