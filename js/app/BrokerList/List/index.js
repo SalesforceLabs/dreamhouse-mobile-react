@@ -26,7 +26,7 @@
 
 import React from 'react';
 
-import { ListView } from 'react-native';
+import { ListView, RefreshControl } from 'react-native';
 
 import {SobjContainer} from 'react.force.datacontainer';
 
@@ -37,17 +37,17 @@ module.exports = React.createClass({
 
     contextTypes: {
       dataSource: React.PropTypes.object,
+      refreshData:React.PropTypes.func,
+      listRefreshing:React.PropTypes.bool
     },
 
-    handlePress() {
-      if(this.props.navigator){
-        this.props.navigator.push({
-          name:'propertyDetail',
-        });
+    _onRefresh() {
+      if(this.context && this.context.refreshData){
+        this.context.refreshData();
       }
     },
 
-    renderRow (sobj) {
+    _renderRow (sobj) {
       return (
         <SobjContainer key={sobj.Id} type={sobj.attributes.type} id={sobj.Id} sobj={sobj}>
           <BrokerListItem route={this.props.route} navigator={this.props.navigator} />
@@ -60,7 +60,13 @@ module.exports = React.createClass({
         <ListView
           dataSource={this.context.dataSource}
           enableEmptySections={true}
-          renderRow={this.renderRow} />
+          refreshControl={
+            <RefreshControl
+              refreshing={this.context.listRefreshing}
+              onRefresh={this._onRefresh}
+            />
+          }
+          renderRow={this._renderRow} />
       );
     }
 

@@ -25,7 +25,7 @@
 'use strict';
 
 import React from 'react';
-import { ListView, View, Text } from 'react-native';
+import { ListView, RefreshControl, View, Text } from 'react-native';
 import { SobjContainer} from 'react.force.datacontainer';
 
 import PropertyListItem from '../ListItem';
@@ -34,9 +34,11 @@ module.exports = React.createClass({
 
     contextTypes: {
       dataSource: React.PropTypes.object,
+      refreshData:React.PropTypes.func,
+      listRefreshing:React.PropTypes.bool
     },
     
-    renderRow (sobj) {
+    _renderRow (sobj) {
       return (
         <SobjContainer key={sobj.Id} type={sobj.attributes.type} id={sobj.Id} sobj={sobj}>
           <PropertyListItem route={this.props.route} navigator={this.props.navigator} />
@@ -44,12 +46,24 @@ module.exports = React.createClass({
       );
     },
 
+    _onRefresh() {
+      if(this.context && this.context.refreshData){
+        this.context.refreshData();
+      }
+    },
+
     render () {
       return (
         <ListView
           dataSource={this.context.dataSource}
           enableEmptySections={true}
-          renderRow={this.renderRow} />
+          refreshControl={
+            <RefreshControl
+              refreshing={this.context.listRefreshing}
+              onRefresh={this._onRefresh}
+            />
+          }
+          renderRow={this._renderRow} />
       );
     }
 });
