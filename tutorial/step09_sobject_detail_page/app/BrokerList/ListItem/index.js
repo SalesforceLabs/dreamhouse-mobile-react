@@ -1,21 +1,14 @@
-'use strict';
-
-import React, {
-  Image,
-  TouchableOpacity
-} from 'react-native';
-
+import React from 'react';
+import { Image, TouchableOpacity } from 'react-native';
 import Theme from 'react.force.base.theme';
-
-import {utils} from 'react.force.datacontainer';
-
+import { utils } from 'react.force.datacontainer';
 import styles from './styles';
 
 module.exports = React.createClass({
   contextTypes:{
     sobj: React.PropTypes.object
   },
-  handlePress(){
+  _handlePress(){
     if(this.props.navigator){
       this.props.navigator.push({
         name:'BrokerDetail',
@@ -28,7 +21,7 @@ module.exports = React.createClass({
     const title = this.context.sobj.Name;
     const detail = this.context.sobj['Title__c']?this.context.sobj['Title__c']:' ';
     return (
-      <TouchableOpacity onPress={this.handlePress}>
+      <TouchableOpacity onPress={this._handlePress}>
         <Theme.Tiles.List 
           title={title} 
           detail={detail}

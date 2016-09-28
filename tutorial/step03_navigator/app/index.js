@@ -1,26 +1,18 @@
-'use strict';
-
-import React, {
-  Text,
-  View,
-  Navigator,
-
-} from 'react-native';
-
+import React from 'react';
+import { Navigator } from 'react-native';
 import styles from './styles';
-
 import PageA from './PageA';
 
 module.exports = React.createClass({
-  renderScene(route,navigator){
+  _renderScene(route,navigator){
     return <PageA navigator={navigator} route={route} />;
   },
   render() {
     return (
       <Navigator
         initialRoute={{name:'PageA'}}
-        renderScene={this.renderScene}
+        renderScene={this._renderScene}
       />
     );
-  },
+  }
 });

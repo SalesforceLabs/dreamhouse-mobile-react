@@ -1,14 +1,5 @@
-'use strict';
-
-import React, {
-  Text,
-  View,
-  Navigator,
-
-} from 'react-native';
-
-import styles from './styles';
-
+import React from 'react';
+import { Navigator } from 'react-native';
 import BrokerList from './BrokerList';
 
 module.exports = React.createClass({
@@ -22,5 +13,5 @@ module.exports = React.createClass({
         renderScene={this.renderScene}
       />
     );
-  },
+  }
 });

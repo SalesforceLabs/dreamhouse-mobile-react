@@ -1,11 +1,5 @@
-'use strict';
-
-import React, {
-  ListView,
-  View,
-  Text,
-} from 'react-native';
-
+import React from 'react';
+import { ListView, View, Text } from 'react-native';
 import styles from './styles';
 
 module.exports = React.createClass({
@@ -20,5 +14,5 @@ module.exports = React.createClass({
         </Text>
       </View>
     );
-  },
+  }
 });

@@ -1,23 +1,14 @@
-'use strict';
-
-import React, {
-  ListView,
-  View,
-  Text,
-} from 'react-native';
-
-import {Sobj} from 'react.force.datacontainer';
-
+import React from 'react';
+import { ListView } from 'react-native';
+import { Sobj } from 'react.force.datacontainer';
 import ListItem from '../ListItem';
-
 import styles from './styles';
-
 
 module.exports = React.createClass({
   contextTypes:{
     dataSource: React.PropTypes.object
   },
-  renderRow(sobj){
+  _renderRow(sobj){
     return (
       <Sobj id={sobj.Id} type={sobj.attributes.type}>
         <ListItem />
@@ -29,7 +20,7 @@ module.exports = React.createClass({
       <ListView
         dataSource={this.context.dataSource}
         enableEmptySections={true}
-        renderRow={this.renderRow}
+        renderRow={this._renderRow}
       />
     );
   },

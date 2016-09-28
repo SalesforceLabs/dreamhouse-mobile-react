@@ -1,24 +1,11 @@
-'use strict';
-
-import React, {
-  Text,
-  View,
-  Image
-} from 'react-native';
-
-import {Sobj,utils} from 'react.force.datacontainer';
-
+import React from 'react';
+import { Text, View, Image } from 'react-native';
+import { Sobj, utils } from 'react.force.datacontainer';
 import styles from './styles';
 
 module.exports = React.createClass({
   contextTypes:{
     sobj:React.PropTypes.object
-  },
-  getName() {
-    if(this.context.sobj && this.context.sobj.Name){
-      return this.context.sobj.Name;
-    }
-    return ' ';
   },
   render(){
     const imgConfig = utils.parseImageHTML(this.context.sobj['Picture_IMG__c']);

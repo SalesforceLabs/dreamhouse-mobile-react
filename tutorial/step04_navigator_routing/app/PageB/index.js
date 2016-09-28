@@ -1,15 +1,9 @@
-'use strict';
-
-import React, {
-  Text,
-  View,
-  TouchableOpacity
-} from 'react-native';
-
+import React from 'react';
+import { Text, View, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
 module.exports = React.createClass({
-  handlePress(){
+  _handlePress(){
     if(this.props.navigator){
       this.props.navigator.push({name:'PageA'});
     }
@@ -17,10 +11,10 @@ module.exports = React.createClass({
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={this.handlePress}>
+        <TouchableOpacity onPress={this._handlePress}>
           <Text style={styles.text}>Page B</Text>
         </TouchableOpacity>
       </View>
     );
-  },
+  }
 });

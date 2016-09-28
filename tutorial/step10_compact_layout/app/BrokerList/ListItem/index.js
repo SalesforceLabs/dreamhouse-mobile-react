@@ -1,14 +1,7 @@
-'use strict';
-
-import React, {
-  Image,
-  TouchableOpacity
-} from 'react-native';
-
+import React from 'react';
+import { Image, TouchableOpacity } from 'react-native';
 import Theme from 'react.force.base.theme';
-
-import {utils} from 'react.force.datacontainer';
-
+import { utils } from 'react.force.datacontainer';
 import styles from './styles';
 
 module.exports = React.createClass({

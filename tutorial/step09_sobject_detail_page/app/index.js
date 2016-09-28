@@ -1,12 +1,5 @@
-'use strict';
-
-import React, {
-  Text,
-  View,
-  Navigator,
-
-} from 'react-native';
-
+import React from 'react';
+import { Navigator } from 'react-native';
 import BrokerList from './BrokerList';
 import BrokerDetail from './BrokerDetail';
 

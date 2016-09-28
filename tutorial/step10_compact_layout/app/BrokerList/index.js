@@ -1,15 +1,7 @@
-'use strict';
-
-import React, {
-  Text,
-  View,
-  TouchableOpacity
-} from 'react-native';
-
+import React from 'react';
+import { View } from 'react-native';
 import {RelevantItems} from 'react.force.datacontainer';
-
 import List from './List';
-
 import styles from './styles';
 
 module.exports = React.createClass({

@@ -1,13 +1,6 @@
-'use strict';
-
-import React, {
-  Text,
-  View,
-  Image
-} from 'react-native';
-
-import {Sobj,utils} from 'react.force.datacontainer';
-
+import React from 'react';
+import { Text, View, Image } from 'react-native';
+import { Sobj, utils } from 'react.force.datacontainer';
 import styles from './styles';
 
 module.exports = React.createClass({

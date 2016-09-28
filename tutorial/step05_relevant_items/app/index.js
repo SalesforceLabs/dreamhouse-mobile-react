@@ -1,26 +1,17 @@
-'use strict';
-
-import React, {
-  Text,
-  View,
-  Navigator,
-
-} from 'react-native';
-
-import styles from './styles';
-
+import React from 'react';
+import { Navigator } from 'react-native';
 import BrokerList from './BrokerList';
 
 module.exports = React.createClass({
-  renderScene(route,navigator){
+  _renderScene(route,navigator){
     return <BrokerList navigator={navigator} route={route} />;
   },
   render() {
     return (
       <Navigator
         initialRoute={{name:'BrokerList'}}
-        renderScene={this.renderScene}
+        renderScene={this._renderScene}
       />
     );
-  },
+  }
 });

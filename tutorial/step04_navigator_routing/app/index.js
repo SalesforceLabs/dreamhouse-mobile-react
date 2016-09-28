@@ -1,14 +1,5 @@
-'use strict';
-
-import React, {
-  Text,
-  View,
-  Navigator,
-
-} from 'react-native';
-
-import styles from './styles';
-
+import React from 'react';
+import { Navigator } from 'react-native';
 import PageA from './PageA';
 import PageB from './PageB';
 
