@@ -22,43 +22,45 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
  
-'use strict';
-
 import React from 'react';
 
-import {View,Text} from 'react-native';
+import {
+    View,
+    Text,
+    Image,
+    TouchableOpacity
+} from 'react-native';
 
-import { ListContainer } from 'react.force.datacontainer';
-
-import List from './List';
-
-import { oauth } from 'react.force';
+import Theme from 'react.force.base.theme';
 
 import styles from './styles';
 
+import {utils} from 'react.force.data';
+
 module.exports = React.createClass({
 
-    getInitialState (){
-      return {
-        userId: null
-      };
-    },
+  getDefaultProps(){
+    return {
+      label:'Favorite',
+      iconName: 'favorite'
+    };
+  },
 
-    componentDidMount(){
-      oauth.getAuthCredentials( creds => {
-        this.setState({
-          userId:creds.userId
-        });
-      });
-    },
-
-    render () {
-      if(!this.state.userId) return <View />;
-      return (
-        <ListContainer type='Favorite__c' fields={['Id','Property__c']} where={"User__c='"+this.state.userId+"'"} style={styles.container} fullFetch={false}>
-          <List navigator={this.props.navigator} route={this.props.route} />
-        </ListContainer>
-      );
+  _handlePress(){
+    if(this.props.onPress){
+      this.props.onPress();
     }
+  },
 
+  render(){
+
+    return (
+      <TouchableOpacity style={styles.container} onPress={this._handlePress}>
+        <View style={styles.imageRow}>
+          <Theme.Icons.Utility style={styles.icon} name={this.props.iconName} isRound={true} />
+        </View>
+        <Text style={styles.label}>{this.props.label}</Text>
+      </TouchableOpacity>
+    );
+  }
 });

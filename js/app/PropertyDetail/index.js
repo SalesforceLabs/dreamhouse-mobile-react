@@ -34,6 +34,7 @@ import {SobjContainer,ScrollRefresh} from 'react.force.datacontainer';
 
 import styles from './styles';
 import Header from './Header';
+import ActionBar from './ActionBar';
 
 module.exports = React.createClass({    
 
@@ -59,6 +60,7 @@ module.exports = React.createClass({
         <ScrollRefresh>
           <Header />
           <CompactLayout onLayoutTap={this.handleLayoutTap}/>
+          <ActionBar />
         </ScrollRefresh>
       </SobjContainer>
     );

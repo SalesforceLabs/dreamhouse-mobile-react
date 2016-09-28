@@ -24,41 +24,27 @@
  
 'use strict';
 
-import React from 'react';
+import { StyleSheet } from 'react-native';
 
-import {View,Text} from 'react-native';
-
-import { ListContainer } from 'react.force.datacontainer';
-
-import List from './List';
-
-import { oauth } from 'react.force';
-
-import styles from './styles';
-
-module.exports = React.createClass({
-
-    getInitialState (){
-      return {
-        userId: null
-      };
-    },
-
-    componentDidMount(){
-      oauth.getAuthCredentials( creds => {
-        this.setState({
-          userId:creds.userId
-        });
-      });
-    },
-
-    render () {
-      if(!this.state.userId) return <View />;
-      return (
-        <ListContainer type='Favorite__c' fields={['Id','Property__c']} where={"User__c='"+this.state.userId+"'"} style={styles.container} fullFetch={false}>
-          <List navigator={this.props.navigator} route={this.props.route} />
-        </ListContainer>
-      );
-    }
-
+module.exports = StyleSheet.create({
+  container: {
+    height:60,
+  },
+  imageRow:{
+    flex:1,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center',
+  },
+  icon:{
+    width:22,
+    height:22
+  },
+  label:{
+    textAlign:'center',
+    paddingTop:4,
+    backgroundColor:'transparent',
+    fontFamily: 'SalesforceSans-Regular',
+    fontSize:14
+  }
 });
