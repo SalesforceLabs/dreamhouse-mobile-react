@@ -29,6 +29,7 @@ import FavoriteList from './FavoriteList';
 import BrokerList from './BrokerList';
 import BrokerDetail from './BrokerDetail';
 import Settings from './Settings';
+import MapViewer from './MapViewer';
 
 module.exports = {
   welcome:{
@@ -74,6 +75,11 @@ module.exports = {
     icon: 'custom',
     iconCategory:'standard',
     menuItemStyle:{marginTop:30}
+  },
+  mapViewer:{
+    name:'mapViewer',
+    comp: MapViewer,
+    label: 'Map'
   }
 };
 

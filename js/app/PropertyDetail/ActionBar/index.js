@@ -38,7 +38,6 @@ import { utils } from 'react.force.data';
 
 import { net,oauth } from 'react.force';
 
-
 import ActionIcon from './ActionIcon';
 
 module.exports = React.createClass({
@@ -61,12 +60,19 @@ module.exports = React.createClass({
     }
   },
 
-  _handleLike(){
-    Alert.alert('Like','not implemented');
+  _getAddress(){
+    return this.context.sobj['Address__c']+', '+this.context.sobj['City__c']+' '+this.context.sobj['State__c'];
   },
 
-  _handleShare(){
-    Alert.alert('Share','not implemented');
+  _handleMap(){
+    if(this.props.navigator){
+      const address = this._getAddress();
+      this.props.navigator.push({
+        name:'mapViewer',
+        sobj:this.context.sobj,
+        address:address
+      });
+    }
   },
 
   _doFavorite(){
@@ -117,8 +123,7 @@ module.exports = React.createClass({
     return (
       <View style={styles.container}>
         {this.props.favoriteId?null:<ActionIcon label='Favorite' iconName='favorite' onPress={this._handleFavorite} />}
-        <ActionIcon label='Like' iconName='like' onPress={this._handleLike}/>
-        <ActionIcon label='Share' iconName='share' onPress={this._handleShare}/>
+        <ActionIcon label='Map' iconName='location' onPress={this._handleMap}/>
       </View>
     );
   }

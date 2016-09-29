@@ -27,43 +27,87 @@
 import React from 'react';
 import {
     View,
-    ScrollView
+    Text,
+    ScrollView,
+    MapView
 } from 'react-native';
-import {CompactLayout} from 'react.force.layout';
+
 import {SobjContainer,ScrollRefresh} from 'react.force.datacontainer';
 
-import styles from './styles';
 import Header from './Header';
-import ActionBar from './ActionBar';
+
+import Geocoder from 'react-native-geocoder';
+
+import styles from './styles';
+
+const normalizeUrl = (url) => {
+  if(url.indexOf('http')!==0){
+    return 'http://'+url;
+  }
+  return url;
+};
 
 module.exports = React.createClass({    
 
+  getInitialState: function() {
+    return {
+      status: 'No Page Loaded',
+      loading: true,
+      position: {lat:0,lng:0},
+      formattedAddress:''
+    };
+  },
 
-  handleLayoutTap(layoutTapEvent){
-    if(layoutTapEvent && layoutTapEvent.refSobj && layoutTapEvent.refSobj.attributes){
-      if(layoutTapEvent.eventType === 'reference'){
-        const type = layoutTapEvent.refSobj.attributes.type;
-        if(type === 'Broker__c'){
-          this.props.navigator.push({
-            name:'brokerDetail',
-            sobj: layoutTapEvent.refSobj
+  componentDidMount() {
+    console.log(this.props.route);
+
+    Geocoder.geocodeAddress(this.props.route.address).then(res => {
+      if(res && res.length){
+        const loc = res[0];
+        if(loc && loc.position){
+          this.setState({
+            position:loc.position,
+            formattedAddress:loc.formattedAddress
           });
         }
       }
-    }
+    })
+    .catch(err => console.log(err))
+    
   },
 
   render() {
     const sobj = this.props.route.sobj;
+    const region = {
+      latitude: this.state.position.lat,
+      longitude: this.state.position.lng,
+      latitudeDelta: 0.03,
+      longitudeDelta: 0.03,
+    };
+    const annotations = [{
+      latitude: this.state.position.lat,
+      longitude: this.state.position.lng,
+      title: sobj.Name,
+      subtitle: this.state.formattedAddress,
+      animateDrop: true,
+    }];
+    if(!sobj || !sobj.attributes){
+      return <View style={styles.container}></View>;
+    }
     return (
-      <SobjContainer id={sobj.Id} type={sobj.attributes.type} style={styles.container}>
-        <ScrollRefresh>
-          <Header />
-          <CompactLayout onLayoutTap={this.handleLayoutTap}/>
-          <ActionBar navigator={this.props.navigator} route={this.props.route} />
-        </ScrollRefresh>
-      </SobjContainer>
+      <View style={styles.container}>
+        <SobjContainer id={sobj.Id} type={sobj.attributes.type}>
+          <Header navigator={this.props.navigator} route={this.props.route} />
+        </SobjContainer>
+        <MapView
+          style={{flex:1}}
+          region={region}
+          annotations={annotations}
+          zoomEnabled={true}
+          pitchEnabled={true}
+          showsCompass={true}
+        />
+      </View>
     );
   },
-
 });

@@ -21,49 +21,16 @@
  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
-'use strict';
-
-import React from 'react';
-import {
-    View,
-    ScrollView
-} from 'react-native';
-import {CompactLayout} from 'react.force.layout';
-import {SobjContainer,ScrollRefresh} from 'react.force.datacontainer';
-
-import styles from './styles';
-import Header from './Header';
-import ActionBar from './ActionBar';
-
-module.exports = React.createClass({    
-
-
-  handleLayoutTap(layoutTapEvent){
-    if(layoutTapEvent && layoutTapEvent.refSobj && layoutTapEvent.refSobj.attributes){
-      if(layoutTapEvent.eventType === 'reference'){
-        const type = layoutTapEvent.refSobj.attributes.type;
-        if(type === 'Broker__c'){
-          this.props.navigator.push({
-            name:'brokerDetail',
-            sobj: layoutTapEvent.refSobj
-          });
-        }
-      }
-    }
+ 
+import { StyleSheet } from 'react-native';
+module.exports = StyleSheet.create({
+  container: {
+    flex:1,
+    backgroundColor: 'white',
   },
-
-  render() {
-    const sobj = this.props.route.sobj;
-    return (
-      <SobjContainer id={sobj.Id} type={sobj.attributes.type} style={styles.container}>
-        <ScrollRefresh>
-          <Header />
-          <CompactLayout onLayoutTap={this.handleLayoutTap}/>
-          <ActionBar navigator={this.props.navigator} route={this.props.route} />
-        </ScrollRefresh>
-      </SobjContainer>
-    );
-  },
-
+  centering: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 8,
+  }
 });
