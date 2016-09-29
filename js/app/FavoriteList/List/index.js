@@ -30,49 +30,95 @@ import {
     Text,
     View,
     ListView,
-    RefreshControl
+    SwipeableListView,
+    RecyclerViewBackedScrollView,
+    RefreshControl,
+    TouchableOpacity,
+    Alert
 } from 'react-native';
 
 import { SobjContainer } from 'react.force.datacontainer';
 
 import PropertyListItem from '../../PropertyList/ListItem';
 
+import normalizeDataSource from './normalizeDataSource';
+
+import doUnfavorite from './doUnfavorite';
+
+import styles from './styles';
 
 module.exports = React.createClass({
 
-    contextTypes: {
-      dataSource: React.PropTypes.object,
-      refreshData:React.PropTypes.func,
-      listRefreshing:React.PropTypes.bool
-    },
+  contextTypes: {
+    dataSource: React.PropTypes.object,
+    refreshData:React.PropTypes.func,
+    listRefreshing:React.PropTypes.bool
+  },
 
-    _onRefresh() {
-      if(this.context && this.context.refreshData){
-        this.context.refreshData();
-      }
-    },
+  getInitialState() {
+    return {
+      deletedIds:{},
+      dataSource: SwipeableListView.getNewDataSource()
+    };
+  },
 
-    _renderRow (sobj) {
-      return (
-        <SobjContainer key={sobj.Id} type='Property__c' id={sobj.Property__c} >
-          <PropertyListItem route={this.props.route} navigator={this.props.navigator} />
-        </SobjContainer>
-      );
-    },
-
-    render () {
-      return (
-          <ListView
-            dataSource={this.context.dataSource}
-            enableEmptySections={true}
-            refreshControl={
-              <RefreshControl
-                refreshing={this.context.listRefreshing}
-                onRefresh={this._onRefresh}
-              />
-            }
-            renderRow={this._renderRow} />
-      );
+  _onRefresh() {
+    if(this.context.refreshData){
+      this.context.refreshData();
     }
+  },
+
+  _renderRow (sobj) {
+    if(this.state.deletedIds[sobj.Id]){
+      return <View />;
+    }
+    return (
+      <SobjContainer key={sobj.Id} type='Property__c' id={sobj.Property__c}  style={styles.row} >
+        <PropertyListItem route={this.props.route} navigator={this.props.navigator} />
+      </SobjContainer>
+    );
+  },
+
+  _updateDataSource(){
+    const listDataSource = this.context.dataSource;
+    const ds = normalizeDataSource(listDataSource,this.state.deletedIds);
+    this.setState({dataSource : this.state.dataSource.cloneWithRowsAndSections(...ds)});
+  },
+
+  _renderQuickActions (rowData, sectionID, rowID) {
+    return (<View style={styles.actionsContainer}>
+      <TouchableOpacity onPress={() => {
+        this.state.deletedIds[rowData.Id] = true;
+        this._updateDataSource();
+        doUnfavorite(rowData.Id);
+      }}>
+        <Text style={{padding:10,color:'white'}}>Unfavorive</Text>
+      </TouchableOpacity>
+    </View>);
+  },
+
+  render () {
+    return (
+      <SwipeableListView
+        dataSource={this.state.dataSource}
+        maxSwipeDistance={100}
+        renderQuickActions={this._renderQuickActions}
+        enableEmptySections={true}
+        refreshControl={
+          <RefreshControl
+            refreshing={this.context.listRefreshing}
+            onRefresh={this._onRefresh}
+          />
+        }
+        renderScrollComponent={props => <RecyclerViewBackedScrollView {...props} />}
+        renderRow={this._renderRow} />
+    );
+  },
+
+  componentDidUpdate(prevProps, prevState, prevContext) {
+    if(prevContext.listRefreshing !== this.context.listRefreshing){
+      this._updateDataSource();
+    }
+  }
 
 });
