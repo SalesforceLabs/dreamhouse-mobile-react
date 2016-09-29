@@ -29,6 +29,9 @@ import { StyleSheet } from 'react-native';
 module.exports = StyleSheet.create({
   container: {
     height:60,
+    padding:10,
+    paddingLeft:30,
+    paddingRight:30
   },
   imageRow:{
     flex:1,

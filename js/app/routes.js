@@ -30,12 +30,17 @@ import BrokerList from './BrokerList';
 import BrokerDetail from './BrokerDetail';
 import Settings from './Settings';
 import MapViewer from './MapViewer';
+import UnderConstruction from './UnderConstruction';
 
 module.exports = {
   welcome:{
     name:'welcome',
     comp: Welcome,
     label: 'Welcome',
+  },
+  homeSearchSection:{
+    menuType:'sectionHeader',
+    label: 'Home Search'
   },
   propertyList:{
     name:'propertyList',
@@ -68,6 +73,28 @@ module.exports = {
     comp: BrokerDetail,
     label: 'Broker'
   },
+  mortgageSection:{
+    menuType:'sectionHeader',
+    label: 'Mortgage'
+  },
+  preapproval:{
+    name:'preapproval',
+    comp: UnderConstruction,
+    label: 'Get Pre-Approved',
+    icon: 'approval',
+    iconCategory:'action',
+  },
+  rates:{
+    name:'rates',
+    comp: UnderConstruction,
+    label: 'Shop Rates',
+    icon: 'custom17',
+    iconCategory:'custom',
+  },
+  accountSection:{
+    menuType:'sectionHeader',
+    label: 'Account'
+  },
   settings:{
     name:'settings',
     comp: Settings,
@@ -83,4 +110,4 @@ module.exports = {
   }
 };
 
-module.exports.menu = ['propertyList','brokerList','favoriteList','settings'];
+module.exports.menu = ['homeSearchSection','propertyList','brokerList','favoriteList','mortgageSection', 'preapproval' ,'rates', 'accountSection','settings'];

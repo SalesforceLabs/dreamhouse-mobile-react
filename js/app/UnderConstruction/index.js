@@ -21,38 +21,23 @@
  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
-'use strict';
 
 import React from 'react';
-
 import {
     View,
-    Image,
-    TouchableOpacity
+    Text,
+    ScrollView
 } from 'react-native';
-
-import Theme from 'react.force.base.theme';
 
 import styles from './styles';
 
-module.exports = React.createClass({
 
-  _handlePress () {
-    if(this.props.onPress){
-      this.props.onPress();
-    }
-  },
-
-  render () {
+module.exports = React.createClass({    
+  render() {
     return (
-      <TouchableOpacity style={styles.header} onPress={this._handlePress}>
-        <View style={styles.headerRow}>
-          <Image style={styles.logo}
-            source={require('image!logo')}
-            resizeMode='contain' />
-        </View>
-      </TouchableOpacity>
+      <View style={styles.container}>
+        <Text style={styles.label}>This feature is not implemented.</Text>
+      </View>
     );
-  }
+  },
 });

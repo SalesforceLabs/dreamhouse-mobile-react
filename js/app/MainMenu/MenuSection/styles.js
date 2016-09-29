@@ -22,37 +22,23 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
  
-'use strict';
-
-import React from 'react';
 
 import {
-    View,
-    Image,
-    TouchableOpacity
+    StyleSheet,
+    PixelRatio
 } from 'react-native';
 
-import Theme from 'react.force.base.theme';
-
-import styles from './styles';
-
-module.exports = React.createClass({
-
-  _handlePress () {
-    if(this.props.onPress){
-      this.props.onPress();
-    }
+module.exports = StyleSheet.create({
+  container: {
+    backgroundColor: 'white',
+    marginTop:30,
+    marginBottom:10,
+    marginLeft:22
   },
-
-  render () {
-    return (
-      <TouchableOpacity style={styles.header} onPress={this._handlePress}>
-        <View style={styles.headerRow}>
-          <Image style={styles.logo}
-            source={require('image!logo')}
-            resizeMode='contain' />
-        </View>
-      </TouchableOpacity>
-    );
+  label:{
+    fontFamily: 'SalesforceSans-Regular',
+    fontSize:PixelRatio.get()*5,
+    letterSpacing:2,
+    color:'#16325c'
   }
 });

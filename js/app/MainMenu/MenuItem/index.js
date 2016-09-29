@@ -22,13 +22,8 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
  
-'use strict';
-
 import React from 'react';
-
 import {
-    AppRegistry,
-    StyleSheet,
     Text,
     View,
     ListView,
@@ -48,13 +43,13 @@ module.exports = React.createClass({
       style:{}
     },
 
-    handlePress() {
+    _handlePress() {
       if(this.props.onPress){
         this.props.onPress(this.props.menuItem);
       }
     },
 
-    getIconCompClass(iconCategory){
+    _getIconCompClass(iconCategory){
       if(iconCategory.toLowerCase() === 'standard'){
         return Theme.Icons.Standard;
       }
@@ -67,21 +62,24 @@ module.exports = React.createClass({
       return Theme.Icons.Action;
     },
 
-    getImage(){
+    _getImage(){
       const iconName = this.props.menuItem.icon;
       const iconCategory = this.props.menuItem.iconCategory;
-      const IconComp = this.getIconCompClass(iconCategory);
-      return <IconComp style={{width:40,height:40}} name={iconName} isRound={true} />;
+      const IconComp = this._getIconCompClass(iconCategory);
+      return <IconComp style={{width:PixelRatio.get()*10,height:PixelRatio.get()*10}} name={iconName} isRound={true} />;
     },
 
     render() {
       return (
-          <TouchableOpacity onPress={this.handlePress} style={[this.props.style]}>
-
-          <Theme.Menus.ActionListItem 
-            image={ this.getImage() }
-            label={ this.props.menuItem.label} />
-          </TouchableOpacity>
+        <TouchableOpacity onPress={this._handlePress} style={styles.container}>
+          <View style={styles.iconContainer}>
+            { this._getImage() }
+          </View>
+          <View style={styles.labelContainer}>
+            <Text style={styles.label} numberOfLines={1} ellipsizeMode='tail' >{this.props.menuItem.label}</Text>
+          </View>
+        </TouchableOpacity>
       );
+
     }
 });
