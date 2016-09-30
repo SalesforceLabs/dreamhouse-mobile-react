@@ -15,7 +15,8 @@
     "step9": "node_modules/react-native/packager/packager.sh --root tutorial/step09_sobject_detail_page",
     "step10": "node_modules/react-native/packager/packager.sh --root tutorial/step10_compact_layout",
     "step11": "node_modules/react-native/packager/packager.sh --root tutorial/step11_compact_layout_event_handling",
-    "step12": "node_modules/react-native/packager/packager.sh --root tutorial/step12_sobject_detail_pull_to_refresh"
+    "step12": "node_modules/react-native/packager/packager.sh --root tutorial/step12_sobject_detail_pull_to_refresh",
+    "test": "mocha --require react-native-mock/mock.js js/testLib/mochaInit.js --recursive js/**/*-enzymetest.js"
   },
   "dependencies": {
     "react": "^15.0.0",
@@ -23,10 +24,28 @@
     "react-native-geocoder": "^0.4.5",
     "react-native-side-menu": "^0.19.0",
     "react-native-swiper": "^1.4.11",
-    "react.force": "https://github.com/ForceDotComLabs/react.force.git",
+    "react.force": "https://github.com/ForceDotComLabs/react.force.git#master",
     "react.force.base.theme": "https://github.com/ForceDotComLabs/react.force.base.theme.git#master",
     "react.force.data": "https://github.com/ForceDotComLabs/react.force.data.git",
     "react.force.datacontainer": "https://github.com/ForceDotComLabs/react.force.datacontainer.git",
     "react.force.layout": "https://github.com/forceDotComLabs/react.force.layout.git"
+  },
+  "devDependencies": {
+    "babel-jest": "^15.0.0",
+    "babel-preset-react-native": "^1.9.0",
+    "babel-register": "^6.16.3",
+    "chai": "^3.5.0",
+    "enzyme": "^2.4.1",
+    "mocha": "^3.1.0",
+    "mockery": "^1.7.0",
+    "react-addons-test-utils": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-native-mock": "^0.2.6",
+    "react-test-renderer": "^15.3.2"
+  },
+  "babel": {
+    "presets": [
+      "react-native"
+    ]
   }
 }

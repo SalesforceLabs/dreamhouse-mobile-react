@@ -1,6 +1,6 @@
 /*
  Copyright (c) 2016, salesforce.com, inc. All rights reserved.
- 
+
  Redistribution and use of this software in source and binary forms, with or without modification,
  are permitted provided that the following conditions are met:
  * Redistributions of source code must retain the above copyright notice, this list of conditions
@@ -11,7 +11,7 @@
  * Neither the name of salesforce.com, inc. nor the names of its contributors may be used to
  endorse or promote products derived from this software without specific prior written
  permission of salesforce.com, inc.
- 
+
  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
  FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
@@ -21,7 +21,7 @@
  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
+
 import React from 'react';
 import {
     View,
@@ -33,8 +33,6 @@ import {
 import Theme from 'react.force.base.theme';
 
 import styles from './styles';
-
-import { utils } from 'react.force.data';
 
 import { net,oauth } from 'react.force';
 
@@ -76,6 +74,7 @@ module.exports = React.createClass({
   },
 
   _doFavorite(){
+    console.log('you are here');
     oauth.getAuthCredentials(creds=>{
       const soql = "Select Id from Favorite__c Where User__c = '"+creds.userId+"' AND Property__c = '"+this.context.sobj.Id+"' LIMIT 1";
       net.query(
@@ -119,7 +118,6 @@ module.exports = React.createClass({
   },
 
   render(){
-
     return (
       <View style={styles.container}>
         {this.props.favoriteId?null:<ActionIcon label='Favorite' iconName='favorite' onPress={this._handleFavorite} />}

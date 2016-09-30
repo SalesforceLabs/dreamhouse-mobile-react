@@ -1,0 +1,25 @@
+{
+   "Price__c":690000,
+   "Thumbnail_IMG__c":"<img src=\"https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house11sq.jpg\" alt=\"Picture\" height=\"200\" width=\"200\" border=\"0\"/>",
+   "Broker__c":"a0036000009Pm1uAAC",
+   "Picture_IMG__c":"<img src=\"https://s3-us-west-1.amazonaws.com/sfdc-demo/realty/house11.jpg\" alt=\"Picture\" height=\"400\" width=\"400\" border=\"0\"/>",
+   "Id":"a0236000008ejoLAAQ",
+   "Description__c":"Lorem ipsum dolor sit amet",
+   "Baths__c":3,
+   "Address__c":"95 Gloucester st",
+   "Name":"95 Gloucester st",
+   "OwnerId":"00536000002G4bmAAC",
+   "Beds__c":3,
+   "__shortId":"a0236000008ejoL",
+   "City__c":"Boston",
+   "attributes":{
+      "compactTitle":"95 Gloucester st",
+      "type":"Property__c",
+      "url":"/services/data/v36.0/sobjects/Property__c/a0236000008ejoLAAQ",
+      "shortId":"a0236000008ejoL"
+   },
+   "_soupEntryId":3,
+   "_soupLastModifiedDate":1475204021582,
+   "Title__c":"Architectural Details",
+   "State__c":"MA"
+}

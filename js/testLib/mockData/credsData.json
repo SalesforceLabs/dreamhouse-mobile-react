@@ -1,0 +1,10 @@
+{
+   "userId":"005000000000000",
+   "loginUrl":"https://login.salesforce.com",
+   "refreshToken":"testRefreshToken",
+   "clientId":"testClientId",
+   "orgId":"00D000000000000000",
+   "accessToken":"testAccessToken",
+   "userAgent":"SalesforceMobileSDK/4.3.1 iPhone OS/9.3 (iPhone) dreamhouse/1.0(1.0) ReactNative uid_180D452C-F576-4D99-803F-1E0F849E1467",
+   "instanceUrl":"https://na30.salesforce.com"
+}

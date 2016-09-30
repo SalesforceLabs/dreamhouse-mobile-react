@@ -224,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F8D5EC01B6C0568005E64D4 /* Build configuration list for PBXNativeTarget "dreamhouse" */;
 			buildPhases = (
+				772B3DD937B7B36DFA9C8AFD /* 📦 Check Pods Manifest.lock */,
 				EB3DFA570DCEE9CB81DA4012 /* [CP] Check Pods Manifest.lock */,
 				05416DF21D0152B000516F58 /* ShellScript */,
 				4F8D5E991B6C0568005E64D4 /* Sources */,
@@ -231,6 +232,8 @@
 				4F8D5E9B1B6C0568005E64D4 /* Resources */,
 				EDA7F37187643E7CBA4DD29E /* [CP] Embed Pods Frameworks */,
 				0FA5100F29A2F7B95253BD06 /* [CP] Copy Pods Resources */,
+				C912798807E391418183508D /* 📦 Embed Pods Frameworks */,
+				AC78EAABFD1BA685D459D6E6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +255,7 @@
 				TargetAttributes = {
 					4F8D5E9C1B6C0568005E64D4 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = B47QPRK3YN;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -354,6 +358,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dreamhouse/Pods-dreamhouse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		772B3DD937B7B36DFA9C8AFD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AC78EAABFD1BA685D459D6E6 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dreamhouse/Pods-dreamhouse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C912798807E391418183508D /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dreamhouse/Pods-dreamhouse-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EB3DFA570DCEE9CB81DA4012 /* [CP] Check Pods Manifest.lock */ = {
@@ -491,13 +540,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = B47QPRK3YN;
 				INFOPLIST_FILE = dreamhouse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.msdk.dreamhouse.kapil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -508,13 +560,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = B47QPRK3YN;
 				INFOPLIST_FILE = dreamhouse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.msdk.dreamhouse.kapil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
