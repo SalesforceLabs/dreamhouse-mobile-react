@@ -22,23 +22,9 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
  
-'use strict';
-
 import React from 'react';
-
-import {
-  View,
-  Text,
-  TextInput,
-  ListView
-} from 'react-native';
-
-import { ListContainer, SearchQueryList } from 'react.force.datacontainer';
-
-import List from './List';
-
-import SearchBar from './SearchBar';
-
+import { View, TextInput, TouchableOpacity } from 'react-native';
+import Theme from 'react.force.base.theme';
 import styles from './styles';
 
 module.exports = React.createClass({
@@ -49,41 +35,77 @@ module.exports = React.createClass({
     };
   },
 
-  _handleSearch (searchTerm) {
-    console.log('_handleSearch: '+searchTerm);
-    this.setState({searchTerm:searchTerm});
-    console.log('>>> searchTerm: '+searchTerm);
+  _handleSearch(searchTerm) {
+    if(this.props.onSearch){
+      this.props.onSearch(searchTerm);
+    }
   },
 
-  _renderList () {
-    if(this.state.searchTerm && this.state.searchTerm.length>3){
+  _handleChange(value) {
+    this.setState({searchTerm:value});
+    if(value && value.length){
+      setTimeout((value)=>{
+        if(value && value === this.state.searchTerm){
+          return this._handleSearch(value);
+        }
+      },500,value);
+    }
+    else{
+      this._handleSearch('');
+    }
+  },
+
+  _handleClear() {
+    this.setState({searchTerm:''});
+    this.refs.input.focus();
+    this._handleSearch('');
+  },
+
+  _handleFocus() {
+    this.refs.input.focus();
+  },
+
+  _getInputIcon() {
+    console.log('_getInputIcon: '+this.state.searchTerm);
+    if(this.state.searchTerm && this.state.searchTerm.length){
+      console.log('clearIcon: ');
+
       return (
-        <SearchQueryList 
-          type='Property__c'
-          searchTerm={this.state.searchTerm}
-          style={{flex:1}}>
-          <List navigator={this.props.navigator} route={this.props.route} />
-        </SearchQueryList>
+        <TouchableOpacity onPress={this._handleClear} style={styles.iconWrapper}>
+          <Theme.Icons.Utility 
+          key='close'
+            name="close" 
+            style={styles.icon}
+          />
+        </TouchableOpacity>
       );
     }
     return (
-      <ListContainer 
-        type='Property__c'
-        style={styles.container}>
-        <List navigator={this.props.navigator} route={this.props.route} />
-      </ListContainer>
+      <TouchableOpacity onPress={this._handleFocus} style={styles.iconWrapper}>
+        <Theme.Icons.Utility 
+          key='search'
+          name="search" 
+          style={styles.icon}
+        />
+      </TouchableOpacity>
     );
   },
 
   render () {
-
     return (
       <View style={styles.container}>
-        <SearchBar onSearch={this._handleSearch} />
-        { this._renderList() }
+        <TextInput
+          ref='input'
+          autoFocus={false}
+          autoCorrect={false}
+          onChangeText={this._handleChange}
+          placeholder="Search... "
+          style={styles.searchBarInput}
+          value={this.state.searchTerm}
+        />
+        { this._getInputIcon() }
       </View>
     );
-
   }
 
 });

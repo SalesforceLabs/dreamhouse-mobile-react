@@ -22,17 +22,21 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-'use strict';
-
 import { StyleSheet } from 'react-native';
 
 module.exports = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'white'
+    padding: 3,
+    paddingLeft: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderBottomWidth: 1,
+    borderBottomColor:'gray',
+    height:50
   },
   searchBarInput: {
-    flex: 0,
+    flex: 1,
     fontSize: 18,
     height: 40,
     fontFamily: 'SalesforceSans-Regular',
@@ -40,5 +44,13 @@ module.exports = StyleSheet.create({
   icon: {
     width: 24,
     height: 24,
+//    marginTop:0,
+//    marginRight:10,
+//    marginLeft:10
   },
+  iconWrapper: {
+    padding:12,
+    paddingRight:10,
+    paddingLeft:10
+  }
 });
