@@ -21,38 +21,18 @@
  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+ 
+'use strict';
 
 import { StyleSheet } from 'react-native';
 
 module.exports = StyleSheet.create({
-  container: {
-    padding: 5,
-    backgroundColor:'#54698d'
-  },
-  searchContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor:'white',
-    borderRadius:4
-  },
-  searchBarInput: {
-    flex: 1,
-    fontSize: 18,
-    paddingLeft:8,
-    height: 36,
-    fontFamily: 'SalesforceSans-Regular',
-    backgroundColor:'transparent'
-  },
   icon: {
-    width: 18,
-    height: 18,
-//    marginTop:0,
-//    marginRight:10,
-//    marginLeft:10
-  },
-  iconWrapper: {
-    padding:10,
-    paddingRight:10,
-    paddingLeft:12
+    width:20,
+    height:20,
+    marginBottom:35,
+    marginRight:15,
+    marginTop:10,
+    marginLeft:20
   }
 });

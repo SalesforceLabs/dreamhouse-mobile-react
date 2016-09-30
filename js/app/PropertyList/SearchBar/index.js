@@ -57,20 +57,29 @@ module.exports = React.createClass({
 
   _handleClear() {
     this.setState({searchTerm:''});
-    this.refs.input.focus();
-    this._handleSearch('');
+    if(this.props.onClose){
+      this.props.onClose();
+    }
   },
 
   _handleFocus() {
     this.refs.input.focus();
   },
 
-  _getInputIcon() {
-    console.log('_getInputIcon: '+this.state.searchTerm);
-    if(this.state.searchTerm && this.state.searchTerm.length){
-      console.log('clearIcon: ');
+  render () {
+    return (
+      <View style={styles.container}>
+      <View style={styles.searchContainer}>
 
-      return (
+        <TextInput
+          ref='input'
+          autoFocus={true}
+          autoCorrect={false}
+          onChangeText={this._handleChange}
+          placeholder="Search... "
+          style={styles.searchBarInput}
+          value={this.state.searchTerm}
+        />
         <TouchableOpacity onPress={this._handleClear} style={styles.iconWrapper}>
           <Theme.Icons.Utility 
           key='close'
@@ -78,32 +87,8 @@ module.exports = React.createClass({
             style={styles.icon}
           />
         </TouchableOpacity>
-      );
-    }
-    return (
-      <TouchableOpacity onPress={this._handleFocus} style={styles.iconWrapper}>
-        <Theme.Icons.Utility 
-          key='search'
-          name="search" 
-          style={styles.icon}
-        />
-      </TouchableOpacity>
-    );
-  },
+      </View>
 
-  render () {
-    return (
-      <View style={styles.container}>
-        <TextInput
-          ref='input'
-          autoFocus={false}
-          autoCorrect={false}
-          onChangeText={this._handleChange}
-          placeholder="Search... "
-          style={styles.searchBarInput}
-          value={this.state.searchTerm}
-        />
-        { this._getInputIcon() }
       </View>
     );
   }

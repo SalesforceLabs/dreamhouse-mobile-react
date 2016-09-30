@@ -30,7 +30,8 @@ import {
   View,
   Text,
   TextInput,
-  ListView
+  ListView,
+  LayoutAnimation
 } from 'react-native';
 
 import { ListContainer, SearchQueryList } from 'react.force.datacontainer';
@@ -50,9 +51,16 @@ module.exports = React.createClass({
   },
 
   _handleSearch (searchTerm) {
-    console.log('_handleSearch: '+searchTerm);
     this.setState({searchTerm:searchTerm});
-    console.log('>>> searchTerm: '+searchTerm);
+  },
+
+  _handleSearchClose () {
+    this.setState({
+      searchTerm:''
+    });
+    if(this.props.onSearchClose){
+      this.props.onSearchClose();
+    }
   },
 
   _renderList () {
@@ -75,11 +83,27 @@ module.exports = React.createClass({
     );
   },
 
-  render () {
+  _renderSearchBar () {
+    if(this.props.isSearchOpen){
+      return <SearchBar onSearch={this._handleSearch} onClose={this._handleSearchClose}/>
+    }
+  },
 
+  componentWillReceiveProps (nextProps) {
+    if(nextProps.isSearchOpen !== this.props.isSearchOpen){
+      if(nextProps.isSearchOpen){
+        LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+      }
+      else{
+        LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
+      }
+    }
+  },
+
+  render () {
     return (
       <View style={styles.container}>
-        <SearchBar onSearch={this._handleSearch} />
+        { this._renderSearchBar() }
         { this._renderList() }
       </View>
     );

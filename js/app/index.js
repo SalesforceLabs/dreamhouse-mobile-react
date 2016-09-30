@@ -44,6 +44,7 @@ module.exports = React.createClass({
   getInitialState() {
     return {
       isOpen:false,
+      isSearchOpen:false,
       navigator:null
     };
   },
@@ -63,19 +64,27 @@ module.exports = React.createClass({
     if(r && r.comp){
       return (
         <View style={styles.page}>
-          <r.comp route={route} navigator={navigator} />
+          <r.comp route={route} navigator={navigator} isSearchOpen={this.state.isSearchOpen} onSearchClose={this._handleSearchClose} />
         </View>
       );
     }
     return (
       <View style={styles.page}>
-        <initialRoute.comp route={route} navigator={navigator} />
+        <initialRoute.comp route={route} navigator={navigator} isSearchOpen={this.state.isSearchOpen} onSearchClose={this._handleSearchClose} />
       </View>
     );
   },
 
-  handleMenuOpen(){
+  _handleMenuOpen(){
     this.setState({isOpen:true});
+  },
+
+  _handleSearchOpen(){
+    this.setState({isSearchOpen:true});
+  },
+
+  _handleSearchClose(){
+    this.setState({isSearchOpen:false});
   },
 
   render() {
@@ -88,7 +97,7 @@ module.exports = React.createClass({
             configureScene={() => Navigator.SceneConfigs.PushFromRight}
             initialRoute={routes['welcome']}
             renderScene={this.router}
-            navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouteMapper({onMenuOpen:this.handleMenuOpen})} style={styles.navbar}/>}
+            navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouteMapper({onMenuOpen:this._handleMenuOpen, onSearchOpen:this._handleSearchOpen})} style={styles.navbar}/>}
         />
       </SideMenu>
     );
