@@ -76,15 +76,23 @@ module.exports = React.createClass({
   },
 
   _handleMenuOpen(){
-    this.setState({isOpen:true});
+    this.setState({
+      isOpen:true
+    });
   },
 
   _handleSearchOpen(){
-    this.setState({isSearchOpen:true});
+    this.setState({
+      isSearchOpen:true,
+      isOpen:false
+    });
   },
 
   _handleSearchClose(){
-    this.setState({isSearchOpen:false});
+    this.setState({
+      isSearchOpen:false,
+      isOpen:false
+    });
   },
 
   render() {
