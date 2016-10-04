@@ -292,7 +292,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F8D5EC01B6C0568005E64D4 /* Build configuration list for PBXNativeTarget "dreamhouse" */;
 			buildPhases = (
-				772B3DD937B7B36DFA9C8AFD /* 📦 Check Pods Manifest.lock */,
+				772B3DD937B7B36DFA9C8AFD /* [CP] Check Pods Manifest.lock */,
 				EB3DFA570DCEE9CB81DA4012 /* [CP] Check Pods Manifest.lock */,
 				05416DF21D0152B000516F58 /* ShellScript */,
 				4F8D5E991B6C0568005E64D4 /* Sources */,
@@ -327,7 +327,6 @@
 					};
 					4F8D5E9C1B6C0568005E64D4 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = D3C8BU4ASG;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -451,14 +450,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dreamhouse/Pods-dreamhouse-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		772B3DD937B7B36DFA9C8AFD /* 📦 Check Pods Manifest.lock */ = {
+		772B3DD937B7B36DFA9C8AFD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,7 +730,7 @@
 					"\"Security\"",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.msdk.dreamhouse.kapil;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.msdk.dreamhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -778,7 +777,7 @@
 					"\"Security\"",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.msdk.dreamhouse.kapil;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.msdk.dreamhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
