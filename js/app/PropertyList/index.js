@@ -1,6 +1,6 @@
 /*
  Copyright (c) 2016, salesforce.com, inc. All rights reserved.
- 
+
  Redistribution and use of this software in source and binary forms, with or without modification,
  are permitted provided that the following conditions are met:
  * Redistributions of source code must retain the above copyright notice, this list of conditions
@@ -11,7 +11,7 @@
  * Neither the name of salesforce.com, inc. nor the names of its contributors may be used to
  endorse or promote products derived from this software without specific prior written
  permission of salesforce.com, inc.
- 
+
  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
  FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
@@ -21,7 +21,7 @@
  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
+
 'use strict';
 
 import React from 'react';
@@ -43,7 +43,6 @@ import SearchBar from './SearchBar';
 import styles from './styles';
 
 module.exports = React.createClass({
-
   getInitialState () {
     return {
       searchTerm: ''
@@ -66,7 +65,7 @@ module.exports = React.createClass({
   _renderList () {
     if(this.state.searchTerm && this.state.searchTerm.length>3){
       return (
-        <SearchQueryList 
+        <SearchQueryList
           type='Property__c'
           searchTerm={this.state.searchTerm}
           style={{flex:1}}>
@@ -75,7 +74,7 @@ module.exports = React.createClass({
       );
     }
     return (
-      <ListContainer 
+      <ListContainer
         type='Property__c'
         style={styles.container}>
         <List navigator={this.props.navigator} route={this.props.route} />
@@ -107,7 +106,5 @@ module.exports = React.createClass({
         { this._renderList() }
       </View>
     );
-
   }
-
 });

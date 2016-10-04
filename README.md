@@ -92,3 +92,20 @@ Watch the recording of the presentation delivered at the TrailheaDX conference:
 ## Step-By-Step Tutorial
 
 Follow [this step-by-step tutorial](/tutorial) to recreate the application from scratch.
+
+## Testing
+
+There are two types of test examples in this repo; Mocha + Enzyme component tests and image comparison based Snapshot tests.
+
+### Mocha + Enzyme Tests
+All tests live in the `__tests__` directory of the specific component with the following naming schema `componentname-enzymetest.js. Currently there are tests for `PropertyList/ListItem` and `PropertyDetail/ActionBar`.  
+
+To run 
+```
+npm run test
+```
+
+### Snapshot Tests
+Snapshot tests are run from Xcode. You need to your react-native packager running and in Xcode > Product > Scheme > Edit Scheme, set an environment variable `CI_USE_PACKAGER` to 1. 
+
+Please refer to the `dreamhouseSnapshotTests.m` file. The components that will be tested are registered in `js/testLib/snapshotTests`.

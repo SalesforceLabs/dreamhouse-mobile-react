@@ -74,6 +74,7 @@ module.exports = React.createClass({
   },
 
   _doFavorite(){
+    console.log('you are here');
     oauth.getAuthCredentials(creds=>{
       const soql = "Select Id from Favorite__c Where User__c = '"+creds.userId+"' AND Property__c = '"+this.context.sobj.Id+"' LIMIT 1";
       net.query(

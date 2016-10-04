@@ -10,6 +10,8 @@
 		053932991D9DA13A0088DB99 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053932981D9DA13A0088DB99 /* MapKit.framework */; };
 		05DF20AF1CECDC5C00D48CFC /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 05DF20AE1CECDC5C00D48CFC /* main.jsbundle */; };
 		05F7BE311CF4014A00057E91 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F7BE301CF4014A00057E91 /* logo.png */; };
+		29154D981DA31DD7005BACC5 /* dreamhouseSnapshotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29154D971DA31DD7005BACC5 /* dreamhouseSnapshotTests.m */; };
+		29154DA01DA3299A005BACC5 /* libRCTTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29154D671DA30316005BACC5 /* libRCTTest.a */; };
 		2E5B0E3914F04E23A3842945 /* License-for-SalesforceDesignSystemIcons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3E69811381C145568F0A425F /* License-for-SalesforceDesignSystemIcons.txt */; };
 		319016D963754A0781ADBB03 /* SalesforceSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D695F6FCD7649FF83058D42 /* SalesforceSans-Regular.ttf */; };
 		44062F4DEE7B494EBEB88AB8 /* SalesforceSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAB7429758EC40B2A9370F52 /* SalesforceSans-Bold.ttf */; };
@@ -43,6 +45,20 @@
 			remoteGlobalIDString = 05E4E6EC1CBDF7BE00899BCA;
 			remoteInfo = SalesforceBaseTheme;
 		};
+		29154D661DA30316005BACC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29154D621DA30316005BACC5 /* RCTTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 580C376F1AB104AF0015E709;
+			remoteInfo = RCTTest;
+		};
+		29154D9A1DA31DD7005BACC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F8D5E951B6C0568005E64D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F8D5E9C1B6C0568005E64D4;
+			remoteInfo = dreamhouse;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +70,11 @@
 		0767B54680AE48039E3963D9 /* libRNGeocoder.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGeocoder.a; sourceTree = "<group>"; };
 		116641095FE74BB0A4536A3D /* SalesforceBaseTheme.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SalesforceBaseTheme.xcodeproj; path = node_modules/react.force.base.theme/ios/SalesforceBaseTheme/SalesforceBaseTheme.xcodeproj; sourceTree = "<group>"; };
 		28EBFEB5239446C596705EEF /* SalesforceDesignSystemIconsStandard.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SalesforceDesignSystemIconsStandard.ttf; path = node_modules/react.force.base.theme/Fonts/SalesforceDesignSystemIconsStandard.ttf; sourceTree = "<group>"; };
+		29154D621DA30316005BACC5 /* RCTTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTTest.xcodeproj; path = "node_modules/react-native/Libraries/RCTTest/RCTTest.xcodeproj"; sourceTree = "<group>"; };
+		29154D7A1DA315E7005BACC5 /* libPods-dreamhouse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-dreamhouse.a"; path = "../../Library/Developer/Xcode/DerivedData/dreamhouse-btlymfzhhfneavgjssoolkntqsjk/Build/Products/Debug-iphonesimulator/libPods-dreamhouse.a"; sourceTree = "<group>"; };
+		29154D951DA31DD7005BACC5 /* dreamhouseSnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dreamhouseSnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29154D971DA31DD7005BACC5 /* dreamhouseSnapshotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dreamhouseSnapshotTests.m; sourceTree = "<group>"; };
+		29154D991DA31DD7005BACC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D9FA5C6EB9D4B9185D99A94 /* SalesforceDesignSystemIconsCustom.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SalesforceDesignSystemIconsCustom.ttf; path = node_modules/react.force.base.theme/Fonts/SalesforceDesignSystemIconsCustom.ttf; sourceTree = "<group>"; };
 		3E69811381C145568F0A425F /* License-for-SalesforceDesignSystemIcons.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "License-for-SalesforceDesignSystemIcons.txt"; path = "node_modules/react.force.base.theme/Fonts/License-for-SalesforceDesignSystemIcons.txt"; sourceTree = "<group>"; };
 		4822AD07879346C78EAD1660 /* RNGeocoder.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGeocoder.xcodeproj; path = "node_modules/react-native-geocoder/ios/RNGeocoder.xcodeproj"; sourceTree = "<group>"; };
@@ -80,10 +101,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		29154D921DA31DD7005BACC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F8D5E9A1B6C0568005E64D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29154DA01DA3299A005BACC5 /* libRCTTest.a in Frameworks */,
 				86B30DF90877446ABB7D35C1 /* libSalesforceBaseTheme.a in Frameworks */,
 				4D731EBC19BCA84E1D6CA311 /* libPods-dreamhouse.a in Frameworks */,
 				053932991D9DA13A0088DB99 /* MapKit.framework in Frameworks */,
@@ -118,11 +147,29 @@
 			path = assets;
 			sourceTree = "<group>";
 		};
+		29154D631DA30316005BACC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29154D671DA30316005BACC5 /* libRCTTest.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29154D961DA31DD7005BACC5 /* dreamhouseSnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				29154D971DA31DD7005BACC5 /* dreamhouseSnapshotTests.m */,
+				29154D991DA31DD7005BACC5 /* Info.plist */,
+			);
+			path = dreamhouseSnapshotTests;
+			sourceTree = "<group>";
+		};
 		4F8D5E941B6C0568005E64D4 = {
 			isa = PBXGroup;
 			children = (
 				05DF20AE1CECDC5C00D48CFC /* main.jsbundle */,
 				4F8D5E9F1B6C0568005E64D4 /* dreamhouse */,
+				29154D961DA31DD7005BACC5 /* dreamhouseSnapshotTests */,
 				4F8D5E9E1B6C0568005E64D4 /* Products */,
 				746047FD40DE4DEF81D36853 /* Libraries */,
 				799288BF02274A06900D14E7 /* Resources */,
@@ -136,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				4F8D5E9D1B6C0568005E64D4 /* dreamhouse.app */,
+				29154D951DA31DD7005BACC5 /* dreamhouseSnapshotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +221,7 @@
 		746047FD40DE4DEF81D36853 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				29154D621DA30316005BACC5 /* RCTTest.xcodeproj */,
 				116641095FE74BB0A4536A3D /* SalesforceBaseTheme.xcodeproj */,
 				4822AD07879346C78EAD1660 /* RNGeocoder.xcodeproj */,
 			);
@@ -210,6 +259,7 @@
 		D9A7B1696EA221A51AB2D138 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				29154D7A1DA315E7005BACC5 /* libPods-dreamhouse.a */,
 				053932981D9DA13A0088DB99 /* MapKit.framework */,
 				929399CA69BC7E91F5D447C3 /* libPods-dreamhouse.a */,
 				CCAC43490173696ADC151ECF /* libPods-dreamhouse copy.a */,
@@ -220,6 +270,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		29154D941DA31DD7005BACC5 /* dreamhouseSnapshotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29154D9C1DA31DD7005BACC5 /* Build configuration list for PBXNativeTarget "dreamhouseSnapshotTests" */;
+			buildPhases = (
+				29154D911DA31DD7005BACC5 /* Sources */,
+				29154D921DA31DD7005BACC5 /* Frameworks */,
+				29154D931DA31DD7005BACC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29154D9B1DA31DD7005BACC5 /* PBXTargetDependency */,
+			);
+			name = dreamhouseSnapshotTests;
+			productName = dreamhouseSnapshotTests;
+			productReference = 29154D951DA31DD7005BACC5 /* dreamhouseSnapshotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4F8D5E9C1B6C0568005E64D4 /* dreamhouse */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F8D5EC01B6C0568005E64D4 /* Build configuration list for PBXNativeTarget "dreamhouse" */;
@@ -253,9 +321,13 @@
 				LastUpgradeCheck = 710;
 				ORGANIZATIONNAME = Salesforce;
 				TargetAttributes = {
+					29154D941DA31DD7005BACC5 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 4F8D5E9C1B6C0568005E64D4;
+					};
 					4F8D5E9C1B6C0568005E64D4 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = D3C8BU4ASG;
+						DevelopmentTeam = B47QPRK3YN;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -277,6 +349,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 29154D631DA30316005BACC5 /* Products */;
+					ProjectRef = 29154D621DA30316005BACC5 /* RCTTest.xcodeproj */;
+				},
+				{
 					ProductGroup = 053932911D9D98840088DB99 /* Products */;
 					ProjectRef = 4822AD07879346C78EAD1660 /* RNGeocoder.xcodeproj */;
 				},
@@ -288,6 +364,7 @@
 			projectRoot = "";
 			targets = (
 				4F8D5E9C1B6C0568005E64D4 /* dreamhouse */,
+				29154D941DA31DD7005BACC5 /* dreamhouseSnapshotTests */,
 			);
 		};
 /* End PBXProject section */
@@ -307,9 +384,23 @@
 			remoteRef = 055113D41D000DD8000142B5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		29154D671DA30316005BACC5 /* libRCTTest.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTTest.a;
+			remoteRef = 29154D661DA30316005BACC5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		29154D931DA31DD7005BACC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F8D5E9B1B6C0568005E64D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -438,6 +529,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		29154D911DA31DD7005BACC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29154D981DA31DD7005BACC5 /* dreamhouseSnapshotTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F8D5E991B6C0568005E64D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,7 +549,58 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		29154D9B1DA31DD7005BACC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F8D5E9C1B6C0568005E64D4 /* dreamhouse */;
+			targetProxy = 29154D9A1DA31DD7005BACC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		29154D9D1DA31DD7005BACC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"FB_REFERENCE_IMAGE_DIR=\"\\\"$(SOURCE_ROOT)/$(TARGET_NAME)/SnapshotRefImages\\\"\"",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/node_modules/react-native/Libraries";
+				INFOPLIST_FILE = dreamhouseSnapshotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-Objc",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Salesforce.dreamhouseSnapshotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dreamhouse.app/dreamhouse";
+			};
+			name = Debug;
+		};
+		29154D9E1DA31DD7005BACC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/node_modules/react-native/Libraries";
+				INFOPLIST_FILE = dreamhouseSnapshotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-Objc",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Salesforce.dreamhouseSnapshotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dreamhouse.app/dreamhouse";
+			};
+			name = Release;
+		};
 		4F8D5EBE1B6C0568005E64D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -540,9 +690,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = B47QPRK3YN;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"$(inherited)",
+					"SQLITE_HAS_CODEC=1",
+				);
 				INFOPLIST_FILE = dreamhouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -551,9 +705,32 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"CocoaLumberjack\"",
+					"-l\"React\"",
+					"-l\"SQLCipher\"",
+					"-l\"SalesforceNetwork\"",
+					"-l\"SalesforceReact\"",
+					"-l\"SalesforceRestAPI\"",
+					"-l\"SalesforceSDKCore\"",
+					"-l\"SmartStore\"",
+					"-l\"SmartSync\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.msdk.dreamhouse.kapil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -563,8 +740,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = B47QPRK3YN;
 				INFOPLIST_FILE = dreamhouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -574,15 +749,47 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"CocoaLumberjack\"",
+					"-l\"React\"",
+					"-l\"SQLCipher\"",
+					"-l\"SalesforceNetwork\"",
+					"-l\"SalesforceReact\"",
+					"-l\"SalesforceRestAPI\"",
+					"-l\"SalesforceSDKCore\"",
+					"-l\"SmartStore\"",
+					"-l\"SmartSync\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.msdk.dreamhouse.kapil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		29154D9C1DA31DD7005BACC5 /* Build configuration list for PBXNativeTarget "dreamhouseSnapshotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29154D9D1DA31DD7005BACC5 /* Debug */,
+				29154D9E1DA31DD7005BACC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4F8D5E981B6C0568005E64D4 /* Build configuration list for PBXProject "dreamhouse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
