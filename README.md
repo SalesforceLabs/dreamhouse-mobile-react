@@ -81,7 +81,7 @@ Watch the recording of the presentation delivered at the TrailheaDX conference:
   npm start
   ```
 
-1. In Xcode, select the **dreamhouse** project in the Project Navigator and select the **dreamhouse copy** target.
+1. In Xcode, select the **dreamhouse** project in the Project Navigator and select the **dreamhouse** target.
 
     ![xcode](README_files/xcode_target.jpg)
 
