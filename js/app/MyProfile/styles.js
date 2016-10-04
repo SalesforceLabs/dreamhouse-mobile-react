@@ -22,27 +22,37 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+'use strict';
+
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
 
-import Theme from 'react.force.base.theme';
+import { StyleSheet,PixelRatio } from 'react-native';
 
-import styles from './styles';
-
-module.exports = React.createClass({
-  handlePress(){
-    if(this.props.onPress){
-      this.props.onPress();
+module.exports = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: 'white',
+    },
+    header: {
+        height: 50,
+        alignItems:'center'
+    },
+    row: {
+        flex: 1,
+        alignItems: 'center',
+        backgroundColor: 'white',
+        flexDirection: 'row',
+        padding: 12,
+    },
+    cellBorder: {
+        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+        // Trick to get the thinest line the device can display
+        height: 1 / PixelRatio.get(),
+        marginLeft: 4,
+    },
+    centering: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 8,
     }
-  },
-  render(){
-    return (
-        <TouchableOpacity onPress={this.handlePress}>
-          <Theme.Icons.Utility
-            name='search'
-            style={styles.icon}
-            iconColor='#ffffff' />
-        </TouchableOpacity>
-    );
-  }
 });

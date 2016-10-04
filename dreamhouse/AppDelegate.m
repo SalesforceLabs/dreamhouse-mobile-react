@@ -102,7 +102,9 @@ static NSString * const OAuthRedirectURI        = @"testsfdc:///mobilesdk/detect
     
     // Fix geocoder not loading issue when used from RN
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
-    
+    [geocoder geocodeAddressString:@""
+                 completionHandler:^(NSArray* placemarks, NSError* error){
+                 }];
     return YES;
 }
 

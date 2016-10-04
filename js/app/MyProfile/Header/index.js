@@ -23,26 +23,41 @@
  */
 
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import {
+    Text,
+    View,
+    Image,
+    TouchableOpacity
+} from 'react-native';
 
 import Theme from 'react.force.base.theme';
 
 import styles from './styles';
 
 module.exports = React.createClass({
-  handlePress(){
-    if(this.props.onPress){
-      this.props.onPress();
-    }
+
+  contextTypes: {
+    sobj: React.PropTypes.object,
   },
+
+  getDefaultProps(){
+    return {
+    };
+  },
+
   render(){
+    const name = this.context.sobj['Name'];
+    const title = this.context.sobj['Title'];
     return (
-        <TouchableOpacity onPress={this.handlePress}>
-          <Theme.Icons.Utility
-            name='search'
-            style={styles.icon}
-            iconColor='#ffffff' />
-        </TouchableOpacity>
+        <View style={styles.container}>
+            <View style={styles.imageRow}>
+                <Theme.Icons.Custom
+                  name='custom69'
+                  style={styles.image} />
+            </View>
+            <Text style={styles.name}>{name}</Text>
+            <Text style={styles.title}>{title?title:'User'}</Text>
+        </View>
     );
   }
 });

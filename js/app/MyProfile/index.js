@@ -22,27 +22,46 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import React from 'react';
-import { TouchableOpacity } from 'react-native';
+'use strict';
 
-import Theme from 'react.force.base.theme';
+import React from 'react';
+import { View } from 'react-native';
+import Header from './Header';
+import Body from './Body';
+import Logout from './Logout';
+import { oauth } from 'react.force';
+import {SobjContainer,ScrollRefresh} from 'react.force.datacontainer';
 
 import styles from './styles';
 
 module.exports = React.createClass({
-  handlePress(){
-    if(this.props.onPress){
-      this.props.onPress();
-    }
+
+  getInitialState() {
+    return {
+      userId:null
+    };
   },
-  render(){
+
+  componentDidMount() {
+    oauth.getAuthCredentials(creds=>{
+      if(creds.userId){
+        this.setState({userId:creds.userId});
+      }
+    });
+  },
+
+  render() {
+    if(!this.state.userId){
+      return <View />;
+    }
     return (
-        <TouchableOpacity onPress={this.handlePress}>
-          <Theme.Icons.Utility
-            name='search'
-            style={styles.icon}
-            iconColor='#ffffff' />
-        </TouchableOpacity>
+      <SobjContainer id={this.state.userId} type='User' style={styles.container}>
+        <ScrollRefresh>
+          <Header />
+          <Body />
+          <Logout />
+        </ScrollRefresh>
+      </SobjContainer>
     );
-  }
+  },
 });

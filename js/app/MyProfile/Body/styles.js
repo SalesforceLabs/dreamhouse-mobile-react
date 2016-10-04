@@ -22,27 +22,17 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+'use strict';
+
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-import Theme from 'react.force.base.theme';
-
-import styles from './styles';
-
-module.exports = React.createClass({
-  handlePress(){
-    if(this.props.onPress){
-      this.props.onPress();
-    }
+module.exports = StyleSheet.create({
+  container: {
+    margin:20,
+    marginTop:10
   },
-  render(){
-    return (
-        <TouchableOpacity onPress={this.handlePress}>
-          <Theme.Icons.Utility
-            name='search'
-            style={styles.icon}
-            iconColor='#ffffff' />
-        </TouchableOpacity>
-    );
+  info:{
+    marginTop:10
   }
 });

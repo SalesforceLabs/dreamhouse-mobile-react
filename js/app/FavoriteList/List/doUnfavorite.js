@@ -1,4 +1,4 @@
-import { net, oauth } from 'react.force';
+import { net } from 'react.force';
 
 module.exports = (favoriteId,callback) => {
   net.del(

@@ -255,7 +255,7 @@
 				TargetAttributes = {
 					4F8D5E9C1B6C0568005E64D4 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = B47QPRK3YN;
+						DevelopmentTeam = D3C8BU4ASG;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -540,6 +540,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = B47QPRK3YN;
 				INFOPLIST_FILE = dreamhouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -551,6 +553,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.msdk.dreamhouse.kapil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -560,6 +563,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = B47QPRK3YN;
 				INFOPLIST_FILE = dreamhouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -571,6 +576,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.msdk.dreamhouse.kapil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -22,27 +22,39 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+'use strict';
+
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-import Theme from 'react.force.base.theme';
-
-import styles from './styles';
-
-module.exports = React.createClass({
-  handlePress(){
-    if(this.props.onPress){
-      this.props.onPress();
-    }
+module.exports = StyleSheet.create({
+  container: {
+    marginTop:20,
   },
-  render(){
-    return (
-        <TouchableOpacity onPress={this.handlePress}>
-          <Theme.Icons.Utility
-            name='search'
-            style={styles.icon}
-            iconColor='#ffffff' />
-        </TouchableOpacity>
-    );
-  }
+  name: {
+    textAlign:'center',
+    fontFamily: 'SalesforceSans-Regular',
+    backgroundColor: 'transparent',
+    paddingBottom:5,
+    fontSize:26
+  },
+  title: {
+    textAlign:'center',
+    fontFamily: 'SalesforceSans-Light',
+    backgroundColor: 'transparent',
+    paddingBottom:14,
+    fontSize:22
+  },
+  imageRow:{
+    flex:1,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center',
+    marginTop:30,
+    marginBottom:20
+  },
+  image:{
+    width:55,
+    height:55
+  },
 });

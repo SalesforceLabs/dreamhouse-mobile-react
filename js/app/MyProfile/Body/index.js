@@ -23,26 +23,33 @@
  */
 
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import {
+    Text,
+    View,
+    Image,
+    TouchableOpacity
+} from 'react-native';
 
 import Theme from 'react.force.base.theme';
 
 import styles from './styles';
 
+
 module.exports = React.createClass({
-  handlePress(){
-    if(this.props.onPress){
-      this.props.onPress();
-    }
+
+  contextTypes: {
+    sobj: React.PropTypes.object
   },
+
   render(){
+    const userType = this.context.sobj['UserType'];
+    const title = this.context.sobj['Title'];
+    const timeZone = this.context.sobj['TimeZoneSidKey'];
     return (
-        <TouchableOpacity onPress={this.handlePress}>
-          <Theme.Icons.Utility
-            name='search'
-            style={styles.icon}
-            iconColor='#ffffff' />
-        </TouchableOpacity>
+      <View style={styles.container}>
+        <Theme.InputReadonly label='User Type' value={userType?userType:' '} style={styles.info} />
+        <Theme.InputReadonly label='Time Zone' value={timeZone?timeZone:' '} style={styles.info} />
+      </View>
     );
   }
 });
