@@ -98,7 +98,7 @@ Follow [this step-by-step tutorial](/tutorial) to recreate the application from 
 There are two types of test examples in this repo; Mocha + Enzyme component tests and image comparison based Snapshot tests.
 
 ### Mocha + Enzyme Tests
-All tests live in the `__tests__` directory of the specific component with the following naming schema `componentname-enzymetest.js. Currently there are tests for `PropertyList/ListItem` and `PropertyDetail/ActionBar`.  
+All tests live in the `__tests__` directory of the specific component with the following naming schema `componentname-enzymetest.js.` Currently there are tests for `PropertyList/ListItem` and `PropertyDetail/ActionBar`.  
 
 To run 
 ```
